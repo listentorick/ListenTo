@@ -1,0 +1,803 @@
+2009-10-03 11:49:05,560 [9] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The member 'ListenTo.Shared.DO.Venue.IsDeleted' has no supported translation to SQL.   at System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMember(SqlMember m)
+   at System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   at System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   at System.Data.Linq.SqlClient.SqlVisitor.VisitUnaryOperator(SqlUnary uo)
+   at System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitUnaryOperator(SqlUnary uo)
+   at System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   at System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   at System.Data.Linq.SqlClient.SqlVisitor.VisitBinaryOperator(SqlBinary bo)
+   at System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitBinaryOperator(SqlBinary bo)
+   at System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   at System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   at System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   at System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   at System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   at System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   at System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   at System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   at System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   at System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   at System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   at System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   at System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   at System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   at System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   at System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   at System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   at System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   at System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   at ListenTo.Shared.Utility.PageLinqExtensions.ToPageOfList[T](IQueryable`1 allItems, Int32 pageIndex, Int32 pageSize) in F:\ListenTo\trunk\ListenTo.Shared\Utility\PageLinqExtensions.cs:line 19
+   at ListenTo.Core.Managers.GigManager.GetUpcomingGigsWithArtist(Int32 pageSize, Int32 currentPageIndex, Guid artistId) in F:\ListenTo\trunk\ListenTo.Core\Managers\GigManager.cs:line 108
+   at ListenTo.Web.Controllers.ArtistController.Index(String name) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ArtistController.cs:line 38
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-03 13:35:01,806 [10] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The method or operation is not implemented.   at System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   at System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   at ListenTo.Data.LinqToSQL.LinqToSQLRepository.GetNewsItemById(Guid id) in F:\ListenTo\trunk\ListenTo.Data.SQLRepository\LinqToSQLRepository.cs:line 1104
+   at ListenTo.Core.Managers.NewsItemManager.GetByID(Guid id) in F:\ListenTo\trunk\ListenTo.Core\Managers\NewsItemManager.cs:line 60
+   at ListenTo.Core.Actions.NewsAddedActionDataHelper.GetActionData(Action action) in F:\ListenTo\trunk\ListenTo.Core\Actions\NewsAddedActionDataHelper.cs:line 20
+   at ListenTo.Core.Managers.ActionsManager.DecorateWithActionData(IPageOfList`1 actions) in F:\ListenTo\trunk\ListenTo.Core\Managers\ActionsManager.cs:line 39
+   at ListenTo.Core.Managers.ActionsManager.GetLatestActionsForSite(Int32 pageSize, Int32 currentPageIndex, Guid siteId) in F:\ListenTo\trunk\ListenTo.Core\Managers\ActionsManager.cs:line 60
+   at ListenTo.Web.Controllers.AccountController.WhatsNew(String username) in F:\ListenTo\trunk\ListenTo.Web\Controllers\AccountController.cs:line 212
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-03 13:36:02,608 [10] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The method or operation is not implemented.   at System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   at System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   at ListenTo.Data.LinqToSQL.LinqToSQLRepository.GetNewsItemById(Guid id) in F:\ListenTo\trunk\ListenTo.Data.SQLRepository\LinqToSQLRepository.cs:line 1104
+   at ListenTo.Core.Managers.NewsItemManager.GetByID(Guid id) in F:\ListenTo\trunk\ListenTo.Core\Managers\NewsItemManager.cs:line 60
+   at ListenTo.Core.Actions.NewsAddedActionDataHelper.GetActionData(Action action) in F:\ListenTo\trunk\ListenTo.Core\Actions\NewsAddedActionDataHelper.cs:line 20
+   at ListenTo.Core.Managers.ActionsManager.DecorateWithActionData(IPageOfList`1 actions) in F:\ListenTo\trunk\ListenTo.Core\Managers\ActionsManager.cs:line 39
+   at ListenTo.Core.Managers.ActionsManager.GetLatestActionsForSite(Int32 pageSize, Int32 currentPageIndex, Guid siteId) in F:\ListenTo\trunk\ListenTo.Core\Managers\ActionsManager.cs:line 60
+   at ListenTo.Web.Controllers.AccountController.WhatsNew(String username) in F:\ListenTo\trunk\ListenTo.Web\Controllers\AccountController.cs:line 212
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-03 13:37:31,280 [10] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The method or operation is not implemented.   at System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   at System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   at ListenTo.Data.LinqToSQL.LinqToSQLRepository.GetNewsItemById(Guid id) in F:\ListenTo\trunk\ListenTo.Data.SQLRepository\LinqToSQLRepository.cs:line 1104
+   at ListenTo.Core.Managers.NewsItemManager.GetByID(Guid id) in F:\ListenTo\trunk\ListenTo.Core\Managers\NewsItemManager.cs:line 60
+   at ListenTo.Core.Actions.NewsAddedActionDataHelper.GetActionData(Action action) in F:\ListenTo\trunk\ListenTo.Core\Actions\NewsAddedActionDataHelper.cs:line 20
+   at ListenTo.Core.Managers.ActionsManager.DecorateWithActionData(IPageOfList`1 actions) in F:\ListenTo\trunk\ListenTo.Core\Managers\ActionsManager.cs:line 39
+   at ListenTo.Core.Managers.ActionsManager.GetLatestActionsForSite(Int32 pageSize, Int32 currentPageIndex, Guid siteId) in F:\ListenTo\trunk\ListenTo.Core\Managers\ActionsManager.cs:line 60
+   at ListenTo.Web.Controllers.AccountController.WhatsNew(String username) in F:\ListenTo\trunk\ListenTo.Web\Controllers\AccountController.cs:line 212
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-03 14:30:36,254 [8] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Exception of type 'System.Web.HttpUnhandledException' was thrown.   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext)
+   at System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewUserControl(ViewContext context, ViewUserControl control)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   at ASP.views_newsitem_index_aspx.__RenderContent1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\NewsItem\Index.aspx:line 35
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ASP.views_shared_detail_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Shared\Detail.Master:line 31
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_newsitem_index_aspx.ProcessRequest(HttpContext context) in c:\Users\rick\AppData\Local\Temp\Temporary ASP.NET Files\root\a6129b27\3f0567bc\App_Web_kdqqaqn1.4.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<InvokeActionResultWithFilters>b__e()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-03 16:24:19,381 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Exception of type 'System.Web.HttpUnhandledException' was thrown.   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_account_login_aspx.ProcessRequest(HttpContext context) in c:\Users\rick\AppData\Local\Temp\Temporary ASP.NET Files\root\a6129b27\3f0567bc\App_Web_8arxvxaq.3.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<InvokeActionResultWithFilters>b__e()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-03 16:25:17,931 [10] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Exception of type 'System.Web.HttpUnhandledException' was thrown.   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_account_login_aspx.ProcessRequest(HttpContext context) in c:\Users\rick\AppData\Local\Temp\Temporary ASP.NET Files\root\a6129b27\3f0567bc\App_Web_0dasscsy.9.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<InvokeActionResultWithFilters>b__e()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-03 16:26:25,255 [10] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Index(System.Guid)' in 'ListenTo.Web.Controllers.NewsItemController'. To make a parameter optional its type should be either a reference type or a Nullable type.
+Parameter name: parameters   at System.Web.Mvc.ReflectedActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   at System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-03 16:29:31,942 [10] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Index(System.Guid)' in 'ListenTo.Web.Controllers.NewsItemController'. To make a parameter optional its type should be either a reference type or a Nullable type.
+Parameter name: parameters   at System.Web.Mvc.ReflectedActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   at System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-03 16:29:43,654 [10] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Index(System.Guid)' in 'ListenTo.Web.Controllers.NewsItemController'. To make a parameter optional its type should be either a reference type or a Nullable type.
+Parameter name: parameters   at System.Web.Mvc.ReflectedActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   at System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-03 16:31:07,292 [10] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Index(System.Guid)' in 'ListenTo.Web.Controllers.NewsItemController'. To make a parameter optional its type should be either a reference type or a Nullable type.
+Parameter name: parameters   at System.Web.Mvc.ReflectedActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   at System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-03 16:31:19,119 [10] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Index(System.Guid)' in 'ListenTo.Web.Controllers.NewsItemController'. To make a parameter optional its type should be either a reference type or a Nullable type.
+Parameter name: parameters   at System.Web.Mvc.ReflectedActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   at System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-03 16:31:24,565 [10] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Index(System.Guid)' in 'ListenTo.Web.Controllers.NewsItemController'. To make a parameter optional its type should be either a reference type or a Nullable type.
+Parameter name: parameters   at System.Web.Mvc.ReflectedActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   at System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-03 16:32:13,869 [10] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Index(System.Guid)' in 'ListenTo.Web.Controllers.NewsItemController'. To make a parameter optional its type should be either a reference type or a Nullable type.
+Parameter name: parameters   at System.Web.Mvc.ReflectedActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   at System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-04 17:36:16,044 [8] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The conversion of a char data type to a datetime data type resulted in an out-of-range datetime value.   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   at System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.ObjectReaderBase`1.Read()
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.ObjectReader`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ListenTo.Core.Managers.VenueManager.GetVenues() in F:\ListenTo\trunk\ListenTo.Core\Managers\VenueManager.cs:line 82
+   at ListenTo.Web.Controllers.ListenToController.PrepareVenues(Nullable`1 selectedVenue) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ListenToController.cs:line 146
+   at ListenTo.Web.Controllers.GigController.PrepareViewDataForAddAction() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 147
+   at ListenTo.Web.Controllers.GigController.Add() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 58
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-04 17:37:31,822 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The conversion of a char data type to a datetime data type resulted in an out-of-range datetime value.   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   at System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.ObjectReaderBase`1.Read()
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.ObjectReader`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ListenTo.Core.Managers.VenueManager.GetVenues() in F:\ListenTo\trunk\ListenTo.Core\Managers\VenueManager.cs:line 82
+   at ListenTo.Web.Controllers.ListenToController.PrepareVenues(Nullable`1 selectedVenue) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ListenToController.cs:line 146
+   at ListenTo.Web.Controllers.GigController.PrepareViewDataForAddAction() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 147
+   at ListenTo.Web.Controllers.GigController.Add() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 58
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-04 17:47:09,884 [9] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Object reference not set to an instance of an object.   at ListenTo.Core.Managers.GigManager.Save(IDO dO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\GigManager.cs:line 64
+   at ListenTo.Web.Controllers.GigController.Add(Gig gig, FormCollection formCollection) in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 72
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-04 17:48:10,841 [9] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Object reference not set to an instance of an object.   at ListenTo.Core.Managers.GigManager.Save(IDO dO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\GigManager.cs:line 64
+   at ListenTo.Web.Controllers.GigController.Add(Gig gig, FormCollection formCollection) in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 72
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-04 18:03:04,663 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Could not translate expression 'Table(Venue).Select(v => new <>f__AnonymousTypea`2(v = v, town = value(ListenTo.Data.LinqToSQL.LinqToSQLRepository).GetTown(v.TownID)))' into SQL and could not treat it as a local expression.   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.Generate(SqlNode node, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateExpressionForType(SqlExpression expr, Type type, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateAssignValue(MetaDataMember mm, LocalBuilder locInstance, SqlExpression expr, LocalBuilder locStoreInMember)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateMemberAssignment(MetaDataMember mm, LocalBuilder locInstance, SqlExpression expr, LocalBuilder locStoreInMember)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateNew(SqlNew sn)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.Generate(SqlNode node, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateExpressionForType(SqlExpression expr, Type type, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateBody(ILGenerator generator, SqlExpression expression)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.CompileDynamicMethod(Generator gen, SqlExpression expression, Type elementType)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Compile(SqlExpression expression, Type elementType)
+   at System.Data.Linq.SqlClient.SqlProvider.GetReaderFactory(SqlNode node, Type elemType)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ListenTo.Core.Managers.VenueManager.GetVenues() in F:\ListenTo\trunk\ListenTo.Core\Managers\VenueManager.cs:line 82
+   at ListenTo.Web.Controllers.ListenToController.PrepareVenues(Nullable`1 selectedVenue) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ListenToController.cs:line 146
+   at ListenTo.Web.Controllers.GigController.PrepareViewDataForAddAction() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 147
+   at ListenTo.Web.Controllers.GigController.Add() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 58
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-04 18:04:45,708 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Could not translate expression 'Table(Venue).Select(v => new <>f__AnonymousTypea`2(v = v, town = value(ListenTo.Data.LinqToSQL.LinqToSQLRepository).GetTown(v.TownID)))' into SQL and could not treat it as a local expression.   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.Generate(SqlNode node, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateExpressionForType(SqlExpression expr, Type type, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateAssignValue(MetaDataMember mm, LocalBuilder locInstance, SqlExpression expr, LocalBuilder locStoreInMember)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateMemberAssignment(MetaDataMember mm, LocalBuilder locInstance, SqlExpression expr, LocalBuilder locStoreInMember)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateNew(SqlNew sn)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.Generate(SqlNode node, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateExpressionForType(SqlExpression expr, Type type, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateBody(ILGenerator generator, SqlExpression expression)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.CompileDynamicMethod(Generator gen, SqlExpression expression, Type elementType)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Compile(SqlExpression expression, Type elementType)
+   at System.Data.Linq.SqlClient.SqlProvider.GetReaderFactory(SqlNode node, Type elemType)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ListenTo.Core.Managers.VenueManager.GetVenues() in F:\ListenTo\trunk\ListenTo.Core\Managers\VenueManager.cs:line 82
+   at ListenTo.Web.Controllers.ListenToController.PrepareVenues(Nullable`1 selectedVenue) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ListenToController.cs:line 146
+   at ListenTo.Web.Controllers.GigController.PrepareViewDataForAddAction() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 147
+   at ListenTo.Web.Controllers.GigController.Add() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 58
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-04 18:05:01,076 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Could not translate expression 'Table(Venue).Select(v => new <>f__AnonymousTypea`2(v = v, town = value(ListenTo.Data.LinqToSQL.LinqToSQLRepository).GetTown(v.TownID)))' into SQL and could not treat it as a local expression.   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.Generate(SqlNode node, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateExpressionForType(SqlExpression expr, Type type, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateAssignValue(MetaDataMember mm, LocalBuilder locInstance, SqlExpression expr, LocalBuilder locStoreInMember)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateMemberAssignment(MetaDataMember mm, LocalBuilder locInstance, SqlExpression expr, LocalBuilder locStoreInMember)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateNew(SqlNew sn)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.Generate(SqlNode node, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateExpressionForType(SqlExpression expr, Type type, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateBody(ILGenerator generator, SqlExpression expression)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.CompileDynamicMethod(Generator gen, SqlExpression expression, Type elementType)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Compile(SqlExpression expression, Type elementType)
+   at System.Data.Linq.SqlClient.SqlProvider.GetReaderFactory(SqlNode node, Type elemType)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ListenTo.Core.Managers.VenueManager.GetVenues() in F:\ListenTo\trunk\ListenTo.Core\Managers\VenueManager.cs:line 82
+   at ListenTo.Web.Controllers.ListenToController.PrepareVenues(Nullable`1 selectedVenue) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ListenToController.cs:line 146
+   at ListenTo.Web.Controllers.GigController.PrepareViewDataForAddAction() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 147
+   at ListenTo.Web.Controllers.GigController.Add() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 58
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-04 18:05:27,551 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Object reference not set to an instance of an object.   at Read_Venue(ObjectMaterializer`1 )
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.ObjectReader`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ListenTo.Core.Managers.VenueManager.GetVenues() in F:\ListenTo\trunk\ListenTo.Core\Managers\VenueManager.cs:line 82
+   at ListenTo.Web.Controllers.ListenToController.PrepareVenues(Nullable`1 selectedVenue) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ListenToController.cs:line 146
+   at ListenTo.Web.Controllers.GigController.PrepareViewDataForAddAction() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 147
+   at ListenTo.Web.Controllers.GigController.Add() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 58
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-04 18:05:34,796 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Object reference not set to an instance of an object.   at Read_Venue(ObjectMaterializer`1 )
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.ObjectReader`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ListenTo.Core.Managers.VenueManager.GetVenues() in F:\ListenTo\trunk\ListenTo.Core\Managers\VenueManager.cs:line 82
+   at ListenTo.Web.Controllers.ListenToController.PrepareVenues(Nullable`1 selectedVenue) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ListenToController.cs:line 146
+   at ListenTo.Web.Controllers.GigController.PrepareViewDataForAddAction() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 147
+   at ListenTo.Web.Controllers.GigController.Add() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 58
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-04 18:08:07,776 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Could not translate expression 'Table(Venue).Select(v => new <>f__AnonymousTypea`2(v = v, town = value(ListenTo.Data.LinqToSQL.LinqToSQLRepository).GetTown(v.TownID)))' into SQL and could not treat it as a local expression.   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.Generate(SqlNode node, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateExpressionForType(SqlExpression expr, Type type, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateAssignValue(MetaDataMember mm, LocalBuilder locInstance, SqlExpression expr, LocalBuilder locStoreInMember)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateMemberAssignment(MetaDataMember mm, LocalBuilder locInstance, SqlExpression expr, LocalBuilder locStoreInMember)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateNew(SqlNew sn)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.Generate(SqlNode node, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateExpressionForType(SqlExpression expr, Type type, LocalBuilder locInstance)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Generator.GenerateBody(ILGenerator generator, SqlExpression expression)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.CompileDynamicMethod(Generator gen, SqlExpression expression, Type elementType)
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.Compile(SqlExpression expression, Type elementType)
+   at System.Data.Linq.SqlClient.SqlProvider.GetReaderFactory(SqlNode node, Type elemType)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ListenTo.Core.Managers.VenueManager.GetVenues() in F:\ListenTo\trunk\ListenTo.Core\Managers\VenueManager.cs:line 82
+   at ListenTo.Web.Controllers.ListenToController.PrepareVenues(Nullable`1 selectedVenue) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ListenToController.cs:line 146
+   at ListenTo.Web.Controllers.GigController.PrepareViewDataForAddAction() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 147
+   at ListenTo.Web.Controllers.GigController.Add() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 58
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-04 18:11:40,081 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The null value cannot be assigned to a member with type System.Boolean which is a non-nullable value type.   at System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   at System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   at ListenTo.Data.LinqToSQL.LinqToSQLRepository.GetTown(Guid id) in F:\ListenTo\trunk\ListenTo.Data.SQLRepository\LinqToSQLRepository.cs:line 756
+   at Read_Venue(ObjectMaterializer`1 )
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.ObjectReader`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ListenTo.Core.Managers.VenueManager.GetVenues() in F:\ListenTo\trunk\ListenTo.Core\Managers\VenueManager.cs:line 82
+   at ListenTo.Web.Controllers.ListenToController.PrepareVenues(Nullable`1 selectedVenue) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ListenToController.cs:line 146
+   at ListenTo.Web.Controllers.GigController.PrepareViewDataForAddAction() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 147
+   at ListenTo.Web.Controllers.GigController.Add() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 58
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-04 18:11:48,538 [8] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - The null value cannot be assigned to a member with type System.Boolean which is a non-nullable value type.   at System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   at System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   at ListenTo.Data.LinqToSQL.LinqToSQLRepository.GetTown(Guid id) in F:\ListenTo\trunk\ListenTo.Data.SQLRepository\LinqToSQLRepository.cs:line 756
+   at Read_Venue(ObjectMaterializer`1 )
+   at System.Data.Linq.SqlClient.ObjectReaderCompiler.ObjectReader`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ListenTo.Core.Managers.VenueManager.GetVenues() in F:\ListenTo\trunk\ListenTo.Core\Managers\VenueManager.cs:line 82
+   at ListenTo.Web.Controllers.ListenToController.PrepareVenues(Nullable`1 selectedVenue) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ListenToController.cs:line 146
+   at ListenTo.Web.Controllers.GigController.PrepareViewDataForAddAction() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 147
+   at ListenTo.Web.Controllers.GigController.Add() in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 58
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-05 12:34:39,655 [8] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Exception of type 'System.Web.HttpUnhandledException' was thrown.   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_artist_index_aspx.ProcessRequest(HttpContext context) in c:\Users\rick\AppData\Local\Temp\Temporary ASP.NET Files\root\a6129b27\3f0567bc\App_Web_ijgsowqs.7.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<InvokeActionResultWithFilters>b__e()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-05 19:54:33,598 [8] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Sequence contains no elements   at System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   at System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.Single[TSource](IQueryable`1 source)
+   at ListenTo.Core.Managers.StyleManager.GetByID(Guid id) in F:\ListenTo\trunk\ListenTo.Core\Managers\StyleManager.cs:line 20
+   at (Object , Object[] )
+   at Spring.Reflection.Dynamic.SafeMethod.Invoke(Object target, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicMethod.cs:line 131
+   at Spring.Aop.Framework.DynamicMethodInvocation.InvokeJoinpoint() in F:\Spring.NET\src\Spring\Spring.Aop\Aop\Framework\DynamicMethodInvocation.cs:line 96
+   at Spring.Aop.Framework.AbstractMethodInvocation.Proceed() in F:\Spring.NET\src\Spring\Spring.Aop\Aop\Framework\AbstractMethodInvocation.cs:line 256
+   at ListenTo.Core.Caching.XmlConfiguredCacheResultAdvice.Invoke(IMethodInvocation invocation) in F:\ListenTo\trunk\ListenTo.Core.Caching\XmlConfiguredCacheResultAdvice.cs:line 75
+   at Spring.Aop.Framework.AbstractMethodInvocation.Proceed() in F:\Spring.NET\src\Spring\Spring.Aop\Aop\Framework\AbstractMethodInvocation.cs:line 281
+   at Spring.Aop.Framework.DynamicProxy.AdvisedProxy.Invoke(Object proxy, Object target, Type targetType, MethodInfo targetMethod, MethodInfo proxyMethod, Object[] args, IList interceptors) in F:\Spring.NET\src\Spring\Spring.Aop\Aop\Framework\DynamicProxy\AdvisedProxy.cs:line 222
+   at CompositionAopProxy_c528c60b4c8d45ffb196d68cc7c52eac.GetByID(Guid id)
+   at ListenTo.Web.ModelBinders.ArtistModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext) in F:\ListenTo\trunk\ListenTo.Web\ModelBinders\ArtistModelBinder.cs:line 67
+   at System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   at System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-05 20:00:44,054 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Object reference not set to an instance of an object.   at ListenTo.Web.Controllers.ArtistController.PrepareViewDataForEditAction(Artist artist) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ArtistController.cs:line 277
+   at ListenTo.Web.Controllers.ArtistController.ManageArtist(Artist artist) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ArtistController.cs:line 243
+   at ListenTo.Web.Controllers.ArtistController.Add(Artist artist) in F:\ListenTo\trunk\ListenTo.Web\Controllers\ArtistController.cs:line 185
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-05 20:28:29,314 [8] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - f:\ListenTo\trunk\ListenTo.Web\Views\Artist\ArtistList.ascx(28): error CS1928: 'System.Web.Mvc.HtmlHelper<System.Collections.Generic.IList<ListenTo.Shared.DTO.ArtistSummary>>' does not contain a definition for 'EditArtistUrl' and the best extension method overload 'ListenTo.Web.Helpers.HtmlHelperExtensions.UrlHelpers.EditArtistUrl(System.Web.Mvc.HtmlHelper, ListenTo.Shared.DO.Artist)' has some invalid arguments   at System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   at System.Web.Mvc.WebFormViewEngine.FileExists(ControllerContext controllerContext, String virtualPath)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPathFromSpecificName(ControllerContext controllerContext, String name, String cacheKey, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String locationsPropertyName, String name, String controllerName, String cacheKeyPrefix, Boolean useCache, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.FindPartialView(ControllerContext controllerContext, String partialViewName, Boolean useCache)
+   at System.Web.Mvc.ViewEngineCollection.<>c__DisplayClass2.<FindPartialView>b__0(IViewEngine e)
+   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 cacheLocator, Func`2 locator)
+   at System.Web.Mvc.ViewEngineCollection.FindPartialView(ControllerContext controllerContext, String partialViewName)
+   at System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   at ASP.views_artist_list_aspx.__RenderContent1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Artist\List.aspx:line 17
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ASP.views_shared_listing_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Shared\Listing.Master:line 31
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_artist_list_aspx.ProcessRequest(HttpContext context) in c:\Users\rick\AppData\Local\Temp\Temporary ASP.NET Files\root\a6129b27\3f0567bc\App_Web_list.aspx.d8f8ab75.yybkxwp2.0.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<InvokeActionResultWithFilters>b__e()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-10 11:42:42,080 [4] ERROR Spring.Objects.ObjectWrapper [(null)] - Failed setting property 'EmailSender'
+Spring.Core.TypeMismatchException: Cannot convert property value of type [System.String] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'. ---> System.InvalidCastException: Invalid cast from 'System.String' to 'ListenTo.Shared.Interfaces.Mail.IEmailSender'.
+   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType)
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 143
+   --- End of inner exception stack trace ---
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 155
+   at Spring.Expressions.PropertyOrFieldNode.SetPropertyOrFieldValue(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 362
+   at Spring.Expressions.PropertyOrFieldNode.Set(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 258
+   at Spring.Expressions.BaseNode.SetValue(Object context, IDictionary variables, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 229
+   at Spring.Expressions.BaseNode.Spring.Expressions.IExpression.SetValue(Object context, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 209
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(IExpression propertyExpression, Object val) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 268
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(PropertyValue pv) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 284
+   at Spring.Objects.ObjectWrapper.SetPropertyValues(IPropertyValues propertyValues, Boolean ignoreUnknown) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 343
+2009-10-10 11:43:03,313 [4] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [System.String] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: System.InvalidCastException: Invalid cast from 'System.String' to 'ListenTo.Shared.Interfaces.Mail.IEmailSender'.
+   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType)
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 143] ---> Spring.Objects.Factory.ObjectCreationException: Error thrown by a dependency of object 'ActionsManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 55' : Error setting property values: PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [System.String] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: System.InvalidCastException: Invalid cast from 'System.String' to 'ListenTo.Shared.Interfaces.Mail.IEmailSender'.
+   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType)
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 143]
+ while resolving 'ActionPublicationQueue' to 'ActionPublicationQueue' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 60'
+ while resolving 'ActionPublisherFactory' to 'ActionPublisherFactory' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 161'
+ while resolving 'ActionPublishers[COMMENTED_ON_A_NEWSITEM]' to 'CommentedOnANewsItemActionPublishers' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 145'
+ while resolving 'constructor argument[0]' to 'CommentedOnANewsItemActionSmtpPublisher' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 137' ---> PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [System.String] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: System.InvalidCastException: Invalid cast from 'System.String' to 'ListenTo.Shared.Interfaces.Mail.IEmailSender'.
+   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType)
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 143]
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveReference(IConfigurableObjectDefinition definition, String name, String argumentName, RuntimeObjectReference reference) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 352
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveValueIfNecessary(String name, RootObjectDefinition definition, String argumentName, Object argumentValue) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 139
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ApplyPropertyValues(String name, RootObjectDefinition definition, IObjectWrapper wrapper, IPropertyValues properties) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 353
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PopulateObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 533
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 1821
+   at Spring.Objects.Factory.Support.WebObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 433
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 888
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1936
+   at Spring.Objects.Factory.Support.WebObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 291
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1868
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1685
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.PreInstantiateSingletons() in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 503
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 797
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-10-10 11:43:08,158 [4] ERROR Spring.Objects.ObjectWrapper [(null)] - Failed setting property 'EmailSender'
+Spring.Core.TypeMismatchException: Cannot convert property value of type [System.String] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'. ---> System.InvalidCastException: Invalid cast from 'System.String' to 'ListenTo.Shared.Interfaces.Mail.IEmailSender'.
+   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType)
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 143
+   --- End of inner exception stack trace ---
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 155
+   at Spring.Expressions.PropertyOrFieldNode.SetPropertyOrFieldValue(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 362
+   at Spring.Expressions.PropertyOrFieldNode.Set(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 258
+   at Spring.Expressions.BaseNode.SetValue(Object context, IDictionary variables, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 229
+   at Spring.Expressions.BaseNode.Spring.Expressions.IExpression.SetValue(Object context, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 209
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(IExpression propertyExpression, Object val) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 268
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(PropertyValue pv) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 284
+   at Spring.Objects.ObjectWrapper.SetPropertyValues(IPropertyValues propertyValues, Boolean ignoreUnknown) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 343
+2009-10-10 11:43:08,337 [4] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [System.String] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: System.InvalidCastException: Invalid cast from 'System.String' to 'ListenTo.Shared.Interfaces.Mail.IEmailSender'.
+   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType)
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 143] ---> Spring.Objects.Factory.ObjectCreationException: Error thrown by a dependency of object 'ActionsManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 55' : Error setting property values: PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [System.String] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: System.InvalidCastException: Invalid cast from 'System.String' to 'ListenTo.Shared.Interfaces.Mail.IEmailSender'.
+   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType)
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 143]
+ while resolving 'ActionPublicationQueue' to 'ActionPublicationQueue' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 60'
+ while resolving 'ActionPublisherFactory' to 'ActionPublisherFactory' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 161'
+ while resolving 'ActionPublishers[COMMENTED_ON_A_NEWSITEM]' to 'CommentedOnANewsItemActionPublishers' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 145'
+ while resolving 'constructor argument[0]' to 'CommentedOnANewsItemActionSmtpPublisher' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 137' ---> PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [System.String] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: System.InvalidCastException: Invalid cast from 'System.String' to 'ListenTo.Shared.Interfaces.Mail.IEmailSender'.
+   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType)
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 143]
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveReference(IConfigurableObjectDefinition definition, String name, String argumentName, RuntimeObjectReference reference) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 352
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveValueIfNecessary(String name, RootObjectDefinition definition, String argumentName, Object argumentValue) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 139
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ApplyPropertyValues(String name, RootObjectDefinition definition, IObjectWrapper wrapper, IPropertyValues properties) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 353
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PopulateObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 533
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 1821
+   at Spring.Objects.Factory.Support.WebObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 433
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 888
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1936
+   at Spring.Objects.Factory.Support.WebObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 291
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1868
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1685
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.PreInstantiateSingletons() in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 503
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 797
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282

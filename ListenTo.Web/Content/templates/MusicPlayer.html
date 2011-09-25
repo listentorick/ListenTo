@@ -1,0 +1,42 @@
+﻿
+<h2 id="trackTitle"><%=Name%></h2>
+
+<div id="playerPlayer">
+	<img src="/content/images/player/music-player.gif" alt="" />
+    <img id="playerSpools" src="/content/images/player/tape-spools.gif" alt="" />
+    
+	<div id="playerText"><pre><%=Name%> by <%=ArtistName%></pre></div>
+	<a href="#" id="buttonPlay">Play/pause</a>
+	<a href="#" id="buttonNext"><img src="/content/images/player/next-off.gif" alt="Next track" /></a>
+	<a href="#" id="buttonPrev"><img src="/content/images/player/prev-off.gif" alt="Previous track" /></a>
+</div>
+<div id="playerData">
+
+    <p id="trackDescription"><%=Description%></p>
+    <dl class="columnList">
+        
+        <dt>Written</dt>
+        <dd><a href="/<%=ArtistProfileAddress%>" id="trackArtist"><%=ArtistName%></a></dd>
+        
+        <dt>Style</dt>
+        <dd><a href="/music/list/<%=StyleName%>" id="trackStyle"><%=StyleName%></a></dd>
+        
+    </dl>
+
+</div>
+
+<%
+setInterval(
+    function(){
+	    var el = $("#playerText pre");
+	    var origText = el.text();
+	    var firstChar = origText.substring(0,1);
+	    var otherChars = origText.substring(1,origText.length);
+	    var newText = otherChars + firstChar;
+	    el.text(newText);
+    },
+    750
+);
+%>
+    
+

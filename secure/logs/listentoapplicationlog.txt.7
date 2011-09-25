@@ -1,0 +1,633 @@
+2009-10-10 11:44:21,573 [8] ERROR Spring.Objects.ObjectWrapper [(null)] - Failed setting property 'EmailSender'
+Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'. ---> Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147
+   --- End of inner exception stack trace ---
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 155
+   at Spring.Expressions.PropertyOrFieldNode.SetPropertyOrFieldValue(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 362
+   at Spring.Expressions.PropertyOrFieldNode.Set(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 258
+   at Spring.Expressions.BaseNode.SetValue(Object context, IDictionary variables, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 229
+   at Spring.Expressions.BaseNode.Spring.Expressions.IExpression.SetValue(Object context, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 209
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(IExpression propertyExpression, Object val) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 268
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(PropertyValue pv) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 284
+   at Spring.Objects.ObjectWrapper.SetPropertyValues(IPropertyValues propertyValues, Boolean ignoreUnknown) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 343
+2009-10-10 11:44:35,629 [8] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147] ---> Spring.Objects.Factory.ObjectCreationException: Error thrown by a dependency of object 'ActionsManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 55' : Error setting property values: PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147]
+ while resolving 'ActionPublicationQueue' to 'ActionPublicationQueue' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 60'
+ while resolving 'ActionPublisherFactory' to 'ActionPublisherFactory' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 161'
+ while resolving 'ActionPublishers[COMMENTED_ON_A_NEWSITEM]' to 'CommentedOnANewsItemActionPublishers' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 145'
+ while resolving 'constructor argument[0]' to 'CommentedOnANewsItemActionSmtpPublisher' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 137' ---> PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Shared.Interfaces.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147]
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveReference(IConfigurableObjectDefinition definition, String name, String argumentName, RuntimeObjectReference reference) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 352
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveValueIfNecessary(String name, RootObjectDefinition definition, String argumentName, Object argumentValue) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 139
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ApplyPropertyValues(String name, RootObjectDefinition definition, IObjectWrapper wrapper, IPropertyValues properties) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 353
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PopulateObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 533
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 1821
+   at Spring.Objects.Factory.Support.WebObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 433
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 888
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1936
+   at Spring.Objects.Factory.Support.WebObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 291
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1868
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1685
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.PreInstantiateSingletons() in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 503
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 797
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-10-10 11:46:09,333 [9] ERROR Spring.Objects.ObjectWrapper [(null)] - Failed setting property 'EmailSender'
+Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'. ---> Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147
+   --- End of inner exception stack trace ---
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 155
+   at Spring.Expressions.PropertyOrFieldNode.SetPropertyOrFieldValue(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 362
+   at Spring.Expressions.PropertyOrFieldNode.Set(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 258
+   at Spring.Expressions.BaseNode.SetValue(Object context, IDictionary variables, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 229
+   at Spring.Expressions.BaseNode.Spring.Expressions.IExpression.SetValue(Object context, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 209
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(IExpression propertyExpression, Object val) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 268
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(PropertyValue pv) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 284
+   at Spring.Objects.ObjectWrapper.SetPropertyValues(IPropertyValues propertyValues, Boolean ignoreUnknown) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 343
+2009-10-10 11:46:23,861 [9] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147] ---> Spring.Objects.Factory.ObjectCreationException: Error thrown by a dependency of object 'ActionsManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 55' : Error setting property values: PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147]
+ while resolving 'OwnershipHelperFactory' to 'OwnershipHelperFactory' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 257'
+ while resolving 'OwnershipHelpers[<T(ListenTo.Shared.DO.NewsItem)>]' to 'NewsItemOwnershipHelper' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 324'
+ while resolving 'UserManager' to 'UserManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 103'
+ while resolving 'UserApprovalStrategy' to 'UserApprovalStrategy' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 446' ---> PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147]
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveReference(IConfigurableObjectDefinition definition, String name, String argumentName, RuntimeObjectReference reference) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 352
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveValueIfNecessary(String name, RootObjectDefinition definition, String argumentName, Object argumentValue) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 139
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ApplyPropertyValues(String name, RootObjectDefinition definition, IObjectWrapper wrapper, IPropertyValues properties) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 353
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PopulateObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 533
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 1821
+   at Spring.Objects.Factory.Support.WebObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 433
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 888
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1936
+   at Spring.Objects.Factory.Support.WebObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 291
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1868
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1685
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.PreInstantiateSingletons() in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 503
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 797
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-10-10 11:47:43,801 [9] ERROR Spring.Objects.ObjectWrapper [(null)] - Failed setting property 'EmailSender'
+Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'. ---> Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147
+   --- End of inner exception stack trace ---
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 155
+   at Spring.Expressions.PropertyOrFieldNode.SetPropertyOrFieldValue(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 362
+   at Spring.Expressions.PropertyOrFieldNode.Set(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 258
+   at Spring.Expressions.BaseNode.SetValue(Object context, IDictionary variables, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 229
+   at Spring.Expressions.BaseNode.Spring.Expressions.IExpression.SetValue(Object context, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 209
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(IExpression propertyExpression, Object val) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 268
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(PropertyValue pv) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 284
+   at Spring.Objects.ObjectWrapper.SetPropertyValues(IPropertyValues propertyValues, Boolean ignoreUnknown) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 343
+2009-10-10 11:48:22,681 [9] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147] ---> Spring.Objects.Factory.ObjectCreationException: Error thrown by a dependency of object 'ActionsManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 55' : Error setting property values: PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147]
+ while resolving 'OwnershipHelperFactory' to 'OwnershipHelperFactory' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 257'
+ while resolving 'OwnershipHelpers[<T(ListenTo.Shared.DO.NewsItem)>]' to 'NewsItemOwnershipHelper' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 324'
+ while resolving 'UserManager' to 'UserManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 103'
+ while resolving 'RetrieveDetailsStrategy' to 'RetrieveDetailsStrategy' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 454' ---> PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147]
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveReference(IConfigurableObjectDefinition definition, String name, String argumentName, RuntimeObjectReference reference) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 352
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveValueIfNecessary(String name, RootObjectDefinition definition, String argumentName, Object argumentValue) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 139
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ApplyPropertyValues(String name, RootObjectDefinition definition, IObjectWrapper wrapper, IPropertyValues properties) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 353
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PopulateObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 533
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 1821
+   at Spring.Objects.Factory.Support.WebObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 433
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 888
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1936
+   at Spring.Objects.Factory.Support.WebObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 291
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1868
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1685
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.PreInstantiateSingletons() in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 503
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 797
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-10-10 11:48:29,702 [9] ERROR Spring.Objects.ObjectWrapper [(null)] - Failed setting property 'EmailSender'
+Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'. ---> Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147
+   --- End of inner exception stack trace ---
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 155
+   at Spring.Expressions.PropertyOrFieldNode.SetPropertyOrFieldValue(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 362
+   at Spring.Expressions.PropertyOrFieldNode.Set(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 258
+   at Spring.Expressions.BaseNode.SetValue(Object context, IDictionary variables, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 229
+   at Spring.Expressions.BaseNode.Spring.Expressions.IExpression.SetValue(Object context, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 209
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(IExpression propertyExpression, Object val) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 268
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(PropertyValue pv) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 284
+   at Spring.Objects.ObjectWrapper.SetPropertyValues(IPropertyValues propertyValues, Boolean ignoreUnknown) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 343
+2009-10-10 11:48:41,811 [9] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147] ---> Spring.Objects.Factory.ObjectCreationException: Error thrown by a dependency of object 'ActionsManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 55' : Error setting property values: PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147]
+ while resolving 'OwnershipHelperFactory' to 'OwnershipHelperFactory' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 257'
+ while resolving 'OwnershipHelpers[<T(ListenTo.Shared.DO.Artist)>]' to 'ArtistOwnershipHelper' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 312'
+ while resolving 'UserManager' to 'UserManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 103'
+ while resolving 'RetrieveDetailsStrategy' to 'RetrieveDetailsStrategy' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 454' ---> PropertyAccessExceptionsException (1 errors); nested PropertyAccessExceptions are: 
+[Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'., Inner Exception: Spring.Core.TypeMismatchException: Cannot convert property value of type [ListenTo.Core.Mail.SmtpEmailSender] to required type [ListenTo.Core.Mail.IEmailSender] for property 'EmailSender'.
+   at Spring.Core.TypeConversion.TypeConversionUtils.ConvertValueIfNecessary(Type requiredType, Object newValue, String propertyName) in F:\Spring.NET\src\Spring\Spring.Core\Core\TypeConversion\TypeConversionUtils.cs:line 147]
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveReference(IConfigurableObjectDefinition definition, String name, String argumentName, RuntimeObjectReference reference) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 352
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveValueIfNecessary(String name, RootObjectDefinition definition, String argumentName, Object argumentValue) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 139
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ApplyPropertyValues(String name, RootObjectDefinition definition, IObjectWrapper wrapper, IPropertyValues properties) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 353
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PopulateObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 533
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 1821
+   at Spring.Objects.Factory.Support.WebObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 433
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 888
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1936
+   at Spring.Objects.Factory.Support.WebObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 291
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1868
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1685
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.PreInstantiateSingletons() in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 503
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 797
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-10-10 11:53:38,693 [8] ERROR ListenTo.Core.Actions.ActionPublicationQueue [(null)] - Publication of action has failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ListenTo.Core.Actions.SmtpPublisher.Publish(Action action) in F:\ListenTo\trunk\ListenTo.Core\Actions\SmtpPublisher.cs:line 30
+   at ListenTo.Core.Actions.ActionPublicationQueue.Publish(Object data) in F:\ListenTo\trunk\ListenTo.Core\Actions\ActionPublicationQueue.cs:line 47
+2009-10-10 11:56:19,597 [11] ERROR ListenTo.Core.Actions.ActionPublicationQueue [(null)] - Publication of action has failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ListenTo.Core.Actions.SmtpPublisher.Publish(Action action) in F:\ListenTo\trunk\ListenTo.Core\Actions\SmtpPublisher.cs:line 30
+   at ListenTo.Core.Actions.ActionPublicationQueue.Publish(Object data) in F:\ListenTo\trunk\ListenTo.Core\Actions\ActionPublicationQueue.cs:line 47
+2009-10-10 11:58:29,227 [11] ERROR ListenTo.Core.Actions.ActionPublicationQueue [(null)] - Publication of action has failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ListenTo.Core.Actions.SmtpPublisher.Publish(Action action) in F:\ListenTo\trunk\ListenTo.Core\Actions\SmtpPublisher.cs:line 30
+   at ListenTo.Core.Actions.ActionPublicationQueue.Publish(Object data) in F:\ListenTo\trunk\ListenTo.Core\Actions\ActionPublicationQueue.cs:line 47
+2009-10-10 12:53:05,959 [9] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': The 'ref' attribute is not declared. ---> Spring.Objects.Factory.ObjectDefinitionStoreException: Line 198 in XML document from file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] violates the schema.  The 'ref' attribute is not declared. ---> System.Xml.Schema.XmlSchemaValidationException: The 'ref' attribute is not declared.
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.HandleValidation(Object sender, ValidationEventArgs args) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 354
+   at System.Xml.Schema.XmlSchemaValidator.SendValidationEvent(XmlSchemaValidationException e, XmlSeverityType severity)
+   at System.Xml.Schema.XmlSchemaValidator.SendValidationEvent(String code, String arg)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateAttribute(String lName, String ns, XmlValueGetter attributeValueGetter, String attributeStringValue, XmlSchemaInfo schemaInfo)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateAttribute(String localName, String namespaceUri, XmlValueGetter attributeValue, XmlSchemaInfo schemaInfo)
+   at System.Xml.XsdValidatingReader.ValidateAttributes()
+   at System.Xml.XsdValidatingReader.ProcessElementEvent()
+   at System.Xml.XsdValidatingReader.ProcessReaderEvent()
+   at System.Xml.XsdValidatingReader.Read()
+   at System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at Spring.Util.ConfigXmlDocument.Load(XmlReader reader) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigXmlDocument.cs:line 193
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 260
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 278
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.LoadObjectDefinitions(IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 206
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String location) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 231
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String[] locations) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 255
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(XmlObjectDefinitionReader objectDefinitionReader) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 214
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(DefaultListableObjectFactory objectFactory) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 238
+   at Spring.Context.Support.AbstractXmlApplicationContext.RefreshObjectFactory() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 133
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 766
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-10-10 12:55:26,946 [4] ERROR ListenTo.Core.Actions.ActionPublicationQueue [(null)] - Publication of action has failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ListenTo.Core.Actions.CommentOnNewsItemActionDataHelper.GetActionData(Action action) in F:\ListenTo\trunk\ListenTo.Core\Actions\CommentOnNewsItemActionDataHelper.cs:line 25
+   at ListenTo.Core.Actions.SmtpPublisher.Publish(Action action) in F:\ListenTo\trunk\ListenTo.Core\Actions\SmtpPublisher.cs:line 27
+   at ListenTo.Core.Actions.ActionPublicationQueue.Publish(Object data) in F:\ListenTo\trunk\ListenTo.Core\Actions\ActionPublicationQueue.cs:line 47
+2009-10-10 12:58:20,729 [4] ERROR ListenTo.Core.Actions.ActionPublicationQueue [(null)] - Publication of action has failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ListenTo.Core.Actions.CommentOnNewsItemActionDataHelper.GetActionData(Action action) in F:\ListenTo\trunk\ListenTo.Core\Actions\CommentOnNewsItemActionDataHelper.cs:line 25
+   at ListenTo.Core.Actions.SmtpPublisher.Publish(Action action) in F:\ListenTo\trunk\ListenTo.Core\Actions\SmtpPublisher.cs:line 27
+   at ListenTo.Core.Actions.ActionPublicationQueue.Publish(Object data) in F:\ListenTo\trunk\ListenTo.Core\Actions\ActionPublicationQueue.cs:line 47
+2009-10-10 13:01:51,638 [10] ERROR ListenTo.Core.Actions.ActionPublicationQueue [(null)] - Publication of action has failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ListenTo.Core.Actions.CommentOnNewsItemActionDataHelper.GetActionData(Action action) in F:\ListenTo\trunk\ListenTo.Core\Actions\CommentOnNewsItemActionDataHelper.cs:line 25
+   at ListenTo.Core.Actions.SmtpPublisher.Publish(Action action) in F:\ListenTo\trunk\ListenTo.Core\Actions\SmtpPublisher.cs:line 27
+   at ListenTo.Core.Actions.ActionPublicationQueue.Publish(Object data) in F:\ListenTo\trunk\ListenTo.Core\Actions\ActionPublicationQueue.cs:line 47
+2009-10-10 13:03:01,732 [9] ERROR Spring.Objects.ObjectWrapper [(null)] - Failed setting property 'CommentManager'
+Spring.Core.InvalidPropertyException: 'CommentManager' node cannot be resolved for the specified context [ListenTo.Core.Actions.CommentOnNewsItemActionBuilder].
+   at Spring.Expressions.PropertyOrFieldNode.InitializeNode(Object context) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 138
+   at Spring.Expressions.PropertyOrFieldNode.Set(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 248
+   at Spring.Expressions.BaseNode.SetValue(Object context, IDictionary variables, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 229
+   at Spring.Expressions.BaseNode.Spring.Expressions.IExpression.SetValue(Object context, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 209
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(IExpression propertyExpression, Object val) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 268
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(PropertyValue pv) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 284
+   at Spring.Objects.ObjectWrapper.SetPropertyValues(IPropertyValues propertyValues, Boolean ignoreUnknown) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 343
+2009-10-10 13:03:10,614 [9] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': 'CommentManager' node cannot be resolved for the specified context [ListenTo.Core.Actions.CommentOnNewsItemActionBuilder]. ---> Spring.Objects.Factory.ObjectCreationException: Error thrown by a dependency of object 'ActionsManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 55' : Initialization of object failed : 'CommentManager' node cannot be resolved for the specified context [ListenTo.Core.Actions.CommentOnNewsItemActionBuilder].
+ while resolving 'OwnershipHelperFactory' to 'OwnershipHelperFactory' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 275'
+ while resolving 'OwnershipHelpers[<T(ListenTo.Shared.DO.Artist)>]' to 'ArtistOwnershipHelper' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 330'
+ while resolving 'UserManager' to 'UserManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 103'
+ while resolving 'IsNewHelperFactory' to 'IsNewHelperFactory' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 223'
+ while resolving 'IsNewHelpers[<T(ListenTo.Shared.DO.Gig)>]' to 'GigIsNewHelper' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 259'
+ while resolving 'GigManager' to 'GigManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 81'
+ while resolving 'ValidationRunner' to 'ThrowsExceptionValidationRunner' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 358'
+ while resolving 'ValidationHelpers[<T(ListenTo.Shared.DO.Comment)>]' to 'CommentValidationHelper' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 440'
+ while resolving 'CommentManager' to 'CommentManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 85'
+ while resolving 'ActionForCommentBuilderFactory' to 'ActionForCommentBuilderFactory' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 186'
+ while resolving 'ActionForCommentBuilders[NEWSITEM]' to 'CommentOnNewsItemActionBuilder' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 180' ---> Spring.Core.InvalidPropertyException: 'CommentManager' node cannot be resolved for the specified context [ListenTo.Core.Actions.CommentOnNewsItemActionBuilder].
+   at Spring.Expressions.PropertyOrFieldNode.InitializeNode(Object context) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 138
+   at Spring.Expressions.PropertyOrFieldNode.Set(Object context, EvaluationContext evalContext, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\PropertyOrFieldNode.cs:line 248
+   at Spring.Expressions.BaseNode.SetValue(Object context, IDictionary variables, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 229
+   at Spring.Expressions.BaseNode.Spring.Expressions.IExpression.SetValue(Object context, Object newValue) in F:\Spring.NET\src\Spring\Spring.Core\Expressions\BaseNode.cs:line 209
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(IExpression propertyExpression, Object val) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 268
+   at Spring.Objects.ObjectWrapper.SetPropertyValue(PropertyValue pv) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 284
+   at Spring.Objects.ObjectWrapper.SetPropertyValues(IPropertyValues propertyValues, Boolean ignoreUnknown) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 358
+   at Spring.Objects.ObjectWrapper.SetPropertyValues(IPropertyValues pvs) in F:\Spring.NET\src\Spring\Spring.Core\Objects\ObjectWrapper.cs:line 309
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ApplyPropertyValues(String name, RootObjectDefinition definition, IObjectWrapper wrapper, IPropertyValues properties) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 362
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PopulateObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 533
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 1821
+   at Spring.Objects.Factory.Support.WebObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 433
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 879
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveReference(IConfigurableObjectDefinition definition, String name, String argumentName, RuntimeObjectReference reference) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 352
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveValueIfNecessary(String name, RootObjectDefinition definition, String argumentName, Object argumentValue) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 139
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ApplyPropertyValues(String name, RootObjectDefinition definition, IObjectWrapper wrapper, IPropertyValues properties) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 353
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PopulateObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 533
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 1821
+   at Spring.Objects.Factory.Support.WebObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 433
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 888
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1936
+   at Spring.Objects.Factory.Support.WebObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 291
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1868
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1685
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.PreInstantiateSingletons() in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 503
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 797
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-10-10 16:31:09,891 [11] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': No object named 'CommentOnUserProfileActionDataHelper' is defined : Cannot find definition for object [CommentOnUserProfileActionDataHelper] ---> Spring.Objects.Factory.ObjectCreationException: Error thrown by a dependency of object 'ActionsManager' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 55' : Can't resolve reference to object 'CommentOnUserProfileActionDataHelper' while setting 'ActionDataHelpers[COMMENTED_ON_A_USERPROFILE]'.
+ while resolving 'ActionDataHelperFactory' to 'ActionDataHelperFactory' defined in 'file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] line 218' ---> Spring.Objects.Factory.NoSuchObjectDefinitionException: No object named 'CommentOnUserProfileActionDataHelper' is defined : Cannot find definition for object [CommentOnUserProfileActionDataHelper]
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1842
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1685
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveReference(IConfigurableObjectDefinition definition, String name, String argumentName, RuntimeObjectReference reference) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 348
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveReference(IConfigurableObjectDefinition definition, String name, String argumentName, RuntimeObjectReference reference) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 352
+   at Spring.Objects.Factory.Support.ObjectDefinitionValueResolver.ResolveValueIfNecessary(String name, RootObjectDefinition definition, String argumentName, Object argumentValue) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\ObjectDefinitionValueResolver.cs:line 139
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ApplyPropertyValues(String name, RootObjectDefinition definition, IObjectWrapper wrapper, IPropertyValues properties) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 353
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PopulateObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 533
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 1821
+   at Spring.Objects.Factory.Support.WebObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 433
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 888
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1936
+   at Spring.Objects.Factory.Support.WebObjectFactory.CreateAndCacheSingletonInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Web\Objects\Factory\Support\WebObjectFactory.cs:line 291
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1868
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1685
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.PreInstantiateSingletons() in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 503
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 797
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-10-10 16:35:01,011 [10] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Exception of type 'System.Web.HttpUnhandledException' was thrown.   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext)
+   at System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewUserControl(ViewContext context, ViewUserControl control)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   at ASP.views_account_whatsnew_aspx.__RenderContent2(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Account\WhatsNew.aspx:line 15
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ASP.views_shared_account_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Shared\Account.Master:line 64
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_account_whatsnew_aspx.ProcessRequest(HttpContext context) in c:\Users\rick\AppData\Local\Temp\Temporary ASP.NET Files\root\a6129b27\3f0567bc\App_Web_zljralpl.14.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<InvokeActionResultWithFilters>b__e()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-10 17:12:46,451 [10] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - f:\ListenTo\trunk\ListenTo.Web\Views\Shared\Actions\COMMENTED_ON_A_NEWSITEM.ascx(9): error CS1061: 'System.Web.Mvc.HtmlHelper<ListenTo.Shared.DO.Action>' does not contain a definition for 'ViewNewsItem' and no extension method 'ViewNewsItem' accepting a first argument of type 'System.Web.Mvc.HtmlHelper<ListenTo.Shared.DO.Action>' could be found (are you missing a using directive or an assembly reference?)   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   at System.Web.Mvc.WebFormViewEngine.FileExists(ControllerContext controllerContext, String virtualPath)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPathFromSpecificName(ControllerContext controllerContext, String name, String cacheKey, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String locationsPropertyName, String name, String controllerName, String cacheKeyPrefix, Boolean useCache, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.FindPartialView(ControllerContext controllerContext, String partialViewName, Boolean useCache)
+   at System.Web.Mvc.ViewEngineCollection.<>c__DisplayClass2.<FindPartialView>b__0(IViewEngine e)
+   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 cacheLocator, Func`2 locator)
+   at System.Web.Mvc.ViewEngineCollection.FindPartialView(ControllerContext controllerContext, String partialViewName)
+   at System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   at ASP.views_shared_actionlist_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Shared\ActionList.ascx:line 8
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext)
+   at System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewUserControl(ViewContext context, ViewUserControl control)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   at ASP.views_whois_index_aspx.__RenderContent1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\WhoIs\Index.aspx:line 19
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ASP.views_shared_detail_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Shared\Detail.Master:line 31
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_whois_index_aspx.ProcessRequest(HttpContext context) in c:\Users\rick\AppData\Local\Temp\Temporary ASP.NET Files\root\a6129b27\3f0567bc\App_Web_0njgsu8a.0.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<InvokeActionResultWithFilters>b__e()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-10-10 17:15:09,671 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - f:\ListenTo\trunk\ListenTo.Web\Views\Shared\Actions\COMMENTED_ON_A_NEWSITEM.ascx(9): error CS0103: The name 'artistAddedActionData' does not exist in the current context   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   at System.Web.Mvc.WebFormViewEngine.FileExists(ControllerContext controllerContext, String virtualPath)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPathFromSpecificName(ControllerContext controllerContext, String name, String cacheKey, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String locationsPropertyName, String name, String controllerName, String cacheKeyPrefix, Boolean useCache, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.FindPartialView(ControllerContext controllerContext, String partialViewName, Boolean useCache)
+   at System.Web.Mvc.ViewEngineCollection.<>c__DisplayClass2.<FindPartialView>b__0(IViewEngine e)
+   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 cacheLocator, Func`2 locator)
+   at System.Web.Mvc.ViewEngineCollection.FindPartialView(ControllerContext controllerContext, String partialViewName)
+   at System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   at ASP.views_shared_actionlist_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Shared\ActionList.ascx:line 8
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext)
+   at System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewUserControl(ViewContext context, ViewUserControl control)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   at ASP.views_whois_index_aspx.__RenderContent1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\WhoIs\Index.aspx:line 19
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ASP.views_shared_detail_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Shared\Detail.Master:line 31
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_whois_index_aspx.ProcessRequest(HttpContext context) in c:\Users\rick\AppData\Local\Temp\Temporary ASP.NET Files\root\a6129b27\3f0567bc\App_Web_0njgsu8a.0.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<InvokeActionResultWithFilters>b__e()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)

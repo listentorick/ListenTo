@@ -1,0 +1,28 @@
+			#header {
+				background: #8c9f54 url(../images/location/bg-header.gif) repeat-x;
+			}
+			#header h1 span{
+				background-image:url(../images/location/logo.gif);
+			}
+			#skyline {
+				background:url(../images/location/skyline.gif) repeat-x;
+			}
+			
+
+/* homepage */
+			.home #header {
+				background: url(../images/location/amp-top.jpg) no-repeat right;
+			}
+			.home #header h1 span{
+				background-image:url(../images/location/logo-home.gif);
+			}
+
+			.home #wrapper {
+				background:transparent;
+			}
+			.home #highlightBand .overlay {
+				background:url(../images/homepage/poster-overlay.png) no-repeat left top;
+			}
+			* html .home #highlightBand .overlay {
+				background:url(../images/homepage/poster-overlay.gif) no-repeat left top;
+			}

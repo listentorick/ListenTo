@@ -1,0 +1,12 @@
+﻿Listen To Manchester - we love new Manchester music
+---------------------------------------------------
+
+Hello you!
+
+Your NewsItem "#Action.ActionData.NewsItem.Name#" has a comment!
+
+Go have a look http://www.listentomanchester.co.uk/news/#Action.ActionData.NewsItem.Id#
+
+Lots of love,
+Listen To
+

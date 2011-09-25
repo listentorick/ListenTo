@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Artist.Master.cs" Inherits="ListenTo.Web.Views.Shared.Artist" %>
+<%@ Import Namespace="ListenTo.Web.Helpers" %>
+<%@ Import Namespace="ListenTo.Web.Helpers.HtmlHelperExtensions" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="en-uk" />
+
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="14 days" />
+
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+    <asp:ContentPlaceHolder ID="HeaderContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+
+	<style type="text/css">@import "/content/css/global.css";</style>
+	<style type="text/css">@import "/content/css/manchester.css";</style>
+	<style type="text/css">@import "/content/css/inner.css";</style>
+	<style type="text/css">@import "/content/css/inner-homepage.css";</style>
+	<style type="text/css">@import "/content/css/band.css";</style>
+
+	<!--[if lte IE 6]><style type="text/css">@import "/content/css/ie6.css";</style><![endif]-->
+	<!--[if IE 7]><style type="text/css">@import "/content/css/ie7.css";</style><![endif]-->
+	
+	<script type="text/javascript" src="/content/js/jquery.js"></script>
+	<script type="text/javascript" src="/content/js/global.js"></script>
+	<script type="text/javascript" src="/content/js/date.js"></script>
+	<script type="text/javascript" src="/content/js/thickbox.js"></script>
+
+</head>
+
+<body>
+
+
+<%Html.RenderPartial("~/Views/Shared/Header.ascx");%>
+<%Html.RenderPartial("~/Views/Shared/MainMenu.ascx");%>
+
+<div id="wrapper">
+	<div id="innerWrapper">		
+	
+	    <%Html.RenderPartial("~/Views/Shared/ArtistMenu.ascx", ViewData.Model);%>		
+
+
+		<div id="mainContent">
+             <asp:ContentPlaceHolder ID="PrimaryContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+		</div>
+		
+		<div id="subContent">
+            <asp:ContentPlaceHolder ID="SecondryContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>	
+		</div>
+		
+	</div>
+	<div id="skyline"/>
+</div>
+
+
+<%Html.RenderPartial("~/Views/Shared/Footer.ascx", ViewData.Model.Footer);%>
+
+<%Html.RenderPartial("~/Views/Shared/BecomeAFanPopup.ascx", ViewData.Model);%>
+
+<%Html.RenderPartial("~/Views/Account/LoginPopup.ascx");%>
+
+
+</body>
+</html>

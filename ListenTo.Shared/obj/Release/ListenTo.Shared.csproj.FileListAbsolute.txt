@@ -1,0 +1,15 @@
+F:\ListenTo\trunk\ListenTo.Shared\bin\Release\ListenTo.Shared.dll
+F:\ListenTo\trunk\ListenTo.Shared\bin\Release\ListenTo.Shared.pdb
+F:\ListenTo\trunk\ListenTo.Shared\bin\Release\Common.Logging.dll
+F:\ListenTo\trunk\ListenTo.Shared\bin\Release\Common.Logging.Log4Net.dll
+F:\ListenTo\trunk\ListenTo.Shared\bin\Release\Dimebrain.TweetSharp.dll
+F:\ListenTo\trunk\ListenTo.Shared\bin\Release\ListenTo.Core.Audio.dll
+F:\ListenTo\trunk\ListenTo.Shared\bin\Release\ListenTo.TinyUrl.dll
+F:\ListenTo\trunk\ListenTo.Shared\bin\Release\TemplateEngine.dll
+F:\ListenTo\trunk\ListenTo.Shared\bin\Release\log4net.dll
+F:\ListenTo\trunk\ListenTo.Shared\bin\Release\Dimebrain.TweetSharp.xml
+F:\ListenTo\trunk\ListenTo.Shared\bin\Release\ListenTo.Core.Audio.pdb
+F:\ListenTo\trunk\ListenTo.Shared\bin\Release\ListenTo.TinyUrl.pdb
+F:\ListenTo\trunk\ListenTo.Shared\obj\Release\ResolveAssemblyReference.cache
+F:\ListenTo\trunk\ListenTo.Shared\obj\Release\ListenTo.Shared.dll
+F:\ListenTo\trunk\ListenTo.Shared\obj\Release\ListenTo.Shared.pdb

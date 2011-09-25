@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:cache="http://www.listentomanchester.co.uk/schema/cache"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--xsi:schemaLocation="http://www.listentomanchester.co.uk/schema/cache http://www.listentomanchester.co.uk/cache.xsd">-->
+  
+  <description>
+  </description>
+
+  <cache:cache>
+    <cache:object target="ArtistManager">
+      <cache:method name="GetNumberOfArtistsBySite" key="'GetNumberOfArtistsBySite'" storeInCaches="ArtistCache"/>
+    </cache:object>
+    <cache:object target="StyleManager">
+      <cache:method name="GetStyles"  key="'GetStyles'" storeInCaches="MetaDataCache"/>
+    </cache:object>
+    <cache:object target="SiteManager">
+      <cache:method name="GetSiteByURL" key="'GetSiteByURL'" storeInCaches="MetaDataCache"/>
+    </cache:object>
+  </cache:cache>
+  
+  <object id="ArtistCache" type="Spring.Caching.AspNetCache, Spring.Web">
+    <property name="SlidingExpiration" value="true"/>
+    <property name="Priority" value="Low"/>
+    <property name="TimeToLive" value="00:02:00"/>
+  </object>
+
+  <object id="NewsItemCache" type="Spring.Caching.AspNetCache, Spring.Web">
+    <property name="SlidingExpiration" value="true"/>
+    <property name="Priority" value="Low"/>
+    <property name="TimeToLive" value="00:02:00"/>
+  </object>
+
+  <object id="GigCache" type="Spring.Caching.AspNetCache, Spring.Web">
+    <property name="SlidingExpiration" value="true"/>
+    <property name="Priority" value="Low"/>
+    <property name="TimeToLive" value="00:02:00"/>
+  </object>
+
+  <object id="MetaDataCache" type="Spring.Caching.AspNetCache, Spring.Web">
+    <property name="SlidingExpiration" value="true"/>
+    <property name="Priority" value="Low"/>
+    <property name="TimeToLive" value="12:00:00"/>
+  </object>
+
+
+  <object name="BaseManager" abstract="true">
+    <property name="RepositoryFactory" ref="RequestScopedLinqToSQLRepositoryFactory"/>
+    <property name="OwnershipHelperFactory" ref="OwnershipHelperFactory" />
+    <property name="IsNewHelperFactory" ref="IsNewHelperFactory"/>
+    <property name="ValidationRunner" ref="ThrowsExceptionValidationRunner"/>
+  </object>
+
+  <object id="ActionsManager" autowire="byName" type="ListenTo.Core.Managers.ActionsManager, ListenTo.Core" singleton="true" parent="BaseManager">
+    <property name="ActionPublicationQueue" ref="ActionPublicationQueue"/>
+    <property name="ActionDataHelperFactory" ref="ActionDataHelperFactory"/>
+  </object>
+
+  <object id="ActionPublicationQueue" autowire="byName" type="ListenTo.Core.Actions.ActionPublicationQueue, ListenTo.Core" singleton="true" >
+    <property name="ActionPublisherFactory" ref="ActionPublisherFactory"/>
+  </object>
+
+  <object id="RelationshipManager" autowire="byName" type="ListenTo.Core.Managers.RelationshipManager, ListenTo.Core" singleton="true" parent="BaseManager">
+  </object>
+
+
+
+  <object id="SiteManager" autowire="byName" type="ListenTo.Core.Managers.SiteManager, ListenTo.Core" singleton="true" parent="BaseManager">
+  </object>
+
+
+  <object id="TrackManager" autowire="byName" type="ListenTo.Core.Managers.TrackManager, ListenTo.Core" singleton="true" parent="BaseManager">
+    <property name="FileHelpers" ref="FileHelpers"/>
+  </object>
+
+  <object id="ArtistManager" autowire="byName" type="ListenTo.Core.Managers.ArtistManager, ListenTo.Core" singleton="true" parent="BaseManager">
+    <property name="ActionsManager" ref="ActionsManager"/>
+  </object>
+
+  <object id="GigManager" autowire="byName" type="ListenTo.Core.Managers.GigManager, ListenTo.Core" singleton="true" parent="BaseManager">
+    <property name="VenueManager" ref="VenueManager"/>
+  </object>
+
+  <object id="CommentManager" autowire="byName" type="ListenTo.Core.Managers.CommentManager, ListenTo.Core" singleton="true" parent="BaseManager">
+    <property name="ActionForCommentBuilderFactory" ref="ActionForCommentBuilderFactory"/>
+    <property name="ActionsManager" ref="ActionsManager"/>
+  </object>
+
+
+  <object id="NewsItemManager" autowire="byName" type="ListenTo.Core.Managers.NewsItemManager, ListenTo.Core" singleton="true" parent="BaseManager">
+    <property name="ActionsManager" ref="ActionsManager"/>
+    <property name="ImageManager" ref="ImageManager"/>
+  </object>
+
+  <object id="WhatsNewManager" autowire="byName" type="ListenTo.Core.Managers.WhatsNewManager, ListenTo.Core" singleton="true" parent="BaseManager">
+    <property name="NewsItemManager" ref="NewsItemManager"/>
+  </object>
+
+  <object id="VenueManager" autowire="byName" type="ListenTo.Core.Managers.VenueManager, ListenTo.Core" singleton="true" parent="BaseManager">
+  </object>
+
+  <object id="UserManager" autowire="byName" type="ListenTo.Core.Managers.UserManager, ListenTo.Core" singleton="true" parent="BaseManager">
+    <property name="UserApprovalStrategy" ref="UserApprovalStrategy"/>
+    <property name="RetrieveDetailsStrategy" ref="RetrieveDetailsStrategy"/>
+    <property name="ActionsManager" ref="ActionsManager"/>
+  </object>
+
+
+  <object id="UserProfileManager" autowire="byName" type="ListenTo.Core.Managers.UserProfileManager, ListenTo.Core" singleton="true" parent="BaseManager">
+  </object>
+
+  <object id="ImageManager" autowire="byName" type="ListenTo.Core.Managers.ImageManager, ListenTo.Core" singleton="true" parent="BaseManager">
+
+  </object>
+
+  <object id="StyleManager" autowire="byName" type="ListenTo.Core.Managers.StyleManager, ListenTo.Core" singleton="true" parent="BaseManager">
+  </object>
+
+  <object id="TownManager" autowire="byName" type="ListenTo.Core.Managers.TownManager, ListenTo.Core" singleton="true" parent="BaseManager">
+  </object>
+
+  <object id="TinyUrlUrlShortener" type="ListenTo.Shared.Helpers.TinyUrlUrlShortener, ListenTo.Shared" singleton="true"/>
+
+  <object id="AderTemplateEngineHelper" type="ListenTo.Shared.Helpers.AderTemplateEngineHelper, ListenTo.Shared" singleton="true"/>
+
+  <object id="NewsAddedActionUrlHelper"  type="ListenTo.Core.Actions.NewsAddedActionUrlHelper, ListenTo.Core" singleton="true"/>
+
+  <object id="AddedANewsItemActionTwitterPublisher" type="ListenTo.Core.Actions.TwitterPublisher, ListenTo.Core" singleton="true">
+    <property name="ActionDataHelper" ref="NewsAddedActionDataHelper"/>
+    <property name="ActionUrlHelper" ref="NewsAddedActionUrlHelper"/>
+    <property name="TempateEngine" ref="AderTemplateEngineHelper"/>
+    <property name="UrlShortener" ref="TinyUrlUrlShortener"/>
+    <property name="TemplateFilename" value="NewsItemAddedTwitterTemplate.txt"/>
+  </object>
+
+  <object id="CommentedOnANewsItemActionSmtpPublisher" type="ListenTo.Core.Actions.SmtpPublisher, ListenTo.Core" singleton="true">
+    <property name="ActionDataHelper" ref="CommentOnNewsItemActionDataHelper"/>
+    <property name="TempateEngine" ref="AderTemplateEngineHelper"/>
+    <property name="BodyTemplateFilename" value="CommentedOnANewsItemActionSmtpBodyTemplate.txt"/>
+    <property name="SubjectTemplateFilename" value="CommentedOnANewsItemActionSmtpSubjectTemplate.txt"/>
+    <property name="EmailSender" ref="EmailSender"/>
+    <property name="UsersToInformAboutActionResolver" ref="UsersToInformAboutCommentOnNewsItemActionResolver"/>
+  </object>
+
+  <object id="CommentOnUserProfileActionSmtpPublisher" type="ListenTo.Core.Actions.SmtpPublisher, ListenTo.Core" singleton="true">
+    <property name="ActionDataHelper" ref="CommentOnUserProfileActionDataHelper"/>
+    <property name="TempateEngine" ref="AderTemplateEngineHelper"/>
+    <property name="BodyTemplateFilename" value="CommentOnUserProfileActionSmtpBodyTemplate.txt"/>
+    <property name="SubjectTemplateFilename" value="CommentOnUserProfileActionSmtpSubjectTemplate.txt"/>
+    <property name="EmailSender" ref="EmailSender"/>
+    <property name="UsersToInformAboutActionResolver" ref="UsersToInformAboutCommentOnUserProfileActionResolver"/>
+  </object>
+
+  <object id="UsersToInformAboutCommentOnUserProfileActionResolver" type="ListenTo.Core.Actions.UsersToInformAboutCommentOnUserProfileActionResolver, ListenTo.Core" singleton="true">
+    <property name="CommentManager" ref="CommentManager"/>
+    <property name="UserProfileManager" ref="UserProfileManager"/>
+  </object>
+
+  <object id="UsersToInformAboutCommentOnNewsItemActionResolver" type="ListenTo.Core.Actions.UsersToInformAboutCommentOnNewsItemActionResolver, ListenTo.Core" singleton="true">
+    <property name="CommentManager" ref="CommentManager"/>
+    <property name="UserProfileManager" ref="UserProfileManager"/>
+    <property name="NewsItemManager" ref="NewsItemManager"/>
+  </object>
+
+  <object id="CommentedOnANewsItemActionPublishers" type="System.Collections.Generic.List&lt;ListenTo.Shared.Interfaces.Actions.IActionPublisher>">
+    <constructor-arg>
+      <list element-type="ListenTo.Shared.Interfaces.Actions.IActionPublisher, ListenTo.Shared">
+        <ref object="CommentedOnANewsItemActionSmtpPublisher"/>
+      </list>
+    </constructor-arg>
+  </object>
+
+  <object id="AddedANewsItemActionPublishers" type="System.Collections.Generic.List&lt;ListenTo.Shared.Interfaces.Actions.IActionPublisher>">
+    <constructor-arg>
+      <list element-type="ListenTo.Shared.Interfaces.Actions.IActionPublisher, ListenTo.Shared">
+          <ref object="AddedANewsItemActionTwitterPublisher"/>
+      </list>
+    </constructor-arg>
+  </object>
+
+  <object id="CommentedOnUserProfileActionPublishers" type="System.Collections.Generic.List&lt;ListenTo.Shared.Interfaces.Actions.IActionPublisher>">
+    <constructor-arg>
+      <list element-type="ListenTo.Shared.Interfaces.Actions.IActionPublisher, ListenTo.Shared">
+        <ref object="CommentOnUserProfileActionSmtpPublisher"/>
+      </list>
+    </constructor-arg>
+  </object>
+
+  
+
+  <object name="ActionPublisherFactory" type="ListenTo.Core.Actions.ActionPublisherFactory, ListenTo.Core">
+    <property name="ActionPublishers">
+      <dictionary key-type="ListenTo.Shared.Enums.ActionType" value-type="System.Collections.Generic.List&lt;ListenTo.Shared.Interfaces.Actions.IActionPublisher>">      
+        <entry key="ADDED_A_NEWS_ITEM" value-ref="AddedANewsItemActionPublishers"/>
+        <entry key="COMMENTED_ON_A_NEWSITEM" value-ref="CommentedOnANewsItemActionPublishers"/>
+        <entry key="COMMENTED_ON_A_USERPROFILE" value-ref="CommentedOnUserProfileActionPublishers"/>
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="CommentOnNewsItemActionBuilder" singleton="true" type="ListenTo.Core.Actions.CommentOnNewsItemActionBuilder, ListenTo.Core" >
+    <property name="NewsItemManager" ref="NewsItemManager"/> 
+  </object>
+
+  <object name="CommentOnUserProfileActionBuilder" singleton="true" type="ListenTo.Core.Actions.CommentOnUserProfileActionBuilder, ListenTo.Core" >
+    <property name="UserProfileManager" ref="UserProfileManager"/>
+  </object>
+
+  <object name="ActionForCommentBuilderFactory" type="ListenTo.Core.Actions.ActionForCommentBuilderFactory, ListenTo.Core">
+    <property name="ActionForCommentBuilders">
+      <dictionary key-type="ListenTo.Shared.Enums.ContentType" value-type="ListenTo.Shared.Interfaces.Actions.IActionForCommentBuilder, ListenTo.Shared">
+        <entry key="NEWSITEM" value-ref="CommentOnNewsItemActionBuilder"/>
+        <entry key="USERPROFILE" value-ref="CommentOnUserProfileActionBuilder"/>
+      </dictionary>
+    </property>
+  </object>
+  
+  <object name="ActionDataHelperFactory" type="ListenTo.Core.Actions.ActionDataHelperFactory, ListenTo.Core">
+    <property name="ActionDataHelpers">
+      <dictionary key-type="System.String" value-type="ListenTo.Shared.Interfaces.Actions.IActionDataHelper, ListenTo.Shared">
+        <entry key="ADDED_A_NEWS_ITEM" value-ref="NewsAddedActionDataHelper"/>
+        <entry key="ADDED_AN_ARTIST" value-ref="ArtistAddedActionDataHelper"/>
+        <entry key="ADDED_A_GIG" value-ref="GigAddedActionDataHelper"/>
+        <entry key="COMMENTED_ON_A_NEWSITEM" value-ref="CommentOnNewsItemActionDataHelper"/>
+        <entry key="COMMENTED_ON_A_USERPROFILE" value-ref="CommentOnUserProfileActionDataHelper"/>
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="CommentOnUserProfileActionDataHelper" singleton="true" type="ListenTo.Core.Actions.CommentOnUserProfileActionDataHelper, ListenTo.Core" >
+    <property name="UserProfileManager" ref="UserProfileManager"/>
+    <property name="CommentManager" ref="CommentManager"/>
+  </object>
+  
+  <object name="CommentOnNewsItemActionDataHelper" singleton="true" type="ListenTo.Core.Actions.CommentOnNewsItemActionDataHelper, ListenTo.Core" >
+    <property name="NewsItemManager" ref="NewsItemManager"/>
+    <property name="CommentManager" ref="CommentManager"/>
+  </object>
+  
+  <object name="NewsAddedActionDataHelper" singleton="true" type="ListenTo.Core.Actions.NewsAddedActionDataHelper, ListenTo.Core" >
+    <property name="NewsItemManager" ref="NewsItemManager"/>
+  </object>
+
+  <object name="GigAddedActionDataHelper"  type="ListenTo.Core.Actions.GigAddedActionDataHelper, ListenTo.Core" >
+    <property name="GigManager" ref="GigManager"/>
+  </object>
+
+  <object name="ArtistAddedActionDataHelper"  type="ListenTo.Core.Actions.ArtistAddedActionDataHelper, ListenTo.Core" >
+    <property name="ArtistManager" ref="ArtistManager"/>
+  </object>
+
+  <object name="IsNewHelperFactory" type="ListenTo.Core.IsNew.IsNewHelperFactory, ListenTo.Core">
+    <property name="IsNewHelpers">
+      <dictionary key-type="System.Type" value-type="ListenTo.Shared.Interfaces.IsNew.IIsNewHelper, ListenTo.Shared">
+
+        <entry value-ref="NewsItemIsNewHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.NewsItem)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="ArtistIsNewHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Artist)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="GigIsNewHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Gig)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="VenueIsNewHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Venue)"/>
+          </key>
+        </entry>
+
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="VenueIsNewHelper" type="ListenTo.Core.IsNew.VenueIsNewHelper, ListenTo.Core" >
+    <property name="VenueManager" ref="VenueManager"/>
+  </object>
+  
+  <object name="GigIsNewHelper"   type="ListenTo.Core.IsNew.GigIsNewHelper, ListenTo.Core" >
+    <property name="GigManager" ref="GigManager"/>
+  </object>
+
+  <object name="NewsItemIsNewHelper"   type="ListenTo.Core.IsNew.NewsItemIsNewHelper, ListenTo.Core" >
+    <property name="NewsItemManager" ref="NewsItemManager"/>
+  </object>
+
+  <object name="ArtistIsNewHelper"   type="ListenTo.Core.IsNew.ArtistIsNewHelper, ListenTo.Core" >
+    <property name="ArtistManager" ref="ArtistManager"/>
+  </object>
+
+  <object name="OwnershipHelper"   type="ListenTo.Core.Ownership.OwnershipHelper, ListenTo.Core" >
+    <property name="OwnershipHelperFactory" ref="OwnershipHelperFactory"/>
+  </object>
+
+  <object name="OwnershipHelperFactory" type="ListenTo.Core.Ownership.OwnershipHelperFactory, ListenTo.Core">
+    <property name="OwnershipHelpers">
+      <dictionary key-type="System.Type" value-type="ListenTo.Shared.Interfaces.Ownership.IOwnershipHelper, ListenTo.Shared">
+
+        <entry value-ref="ArtistOwnershipHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Artist)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="GigOwnershipHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Gig)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="CommentOwnershipHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Comment)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="NewsItemOwnershipHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.NewsItem)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="TrackOwnershipHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Track)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="UserProfileOwnershipHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.UserProfile)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="VenueOwnershipHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Venue)"/>
+          </key>
+        </entry>
+        
+
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="BaseOwnershipHelper" abstract="true">
+    <property name="UserManager" ref="UserManager"/>
+  </object>
+
+  <object name="ArtistOwnershipHelper"   type="ListenTo.Core.Ownership.ArtistOwnershipHelper, ListenTo.Core" parent="BaseOwnershipHelper">
+    <property name="ArtistManager" ref="ArtistManager"/>
+  </object>
+
+  <object name="GigOwnershipHelper"   type="ListenTo.Core.Ownership.GigOwnershipHelper, ListenTo.Core" parent="BaseOwnershipHelper">
+    <property name="GigManager" ref="GigManager"/>
+  </object>
+
+  <object name="CommentOwnershipHelper"   type="ListenTo.Core.Ownership.CommentOwnershipHelper, ListenTo.Core" parent="BaseOwnershipHelper">
+    <property name="CommentManager" ref="CommentManager"/>
+  </object>
+
+  <object name="NewsItemOwnershipHelper"   type="ListenTo.Core.Ownership.NewsItemOwnershipHelper, ListenTo.Core" parent="BaseOwnershipHelper">
+    <property name="NewsItemManager" ref="NewsItemManager"/>
+  </object>
+
+  <object name="TrackOwnershipHelper"   type="ListenTo.Core.Ownership.TrackOwnershipHelper, ListenTo.Core" parent="BaseOwnershipHelper">
+    <property name="TrackManager" ref="TrackManager"/>
+  </object>
+
+  <object name="UserProfileOwnershipHelper"   type="ListenTo.Core.Ownership.UserProfileOwnershipHelper, ListenTo.Core" parent="BaseOwnershipHelper">
+    <property name="UserProfileManager" ref="UserProfileManager"/>
+  </object>
+
+  <object name="VenueOwnershipHelper"   type="ListenTo.Core.Ownership.VenueOwnershipHelper, ListenTo.Core" parent="BaseOwnershipHelper">
+    <property name="VenueManager" ref="VenueManager"/>
+  </object>
+
+  <object name="ThrowsExceptionValidationRunner" type="ListenTo.Shared.Validation.ThrowsExceptionValidationRunner, ListenTo.Shared">
+
+    <property name="ValidationHelpers">
+      <dictionary key-type="System.Type" value-type="ListenTo.Shared.Validation.IValidationHelper, ListenTo.Shared">
+
+        <entry value-ref="UserValidationHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.User)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="ArtistValidationHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Artist)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="CommentValidationHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Comment)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="GigValidationHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Gig)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="TrackValidationHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Track)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="NewsItemValidationHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.NewsItem)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="ImageValidationHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Image)"/>
+          </key>
+        </entry>
+
+        <entry value-ref="UserProfileValidationHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.UserProfile)"/>
+          </key>
+        </entry>
+        
+        <entry value-ref="VenueValidationHelper">
+          <key>
+            <expression value="T(ListenTo.Shared.DO.Venue)"/>
+          </key>
+        </entry>
+
+      </dictionary>
+    </property>
+
+  </object>
+
+  <object name="UserProfileValidationHelper"   type="ListenTo.Shared.Validation.UserProfileValidationHelper, ListenTo.Shared" >
+  </object>
+
+  <object name="VenueValidationHelper" type="ListenTo.Shared.Validation.VenueValidationHelper, ListenTo.Shared" >
+    <property name="VenueManager" ref="VenueManager"/>
+  </object>
+
+  <object name="ImageValidationHelper"   type="ListenTo.Shared.Validation.ImageValidationHelper, ListenTo.Shared" >
+  </object>
+
+  <object name="UserValidationHelper"   type="ListenTo.Shared.Validation.UserValidationHelper, ListenTo.Shared" >
+    <property name="UserManager" ref="UserManager"/>
+  </object>
+
+  <object name="ArtistValidationHelper"   type="ListenTo.Shared.Validation.ArtistValidationHelper, ListenTo.Shared" >
+    <property name="ArtistManager" ref="ArtistManager"/>
+  </object>
+
+  <object name="CommentValidationHelper" type="ListenTo.Shared.Validation.CommentValidationHelper, ListenTo.Shared" >
+    <property name="CommentManager" ref="CommentManager"/>
+  </object>
+
+  <object name="GigValidationHelper" type="ListenTo.Shared.Validation.GigValidationHelper, ListenTo.Shared" >
+    <property name="GigManager" ref="GigManager"/>
+  </object>
+
+  <object name="TrackValidationHelper" type="ListenTo.Shared.Validation.TrackValidationHelper, ListenTo.Shared" >
+  </object>
+
+  <object name="NewsItemValidationHelper" type="ListenTo.Shared.Validation.NewsItemValidationHelper, ListenTo.Shared" >
+  </object>
+
+  <object name ="EmailSender" type ="ListenTo.Core.Mail.SmtpEmailSender, ListenTo.Core.Mail">
+    <property name="Host" value="mail6.hostinguk.net"></property>
+    <property name="Port" value="25"></property>
+    <property name="AuthenticationUsername" value="transparent@listentomanchester.co.uk"></property>
+    <property name="AuthenticationPassword" value="QtyfSrAr#9"></property>
+  </object>
+
+  <object name ="TemplateEngine" type ="ListenTo.Core.Mail.TemplateEngine, ListenTo.Core.Mail">
+  </object>
+
+  <object name="UserApprovalStrategy" type ="ListenTo.Core.Mail.UserApprovalStrategy, ListenTo.Core.Mail">
+    <property name="EmailSender" ref="EmailSender"/>
+    <property name="TemplateEngine" ref="TemplateEngine"/>
+    <property name="EncryptionHelper" ref="EncryptionHelper"/>
+    <property name="EncryptionKey" value="listento"/>
+    <property name="UserManager" ref="UserManager"/>
+  </object>
+
+  <object name="RetrieveDetailsStrategy" type ="ListenTo.Core.Mail.RetrieveDetailsStrategy, ListenTo.Core.Mail">
+    <property name="EmailSender" ref="EmailSender"/>
+    <property name="TemplateEngine" ref="TemplateEngine"/>
+  </object>
+
+  <object name="EncryptionHelper" type ="ListenTo.Shared.Helpers.SymmetricEncryptionHelper, ListenTo.Shared">
+    <property name="Base64EncodeHelper" ref="Base64EncodeHelper"/>
+  </object>
+
+  <object name="Base64EncodeHelper" type ="ListenTo.Shared.Helpers.UrlFriendlyBase64EncodeHelper, ListenTo.Shared">
+  </object>
+
+  <object name="FileHelpers" type="ListenTo.Shared.Helpers.FileHelpers, ListenTo.Shared"/>
+
+
+
+</objects>

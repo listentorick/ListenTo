@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ARTIST_EMAIL_ADDRESS_INVALID" xml:space="preserve">
+    <value>Give us a valid email address</value>
+  </data>
+  <data name="ARTIST_NEEDS_A_NAME" xml:space="preserve">
+    <value>Tell us your name</value>
+  </data>
+  <data name="ARTIST_NEEDS_A_PROFILE_ADDRESS" xml:space="preserve">
+    <value>Give us a profile address</value>
+  </data>
+  <data name="ARTIST_NEEDS_A_STYLE" xml:space="preserve">
+    <value>Give us a style</value>
+  </data>
+  <data name="ARTIST_NEEDS_A_TOWN" xml:space="preserve">
+    <value>Tell us your town</value>
+  </data>
+  <data name="ARTIST_PROFILE_ADDRESS_MUST_BE_ALPHA_NUMERIC" xml:space="preserve">
+    <value>Give us a profile address (should be letters and numbers only)</value>
+  </data>
+  <data name="ARTIST_PROFILE_ADDRESS_MUST_BE_UNIQUE" xml:space="preserve">
+    <value>This address has already been taken, sorry!</value>
+  </data>
+  <data name="COMMENT_BODY_INVALID" xml:space="preserve">
+    <value>Enter your comment</value>
+  </data>
+  <data name="FILE_IS_NOT_AN_IMAGE" xml:space="preserve">
+    <value>We only accept images of type JPG or GIF</value>
+  </data>
+  <data name="GIG_DESCRIPTION_IS_TOO_LONG" xml:space="preserve">
+    <value>The gig description has to be less than 6000 characters</value>
+  </data>
+  <data name="GIG_NAME_IS_TOO_LONG" xml:space="preserve">
+    <value>The gig name has to be less than 100 characters</value>
+  </data>
+  <data name="GIG_NEEDS_AT_LEAST_ONE_ACT" xml:space="preserve">
+    <value>You need at least one act</value>
+  </data>
+  <data name="GIG_NEEDS_A_NAME" xml:space="preserve">
+    <value>Give your gig a name</value>
+  </data>
+  <data name="GIG_NEEDS_A_VENUE" xml:space="preserve">
+    <value>Select the venue your gig is at</value>
+  </data>
+  <data name="NEWSITEM_BODY_IS_TOO_LONG" xml:space="preserve">
+    <value>You've given us too many words, sorry</value>
+  </data>
+  <data name="NEWSITEM_DESCRIPTION_IS_TOO_LONG" xml:space="preserve">
+    <value>The description has to be less than 200 characters</value>
+  </data>
+  <data name="NEWSITEM_NAME_IS_TOO_LONG" xml:space="preserve">
+    <value>The news headline has to be less than 50 characters</value>
+  </data>
+  <data name="NEWSITEM_NEEDS_A_BODY" xml:space="preserve">
+    <value>Give your news some content</value>
+  </data>
+  <data name="NEWSITEM_NEEDS_A_DESCRIPTION" xml:space="preserve">
+    <value>Give your news a description</value>
+  </data>
+  <data name="NEWSITEM_NEEDS_A_NAME" xml:space="preserve">
+    <value>Give your news a headline</value>
+  </data>
+  <data name="TRACK_NEEDS_AN_ARTIST" xml:space="preserve">
+    <value>Pick the band that wrote/recorded this music</value>
+  </data>
+  <data name="TRACK_NEEDS_AN_MP3" xml:space="preserve">
+    <value>Upload an MP3</value>
+  </data>
+  <data name="TRACK_NEEDS_A_NAME" xml:space="preserve">
+    <value>Give your track a name</value>
+  </data>
+  <data name="TRACK_NEEDS_A_STYLE" xml:space="preserve">
+    <value>Give your track a style</value>
+  </data>
+  <data name="TRACK_NEEDS_A_VALID_MP3" xml:space="preserve">
+    <value>Thats not an mp3! We can accept Mp3 files - sorry!</value>
+  </data>
+  <data name="USERPROFILE_FORENAME_IS_TOO_LONG" xml:space="preserve">
+    <value>Your forename has to be be less than 50 characters</value>
+  </data>
+  <data name="USERPROFILE_PROFILE_IS_TOO_LONG" xml:space="preserve">
+    <value>Your profile has to be be less than 1000 characters</value>
+  </data>
+  <data name="USERPROFILE_SURNAME_IS_TOO_LONG" xml:space="preserve">
+    <value>Your surname has to be be less than 50 characters</value>
+  </data>
+  <data name="USER_NEEDS_A_EMAILADDRESS" xml:space="preserve">
+    <value>Tell us your email address</value>
+  </data>
+  <data name="USER_NEEDS_A_PASSWORD" xml:space="preserve">
+    <value>Enter a password</value>
+  </data>
+  <data name="USER_NEEDS_A_UNIQUE_EMAILADDRESS" xml:space="preserve">
+    <value>Another user has already registered with this email address</value>
+  </data>
+  <data name="USER_NEEDS_A_USERNAME" xml:space="preserve">
+    <value>Enter a username</value>
+  </data>
+  <data name="USER_NEEDS_A_VALID_EMAILADDRESS" xml:space="preserve">
+    <value>Give us a valid email address</value>
+  </data>
+  <data name="USER_PASSWORD_TOO_SHORT" xml:space="preserve">
+    <value>That password is too short to be secure</value>
+  </data>
+  <data name="USER_USERNAME_INVALID" xml:space="preserve">
+    <value>Your username is invalid</value>
+  </data>
+  <data name="USER_USERNAME_MUST_BE_ALPHA_NUMERIC" xml:space="preserve">
+    <value>You username can only contain numbers and letters. No spaces please!</value>
+  </data>
+  <data name="USER_USERNAME_NOT_AVAILABLE" xml:space="preserve">
+    <value>That username is already taken</value>
+  </data>
+  <data name="USER_USERNAME_TOO_SHORT" xml:space="preserve">
+    <value>Your username has to be at least 3 characters</value>
+  </data>
+  <data name="VENUE_NAME_IS_TOO_LONG" xml:space="preserve">
+    <value>Your venue name has to be be less than 50 characters</value>
+  </data>
+  <data name="VENUE_NEEDS_NAME" xml:space="preserve">
+    <value>Give your venue a name</value>
+  </data>
+</root>

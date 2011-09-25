@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    The ListenTo object definitions for the Data Access Objects.
+  </description>
+
+  <!-- Property placeholder configurer for database settings -->
+  <object type="Spring.Objects.Factory.Config.PropertyPlaceholderConfigurer, Spring.Core">
+    <property name="ConfigSections" value="databaseSettings"/>
+  </object>
+
+
+  <!--<object id="ListenToDataContext" type="ListenTo.Data.LinqToSQL.ListenToDataContext, ListenTo.Data.LinqToSQL" singleton="true" >
+  </object>--><!--
+
+  --><!-- Data Access Objects --><!--
+  <object id="LinqToSQLRepository" type="ListenTo.Data.LinqToSQL.LinqToSQLRepository, ListenTo.Data.LinqToSQL" singleton="true">
+    --><!--<property name="DBContext" ref="ListenToDataContext"/>--><!--
+  </object>-->
+
+
+  <object id="RequestScopedLinqToSQLRepositoryFactory" type="ListenTo.Data.LinqToSQL.RequestScopedLinqToSQLRepositoryFactory, ListenTo.Data.LinqToSQL" singleton="true">
+  </object>
+
+  
+</objects>

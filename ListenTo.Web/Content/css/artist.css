@@ -1,0 +1,82 @@
+			h1 {
+				border:none;
+				
+			}
+
+/* Become a fan tab */
+			dl.tabs dd.becomeFan {
+				float:none;
+				text-align:left;
+				position:absolute;
+				right:10px;
+				width:245px;
+				font-weight:normal;
+				padding-top:4px;
+			}
+			dl.tabs dd.becomeFan a {
+				display:inline;
+				padding-right:0;
+				text-decoration:underline;
+				font-size:0.9em;
+			}			
+			dl.tabs dd.becomeFan a img {
+				vertical-align:middle;
+			}
+
+			
+			
+
+
+/* Music page 
+			#trackPlayer {
+				width:260px;
+				float:right;
+				margin-top:-16px;
+				
+			}
+			#trackDetails {
+				width:200px;
+				float:left;
+			}
+			#trackAbout {
+				clear:both;
+			}
+			#trackYourRating {
+				width:196px;
+				float:left;
+				background:url(../images/bg-rating.gif) repeat-x;
+				border:2px solid #e2e5df;
+				padding-top:10px;
+				margin:5px 0 20px 0;
+			}
+			#trackYourRating dt {
+				float: left;
+				width:80px;
+				text-indent:10px;
+			}
+			#trackYourRating dd {
+				float:left;
+			}
+			#trackYourRating p {
+				clear:both;
+				color:#657E39;
+				text-indent:10px;
+			}
+			.peopleWhoLike li {
+				clear:right;
+				margin:0 0 2px 0;
+				list-style-type:none;
+			}
+			.peopleWhoLike li img {
+				margin-top:4px;
+				float:right;
+			}
+*/
+
+
+#reasonsToBecomeAFan 
+{
+	width: 300px;
+	float:left;
+	position:relative;
+}

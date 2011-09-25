@@ -1,0 +1,1102 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BFB091AA-7A50-4E44-93FE-9A934A317C44}</ProjectGuid>
+    <ProjectTypeGuids>{603c0e0b-db56-11dc-be95-000d561079b0};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ListenTo.Web</RootNamespace>
+    <AssemblyName>ListenTo.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="anrControls.Markdown.NET, Version=1.0.1.1, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\anrControls.Markdown.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="anrControls.SmartyPants.NET, Version=1.5.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\anrControls.SmartyPants.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="antlr.runtime, Version=2.7.6.2, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\antlr.runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy, Version=1.1.5.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\Castle.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net, Version=1.2.0.2, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=1.2.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate12, Version=1.1.2.20125, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\Spring.Data.NHibernate12.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Testing.NUnit, Version=1.1.2.20125, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\Spring.Testing.NUnit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\System.Web.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Desktop\MVC-RTM\MVC\bin\Debug\System.Web.Routing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\ModelBinderValidationStateKeys.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelBinderValidationStateKeys.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ValidationStateKeys.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationStateKeys.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Constants\Routes.cs" />
+    <Compile Include="Constants\ViewClasses.cs" />
+    <Compile Include="Constants\ViewIdentifiers.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArtistController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
+    <Compile Include="Controllers\BinaryDataResult.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
+    <Compile Include="Controllers\InfoController.cs" />
+    <Compile Include="Controllers\GigController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ListenToController.cs" />
+    <Compile Include="Controllers\MP3Result.cs" />
+    <Compile Include="Controllers\NewsItemController.cs" />
+    <Compile Include="Controllers\RadioController.cs" />
+    <Compile Include="Controllers\TemporaryFileController.cs" />
+    <Compile Include="Controllers\TrackController.cs" />
+    <Compile Include="Controllers\VenueController.cs" />
+    <Compile Include="Controllers\WhoIsController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enums\MenuSection.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\FileHelpers.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions\ActionViewHelper.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions\DateTimeHelper.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions\GeneralHelper.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions\ImageHelper.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions\ListHelper.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions\OwnershipHelper.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions\SectionHelper.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions\TextHelper.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions\TitleHelper.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions\UrlHelper.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions\ValidationHelper.cs" />
+    <Compile Include="Helpers\IFileValidationHelper.cs" />
+    <Compile Include="Helpers\ImageFileValidationHelper.cs" />
+    <Compile Include="Helpers\ITextToHtmlHelpers.cs" />
+    <Compile Include="Helpers\Mp3ValidationHelper.cs" />
+    <Compile Include="Helpers\TextHelperProcessor.cs" />
+    <Compile Include="Helpers\TextToHtmlHelpers.cs" />
+    <Compile Include="Helpers\UserProfileHelper.cs" />
+    <Compile Include="Helpers\IOCHelper.cs" />
+    <Compile Include="Helpers\LocaleHelpers.cs" />
+    <Compile Include="Helpers\ModelBinderValidationStateKeys.cs" />
+    <Compile Include="Helpers\ModelStateDictionaryExtensionMethods.cs" />
+    <Compile Include="Helpers\OwnershipHelpers.cs" />
+    <Compile Include="Helpers\Paging\PagerBuilder.cs" />
+    <Compile Include="Helpers\Paging\PagerHelper.cs" />
+    <Compile Include="Helpers\Paging\PagerItem.cs" />
+    <Compile Include="Helpers\Paging\PagerOptions.cs" />
+    <Compile Include="Helpers\RouteCollectionExtensions.cs" />
+    <Compile Include="Helpers\RouteHelpers.cs" />
+    <Compile Include="Helpers\SelectListHelper.cs" />
+    <Compile Include="Helpers\TemporaryFileStrategy.cs" />
+    <Compile Include="Helpers\ValidationExtensionMethods.cs" />
+    <Compile Include="Helpers\ViewHelpers.cs" />
+    <Compile Include="IListenToSite.cs" />
+    <Compile Include="InvalidFileTypeException.cs" />
+    <Compile Include="InvalidTrackException.cs" />
+    <Compile Include="ListenToSite.cs" />
+    <Compile Include="ModelBinders\AddNewsItemPartialViewModelBinder.cs" />
+    <Compile Include="ModelBinders\ArtistModelBinder.cs" />
+    <Compile Include="ModelBinders\CommentModelBinder.cs" />
+    <Compile Include="ModelBinders\GigModelBinder.cs" />
+    <Compile Include="ModelBinders\ImageModelBinder.cs" />
+    <Compile Include="ModelBinders\IModelBinderHelpers.cs" />
+    <Compile Include="ModelBinders\ModelBinderHelpers.cs" />
+    <Compile Include="ModelBinders\NewsItemModelBinder.cs" />
+    <Compile Include="ModelBinders\UploadFilePartialViewModelModelBinder.cs" />
+    <Compile Include="ModelBinders\TrackModelBinder.cs" />
+    <Compile Include="ModelBinders\UploadImagePopupViewModelModelBinder.cs" />
+    <Compile Include="ModelBinders\UserModelBinder.cs" />
+    <Compile Include="ModelBinders\UserProfileModelBinder.cs" />
+    <Compile Include="Models\AccountViewModel.cs" />
+    <Compile Include="Models\AccountWhatsNewViewModel.cs" />
+    <Compile Include="Models\AddArtistViewModel.cs" />
+    <Compile Include="Models\AddTrackViewModel.cs" />
+    <Compile Include="Models\ArtistIndexViewModel.cs" />
+    <Compile Include="Models\ArtistListViewModel.cs" />
+    <Compile Include="Models\ArtistsGigsViewModel.cs" />
+    <Compile Include="Models\ArtistsMusicViewModel.cs" />
+    <Compile Include="Models\ArtistViewModel.cs" />
+    <Compile Include="Models\BandsLikedPartialViewModel.cs" />
+    <Compile Include="Models\BaseListenToViewModel.cs" />
+    <Compile Include="Models\AddCommentViewModel.cs" />
+    <Compile Include="Models\EditProfileViewModel.cs" />
+    <Compile Include="Models\FansPartialViewModel.cs" />
+    <Compile Include="Models\File.cs" />
+    <Compile Include="Models\Footer.cs" />
+    <Compile Include="Models\HomePageViewModel.cs" />
+    <Compile Include="Models\ListViewModel.cs" />
+    <Compile Include="Models\NewsItemEditViewModel.cs" />
+    <Compile Include="Models\NewsItemIndexViewModel.cs" />
+    <Compile Include="Models\NewsItemListViewModel.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\AccountProfileViewModel.cs" />
+    <Compile Include="Models\RadioViewModel.cs" />
+    <Compile Include="Models\RegisterUserViewModel.cs" />
+    <Compile Include="Models\TagCloudViewModel.cs" />
+    <Compile Include="Models\TagViewModel.cs" />
+    <Compile Include="Models\TrackListViewModel.cs" />
+    <Compile Include="Models\UploadImagePartialViewModel.cs" />
+    <Compile Include="Models\UploadImagePopupViewModel.cs" />
+    <Compile Include="Models\UploadImageViewModel.cs" />
+    <Compile Include="Models\UserContentViewModel.cs" />
+    <Compile Include="Models\VenueIndexViewModel.cs" />
+    <Compile Include="Models\WhoIsIndexViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegexRoute.cs" />
+    <Compile Include="RegexRouteCollectionExtensions.cs" />
+    <Compile Include="Security\FormsAuthenticationWrapper.cs" />
+    <Compile Include="Security\IFormsAuthentication.cs" />
+    <Compile Include="Security\IListenToUser.cs" />
+    <Compile Include="Security\IMembership.cs" />
+    <Compile Include="Security\ListenToMembershipProvider.cs" />
+    <Compile Include="Security\ListenToUser.cs" />
+    <Compile Include="Security\ListenToRoleProvider.cs" />
+    <Compile Include="Security\MembershipWrapper.cs" />
+    <Compile Include="SpringControllerFactory.cs" />
+    <Compile Include="Views\Account\AddUser.ascx.cs">
+      <DependentUpon>AddUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\AddUser.ascx.designer.cs">
+      <DependentUpon>AddUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\Approve.aspx.cs">
+      <DependentUpon>Approve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\Approve.aspx.designer.cs">
+      <DependentUpon>Approve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\ProfileDetail.ascx.cs">
+      <DependentUpon>ProfileDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\Registered.aspx.cs">
+      <DependentUpon>Registered.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\Registered.aspx.designer.cs">
+      <DependentUpon>Registered.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\UserContent.aspx.cs">
+      <DependentUpon>UserContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\WhatsNew.aspx.cs">
+      <DependentUpon>WhatsNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Artist\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Artist\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Artist\AddArtist.ascx.cs">
+      <DependentUpon>AddArtist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Artist\AddArtist.ascx.designer.cs">
+      <DependentUpon>AddArtist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Artist\ArtistList.ascx.cs">
+      <DependentUpon>ArtistList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Artist\ArtistList.ascx.designer.cs">
+      <DependentUpon>ArtistList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Artist\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Artist\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Artist\Gigs.aspx.cs">
+      <DependentUpon>Gigs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Artist\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Artist\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Artist\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Artist\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Artist\Music.aspx.cs">
+      <DependentUpon>Music.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Gig\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Gig\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Gig\AddGig.ascx.cs">
+      <DependentUpon>AddGig.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Gig\AddGig.ascx.designer.cs">
+      <DependentUpon>AddGig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Gig\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Gig\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Gig\GigListItem.ascx.cs">
+      <DependentUpon>GigListItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Gig\GigListItem.ascx.designer.cs">
+      <DependentUpon>GigListItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Gig\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Gig\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Gig\GigList.ascx.cs">
+      <DependentUpon>GigList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Gig\GigList.ascx.designer.cs">
+      <DependentUpon>GigList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Gig\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Gig\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Image\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Image\Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Info\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Info\AddingContent.aspx.cs">
+      <DependentUpon>AddingContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Info\PrivacyPolicy.aspx.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Info\RSS.aspx.cs">
+      <DependentUpon>RSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Info\TermsAndConditions.aspx.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsItem\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsItem\AddNewsItem.ascx.cs">
+      <DependentUpon>AddNewsItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsItem\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsItem\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsItem\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsItem\NewsItemList.ascx.cs">
+      <DependentUpon>NewsItemList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\AccountInner.Master.cs">
+      <DependentUpon>AccountInner.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Actions\ADDED_AN_ARTIST.ascx.cs">
+      <DependentUpon>ADDED_AN_ARTIST.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Actions\ADDED_A_GIG.ascx.cs">
+      <DependentUpon>ADDED_A_GIG.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Actions\ADDED_A_NEWS_ITEM.ascx.cs">
+      <DependentUpon>ADDED_A_NEWS_ITEM.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Actions\COMMENTED_ON_A_NEWSITEM.ascx.cs">
+      <DependentUpon>COMMENTED_ON_A_NEWSITEM.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Actions\COMMENTED_ON_A_USERPROFILE.ascx.cs">
+      <DependentUpon>COMMENTED_ON_A_USERPROFILE.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Actions\JOINED.ascx.cs">
+      <DependentUpon>JOINED.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\AddAGig.ascx.cs">
+      <DependentUpon>AddAGig.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\AddAGig.ascx.designer.cs">
+      <DependentUpon>AddAGig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\AddAnArtist.ascx.cs">
+      <DependentUpon>AddAnArtist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\AddAnArtist.ascx.designer.cs">
+      <DependentUpon>AddAnArtist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\AddComment.ascx.cs">
+      <DependentUpon>AddComment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\AddComment.ascx.designer.cs">
+      <DependentUpon>AddComment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Artist.Master.cs">
+      <DependentUpon>Artist.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Artist.Master.designer.cs">
+      <DependentUpon>Artist.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\ArtistInner.Master.cs">
+      <DependentUpon>ArtistInner.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\ArtistMenu.ascx.cs">
+      <DependentUpon>ArtistMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\BandsLiked.ascx.cs">
+      <DependentUpon>BandsLiked.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\BecomeAFan.ascx.cs">
+      <DependentUpon>BecomeAFan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\BecomeAFanPopup.ascx.cs">
+      <DependentUpon>BecomeAFanPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\CommentList.ascx.cs">
+      <DependentUpon>CommentList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\CommentList.ascx.designer.cs">
+      <DependentUpon>CommentList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Detail.Master.cs">
+      <DependentUpon>Detail.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Detail.Master.designer.cs">
+      <DependentUpon>Detail.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Fans.ascx.cs">
+      <DependentUpon>Fans.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Form.Master.cs">
+      <DependentUpon>Form.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Form.Master.designer.cs">
+      <DependentUpon>Form.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Image.ascx.cs">
+      <DependentUpon>Image.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Image.ascx.designer.cs">
+      <DependentUpon>Image.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Listing.Master.cs">
+      <DependentUpon>Listing.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Listing.Master.designer.cs">
+      <DependentUpon>Listing.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\MainMenu.ascx.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\MainMenu.ascx.designer.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\NextGig.ascx.cs">
+      <DependentUpon>NextGig.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\NextGig.ascx.designer.cs">
+      <DependentUpon>NextGig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Player.ascx.cs">
+      <DependentUpon>Player.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\TagCloud.ascx.cs">
+      <DependentUpon>TagCloud.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\UploadFile.ascx.cs">
+      <DependentUpon>UploadFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\UploadImage.ascx.cs">
+      <DependentUpon>UploadImage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\UploadImage.ascx.designer.cs">
+      <DependentUpon>UploadImage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Account.Master.cs">
+      <DependentUpon>Account.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\UploadImagePopup.ascx.cs">
+      <DependentUpon>UploadImagePopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Wide.Master.cs">
+      <DependentUpon>Wide.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Wide.Master.designer.cs">
+      <DependentUpon>Wide.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Track\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Track\AddTrack.ascx.cs">
+      <DependentUpon>AddTrack.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Track\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Track\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Radio\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Track\TrackList.ascx.cs">
+      <DependentUpon>TrackList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Venue\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Venue\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\ActionList.ascx.cs">
+      <DependentUpon>ActionList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WhoIs\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\artist.css" />
+    <Content Include="Content\css\band.css" />
+    <Content Include="Content\css\global.css" />
+    <Content Include="Content\css\home.css" />
+    <Content Include="Content\css\ie6.css" />
+    <Content Include="Content\css\inner-homepage.css" />
+    <Content Include="Content\css\inner.css" />
+    <Content Include="Content\css\lightbox.css" />
+    <Content Include="Content\css\manchester.css" />
+    <Content Include="Content\images\band-for-mockup.jpg" />
+    <Content Include="Content\images\bandimage.jpg" />
+    <Content Include="Content\images\banners\home-podcast1.jpg" />
+    <Content Include="Content\images\banners\home-wider-test.jpg" />
+    <Content Include="Content\images\bg-bands-fade-bottom.gif" />
+    <Content Include="Content\images\bg-bands-fade-top.gif" />
+    <Content Include="Content\images\bg-error.gif" />
+    <Content Include="Content\images\bg-fadecolumn.gif" />
+    <Content Include="Content\images\bg-home-bands.gif" />
+    <Content Include="Content\images\bg-home-dividers-bands.gif" />
+    <Content Include="Content\images\bg-home-dividers-columns.gif" />
+    <Content Include="Content\images\bg-home-dividers.gif" />
+    <Content Include="Content\images\bg-home-intro-img.jpg" />
+    <Content Include="Content\images\bg-home-intro.gif" />
+    <Content Include="Content\images\bg-musicplayer.gif" />
+    <Content Include="Content\images\bg-rating.gif" />
+    <Content Include="Content\images\buttons\addacomment.gif" />
+    <Content Include="Content\images\buttons\addagig.gif" />
+    <Content Include="Content\images\buttons\addanarticle.gif" />
+    <Content Include="Content\images\buttons\addareview.gif" />
+    <Content Include="Content\images\buttons\addasong.gif" />
+    <Content Include="Content\images\buttons\addcontent.gif" />
+    <Content Include="Content\images\buttons\addphotos.gif" />
+    <Content Include="Content\images\buttons\addyourband.gif" />
+    <Content Include="Content\images\buttons\becomeafan.gif" />
+    <Content Include="Content\images\buttons\ifeellucky.gif" />
+    <Content Include="Content\images\buttons\illbethere.gif" />
+    <Content Include="Content\images\buttons\iwasthere.gif" />
+    <Content Include="Content\images\buttons\login-top.gif" />
+    <Content Include="Content\images\buttons\register-top copy.gif" />
+    <Content Include="Content\images\buttons\register-top.gif" />
+    <Content Include="Content\images\buttons\register.gif" />
+    <Content Include="Content\images\buttons\search.gif" />
+    <Content Include="Content\images\classifiedthumb1.jpg" />
+    <Content Include="Content\images\classifiedthumb2.jpg" />
+    <Content Include="Content\images\dummy.gif" />
+    <Content Include="Content\images\edging-fadeout.gif" />
+    <Content Include="Content\images\error-excl-mark.gif" />
+    <Content Include="Content\images\grid.gif" />
+    <Content Include="Content\images\lightbox\blank.gif" />
+    <Content Include="Content\images\lightbox\loading.gif" />
+    <Content Include="Content\images\lightbox\next.gif" />
+    <Content Include="Content\images\lightbox\prev.gif" />
+    <Content Include="Content\images\locations\--manchester-logo.gif" />
+    <Content Include="Content\images\locations\-manchester-logo.gif" />
+    <Content Include="Content\images\locations\manchester-bg-header.gif" />
+    <Content Include="Content\images\locations\manchester-logo.gif" />
+    <Content Include="Content\images\locations\manchester.gif" />
+    <Content Include="Content\images\main-bg.gif" />
+    <Content Include="Content\images\mockup-security.jpg" />
+    <Content Include="Content\images\ratings\0star.gif" />
+    <Content Include="Content\images\ratings\1star.gif" />
+    <Content Include="Content\images\ratings\2star.gif" />
+    <Content Include="Content\images\ratings\3star.gif" />
+    <Content Include="Content\images\ratings\4star.gif" />
+    <Content Include="Content\images\ratings\5star.gif" />
+    <Content Include="Content\images\ratings\delete.gif" />
+    <Content Include="Content\images\ratings\star-.gif" />
+    <Content Include="Content\images\ratings\star.gif" />
+    <Content Include="Content\images\review-mockup.jpg" />
+    <Content Include="Content\images\skylines\-manchester.gif" />
+    <Content Include="Content\images\skylines\manchester.gif" />
+    <Content Include="Content\images\temp-ratestar.gif" />
+    <Content Include="Content\images\template\bg-footer-OLD.gif" />
+    <Content Include="Content\images\template\bg-footer.gif" />
+    <Content Include="Content\images\template\bg-green75.png" />
+    <Content Include="Content\images\template\bg-green90.png" />
+    <Content Include="Content\images\template\bg-green95.png" />
+    <Content Include="Content\images\template\bg-mainpage.gif" />
+    <Content Include="Content\images\template\listenlink-green.gif" />
+    <Content Include="Content\images\template\listenlink.gif" />
+    <Content Include="Content\images\template\morelink-green.gif" />
+    <Content Include="Content\images\template\morelink.gif" />
+    <Content Include="Content\images\template\newwindow.gif" />
+    <Content Include="Content\images\template\rss.gif" />
+    <Content Include="Content\images\temp\articlethumb1.jpg" />
+    <Content Include="Content\images\temp\band-home-1.jpg" />
+    <Content Include="Content\images\temp\band-home-2.jpg" />
+    <Content Include="Content\images\temp\band-home-3.jpg" />
+    <Content Include="Content\images\temp\band-home-4.jpg" />
+    <Content Include="Content\images\temp\band-home-5.jpg" />
+    <Content Include="Content\images\temp\bandthumb1.jpg" />
+    <Content Include="Content\images\temp\bandthumb2.jpg" />
+    <Content Include="Content\images\temp\bandthumb3.jpg" />
+    <Content Include="Content\images\temp\bandthumb4.jpg" />
+    <Content Include="Content\images\temp\busker.jpg" />
+    <Content Include="Content\images\temp\gigphoto-large1.jpg" />
+    <Content Include="Content\images\temp\gigphoto-large2.jpg" />
+    <Content Include="Content\images\temp\gigphoto-large3.jpg" />
+    <Content Include="Content\images\temp\gigphoto-large4.jpg" />
+    <Content Include="Content\images\temp\gigphoto-large5.jpg" />
+    <Content Include="Content\images\temp\gigphoto-large6.jpg" />
+    <Content Include="Content\images\temp\gigphoto-large7.jpg" />
+    <Content Include="Content\images\temp\gigphoto-thumb1.jpg" />
+    <Content Include="Content\images\temp\gigphoto-thumb2.jpg" />
+    <Content Include="Content\images\temp\gigphoto-thumb3.jpg" />
+    <Content Include="Content\images\temp\gigphoto-thumb4.jpg" />
+    <Content Include="Content\images\temp\gigphoto-thumb5.jpg" />
+    <Content Include="Content\images\temp\gigphoto-thumb6.jpg" />
+    <Content Include="Content\images\temp\gigphoto-thumb7.jpg" />
+    <Content Include="Content\images\temp\grid-new 2.gif" />
+    <Content Include="Content\images\temp\grid-new.gif" />
+    <Content Include="Content\images\temp\music-player-.gif" />
+    <Content Include="Content\images\temp\music-player.gif" />
+    <Content Include="Content\images\temp\reviewthumb1.jpg" />
+    <Content Include="Content\images\temp\skyscraper.gif" />
+    <Content Include="Content\images\temp\temp-ratestar.gif" />
+    <Content Include="Content\images\thumb1.jpg" />
+    <Content Include="Content\images\thumb2.jpg" />
+    <Content Include="Content\images\thumb3.jpg" />
+    <Content Include="Content\images\thumb4.jpg" />
+    <Content Include="Content\images\thumbnail.gif" />
+    <Content Include="Content\images\thumbnails\thumb-article.gif" />
+    <Content Include="Content\images\thumbnails\thumb-artist.gif" />
+    <Content Include="Content\images\thumbnails\thumb-classifieds.gif" />
+    <Content Include="Content\images\thumbnails\thumb-gig.gif" />
+    <Content Include="Content\images\thumbnails\thumb-recording.gif" />
+    <Content Include="Content\images\thumbnails\thumb-review.gif" />
+    <Content Include="Content\images\topten\1.gif" />
+    <Content Include="Content\images\topten\10.gif" />
+    <Content Include="Content\images\topten\2.gif" />
+    <Content Include="Content\images\topten\3.gif" />
+    <Content Include="Content\images\topten\4.gif" />
+    <Content Include="Content\images\topten\5.gif" />
+    <Content Include="Content\images\topten\6.gif" />
+    <Content Include="Content\images\topten\7.gif" />
+    <Content Include="Content\images\topten\8.gif" />
+    <Content Include="Content\images\topten\9.gif" />
+    <Content Include="Content\images\userthumb1.jpg" />
+    <Content Include="Content\images\userthumb2.jpg" />
+    <Content Include="Content\images\userthumb3.jpg" />
+    <Content Include="Content\images\userthumb4.jpg" />
+    <Content Include="Content\images\userthumb5.jpg" />
+    <Content Include="Content\images\userthumb6.jpg" />
+    <Content Include="Content\images\venues\roadhouse.jpg" />
+    <Content Include="Content\js\date.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\MicrosoftAjax.debug.js" />
+    <Content Include="Content\MicrosoftAjax.js" />
+    <Content Include="Content\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Content\MicrosoftMvcAjax.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="SpringConfig\Application.xml" />
+    <Content Include="SpringConfig\Controllers.xml" />
+    <Content Include="SpringConfig\DAO.xml" />
+    <Content Include="SpringConfig\Managers.xml" />
+    <Content Include="SpringConfig\Spring.xml" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\Login.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Gig\Add.aspx" />
+    <Content Include="Views\Gig\AddGig.ascx" />
+    <Content Include="Views\Gig\Index.aspx" />
+    <Content Include="Views\Gig\GigList.ascx" />
+    <Content Include="Views\Gig\List.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\Footer.ascx" />
+    <Content Include="Views\Shared\Header.ascx" />
+    <Content Include="Views\Shared\MainMenu.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Spring.NET\src\Spring\Spring.Aop\Spring.Aop.2008.csproj">
+      <Project>{3A3A4E65-45A6-4B20-B460-0BEDC302C02C}</Project>
+      <Name>Spring.Aop.2008</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Spring.NET\src\Spring\Spring.Core\Spring.Core.2008.csproj">
+      <Project>{710961A3-0DF4-49E4-A26E-F5B9C044AC84}</Project>
+      <Name>Spring.Core.2008</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Spring.NET\src\Spring\Spring.Data\Spring.Data.2008.csproj">
+      <Project>{AE00E5AB-C39A-436F-86D2-33BFE33E2E40}</Project>
+      <Name>Spring.Data.2008</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Spring.NET\src\Spring\Spring.Web\Spring.Web.2008.csproj">
+      <Project>{BA4789EB-281A-48EA-8763-28B9F0596A18}</Project>
+      <Name>Spring.Web.2008</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ListenTo.Core.Audio\ListenTo.Core.Audio.csproj">
+      <Project>{873DD969-46F0-4F77-B94E-C236D1CC28A1}</Project>
+      <Name>ListenTo.Core.Audio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ListenTo.Core.Caching\ListenTo.Core.Caching.csproj">
+      <Project>{4CA2EC60-C11E-4BEE-BC4A-701E8B487B88}</Project>
+      <Name>ListenTo.Core.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ListenTo.Core.Mail\ListenTo.Core.Mail.csproj">
+      <Project>{39BDBE62-028B-48F6-81F5-91210B344DE9}</Project>
+      <Name>ListenTo.Core.Mail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ListenTo.Core\ListenTo.Core.csproj">
+      <Project>{C449FF6E-367B-44BD-8CCC-BF4762E9D769}</Project>
+      <Name>ListenTo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ListenTo.Data.NHibernate\ListenTo.Data.NHibernate.csproj">
+      <Project>{4A50946B-2DB9-4C02-981A-1EE641893885}</Project>
+      <Name>ListenTo.Data.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ListenTo.Data.SQLRepository\ListenTo.Data.LinqToSQL.csproj">
+      <Project>{EE26D5B6-B268-4760-A1DC-D5C62F18B56A}</Project>
+      <Name>ListenTo.Data.LinqToSQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ListenTo.Shared\ListenTo.Shared.csproj">
+      <Project>{CCB61526-3A0E-4B93-8C5D-364581CBB29E}</Project>
+      <Name>ListenTo.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="cache.xsd" />
+    <None Include="Content\images\temp\.DS_Store" />
+    <Content Include="Views\Shared\AccountInner.Master" />
+    <Content Include="Views\Shared\ArtistInner.Master" />
+    <Content Include="Views\Shared\Account.Master" />
+    <Content Include="Views\Shared\Wide.Master" />
+    <Content Include="Views\Artist\Add.aspx" />
+    <Content Include="Views\Artist\AddArtist.ascx" />
+    <Content Include="Views\Artist\Edit.aspx" />
+    <Content Include="Views\Gig\GigListItem.ascx" />
+    <Content Include="Views\Shared\AddComment.ascx" />
+    <Content Include="Views\Shared\CommentList.ascx" />
+    <Content Include="Views\Shared\Default.Master" />
+    <Content Include="Views\Artist\ArtistList.ascx" />
+    <Content Include="Views\Artist\List.aspx" />
+    <Content Include="Views\Shared\AddAnArtist.ascx" />
+    <Content Include="Views\Shared\Artist.Master" />
+    <Content Include="Content\css\datepicker.css" />
+    <Content Include="Content\js\AddGig.js" />
+    <Content Include="Views\Account\AddUser.ascx" />
+    <Content Include="Views\Artist\Index.aspx" />
+    <Content Include="Views\Gig\Edit.aspx" />
+    <Content Include="Views\Shared\Detail.Master" />
+    <Content Include="Content\css\autosuggest.css" />
+    <Content Include="Content\js\bsn.AutoSuggest_2.1.3.js" />
+    <Content Include="Views\Shared\AddAGig.ascx" />
+    <Content Include="Views\Shared\Image.ascx" />
+    <Content Include="Views\Shared\Listing.Master" />
+    <Content Include="Views\Shared\Form.Master" />
+    <Content Include="Views\Account\Login.ascx" />
+    <Content Include="Views\Shared\NextGig.ascx" />
+    <Content Include="Views\Venue\Index.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ValidationStateKeys.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ValidationStateKeys.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Shared\UploadImage.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ModelBinderValidationStateKeys.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ModelBinderValidationStateKeys.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\js\jquery.effects.core.js" />
+    <Content Include="Content\js\jquery.effects.highlight.js" />
+    <Content Include="Content\js\ejs_0.9_alpha_1.js" />
+    <Content Include="Content\js\global.js" />
+    <Content Include="Content\js\home.js" />
+    <Content Include="Content\js\jquery.scrollto-1.4.2.js" />
+    <Content Include="Content\js\MusicPlayer.js" />
+    <Content Include="Content\js\radio.js" />
+    <Content Include="Content\js\superfish.js" />
+    <Content Include="Content\js\supersubs.js" />
+    <Content Include="Content\js\swfobject.js" />
+    <Content Include="Content\js\ui.timepickr.js" />
+    <Content Include="Content\js\uploadImagePopup.js" />
+    <Content Include="Content\templates\CommentedOnANewsItemActionSmtpBodyTemplate.txt" />
+    <Content Include="Content\templates\CommentedOnANewsItemActionSmtpSubjectTemplate.txt" />
+    <Content Include="Content\templates\CommentOnUserProfileActionSmtpBodyTemplate.txt" />
+    <Content Include="Content\templates\CommentOnUserProfileActionSmtpSubjectTemplate.txt" />
+    <Content Include="Content\templates\MusicPlayer.html" />
+    <Content Include="Content\templates\NewsItemAddedTwitterTemplate.txt" />
+    <Content Include="Content\templates\playlist.html" />
+    <Content Include="Views\Account\Approve.aspx" />
+    <Content Include="Views\Account\DetailsRetrieved.aspx" />
+    <Content Include="Views\Account\EditProfile.aspx" />
+    <Content Include="Views\Account\LoginPopup.ascx" />
+    <Content Include="Views\Account\ProfileDetail.ascx" />
+    <Content Include="Views\Account\Profile.aspx" />
+    <Content Include="Views\Account\Registered.aspx" />
+    <Content Include="Views\Account\RetrieveDetails.aspx" />
+    <Content Include="Views\Account\UserContent.aspx" />
+    <Content Include="Views\Account\WhatsNew.aspx" />
+    <Content Include="Views\Artist\Gigs.aspx" />
+    <Content Include="Views\Artist\Music.aspx" />
+    <Content Include="Views\Image\Index.aspx" />
+    <Content Include="Views\Image\Upload.aspx" />
+    <Content Include="Views\Info\About.aspx" />
+    <Content Include="Views\Info\AddingContent.aspx" />
+    <Content Include="Views\Info\Error.aspx" />
+    <Content Include="Views\Info\PrivacyPolicy.aspx" />
+    <Content Include="Views\Info\RSS.aspx" />
+    <Content Include="Views\Info\TermsAndConditions.aspx" />
+    <Content Include="Views\NewsItem\Add.aspx" />
+    <Content Include="Views\NewsItem\AddNewsItem.ascx" />
+    <Content Include="Views\NewsItem\Edit.aspx" />
+    <Content Include="Views\NewsItem\Index.aspx" />
+    <Content Include="Views\NewsItem\List.aspx" />
+    <Content Include="Views\NewsItem\NewsItemList.ascx" />
+    <Content Include="Views\Shared\Actions\ADDED_AN_ARTIST.ascx" />
+    <Content Include="Views\Shared\Actions\ADDED_A_GIG.ascx" />
+    <Content Include="Views\Shared\Actions\ADDED_A_NEWS_ITEM.ascx" />
+    <Content Include="Views\Shared\Actions\COMMENTED_ON_A_NEWSITEM.ascx" />
+    <Content Include="Views\Shared\Actions\COMMENTED_ON_A_USERPROFILE.ascx" />
+    <Content Include="Views\Shared\Actions\JOINED.ascx" />
+    <Content Include="Views\Shared\AddANewsItem.ascx" />
+    <Content Include="Views\Shared\AddATrack.ascx" />
+    <Content Include="Views\Shared\ArtistMenu.ascx" />
+    <Content Include="Views\Shared\BandsLiked.ascx" />
+    <Content Include="Views\Shared\BecomeAFan.ascx" />
+    <Content Include="Views\Shared\BecomeAFanPopup.ascx" />
+    <Content Include="Views\Shared\Fans.ascx" />
+    <Content Include="Views\Shared\MarkDown.ascx" />
+    <Content Include="Views\Shared\Player.ascx" />
+    <Content Include="Views\Shared\TagCloud.ascx" />
+    <Content Include="Views\Shared\UploadFile.ascx" />
+    <Content Include="Views\Shared\UploadImagePopup.ascx" />
+    <Content Include="Views\Track\Add.aspx" />
+    <Content Include="Views\Track\AddTrack.ascx" />
+    <Content Include="Views\Track\Edit.aspx" />
+    <Content Include="Views\Track\List.aspx" />
+    <Content Include="Views\Radio\Index.aspx" />
+    <Content Include="Views\Track\TrackList.ascx" />
+    <Content Include="Views\Shared\ActionList.ascx" />
+    <Content Include="Views\WhoIs\Index.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\flash\" />
+    <Folder Include="Content\temp\" />
+    <Folder Include="Content\tracks\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51188</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/ListenTo</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost/ListenTo</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

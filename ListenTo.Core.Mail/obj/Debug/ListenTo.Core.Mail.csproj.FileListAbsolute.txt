@@ -1,0 +1,12 @@
+F:\ListenTo\trunk\ListenTo.Core.Mail\bin\Debug\ListenTo.Core.Mail.dll
+F:\ListenTo\trunk\ListenTo.Core.Mail\bin\Debug\ListenTo.Core.Mail.pdb
+F:\ListenTo\trunk\ListenTo.Core.Mail\bin\Debug\ListenTo.Shared.dll
+F:\ListenTo\trunk\ListenTo.Core.Mail\bin\Debug\TemplateEngine.dll
+F:\ListenTo\trunk\ListenTo.Core.Mail\bin\Debug\ListenTo.TinyUrl.dll
+F:\ListenTo\trunk\ListenTo.Core.Mail\bin\Debug\ListenTo.Core.Audio.dll
+F:\ListenTo\trunk\ListenTo.Core.Mail\bin\Debug\ListenTo.TinyUrl.pdb
+F:\ListenTo\trunk\ListenTo.Core.Mail\bin\Debug\ListenTo.Core.Audio.pdb
+F:\ListenTo\trunk\ListenTo.Core.Mail\bin\Debug\ListenTo.Shared.pdb
+F:\ListenTo\trunk\ListenTo.Core.Mail\obj\Debug\ResolveAssemblyReference.cache
+F:\ListenTo\trunk\ListenTo.Core.Mail\obj\Debug\ListenTo.Core.Mail.dll
+F:\ListenTo\trunk\ListenTo.Core.Mail\obj\Debug\ListenTo.Core.Mail.pdb

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="ListenTo.Shared.DO.Site, ListenTo.Shared" table="Sites">
+    <id name="ID" column="ID" type="Guid"  >
+      <generator class="assigned" />
+     <!-- <generator class="native"/>-->
+    </id>
+    <property name="Name" column="Name" type="String" length="50" />
+    <property name="Description" column="Description" type="String" length="40" />
+    <property name="URL" column="URL"  type="String" />
+    <property name="Created" column="Created" type="DateTime" />
+    <property name="IsDeleted" column="IsDeleted" type="Boolean" />
+
+    <bag name="TownsRepresented" table="SiteTowns" lazy="true" inverse="false">
+      <key>
+        <column name="SiteId" not-null="true"/>
+      </key>
+      <many-to-many class="ListenTo.Shared.DO.Town, ListenTo.Shared">
+        <column name="TownId" not-null="true"/>
+      </many-to-many>
+    </bag>
+    
+  </class>
+
+  <!-- Retrieves the set of all users-->
+  <query name="Site.GetAll">
+    <![CDATA[
+    from Site as s
+    where s.IsDeleted = 0
+   ]]>
+  </query>
+
+  <query name="Site.GetSiteByURL">
+    <![CDATA[
+    from 
+      Site as s
+    where
+     s.URL = :URL
+    and
+      s.IsDeleted = 0
+   ]]>
+  </query>
+
+</hibernate-mapping>
+
+

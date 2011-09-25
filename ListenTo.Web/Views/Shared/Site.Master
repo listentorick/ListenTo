@@ -1,0 +1,113 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MvcApplication1.Views.Shared.Site" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="en-uk" />
+
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="14 days" />
+
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+    <title>Gigs | Listen To Manchester</title>
+</head>
+<body>
+<div id="wrapper">
+
+			
+  <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+				
+
+</div>
+
+<div class="loginPanel">
+	<h2 class="hideMe">Login or Register</h2>
+	<fieldset>
+	<p><label for="ctrlLoginBlock_txtUsername">Username</label><input name="ctrlLoginBlock:txtUsername" type="text" id="ctrlLoginBlock_txtUsername" class="text" title="Username" /></p>
+	<p><label for="ctrlLoginBlock_txtPassword">Password </label><input name="ctrlLoginBlock:txtPassword" type="password" id="ctrlLoginBlock_txtPassword" class="text" title="Password" /></p>
+	 
+	 <div class="formButtons">
+		<input type="image" onclick="location.href='register.php'" name="ctrlLoginBlock:btnRegister" id="ctrlLoginBlock_btnRegister" class="button registerBtn" src="images/buttons/register-top.gif" alt="Register" style="border-width:0px;" />
+		<input type="image" name="ctrlLoginBlock:btnLogin" id="ctrlLoginBlock_btnLogin" class="button loginButton" src="images/buttons/login-top.gif" alt="Login" style="border-width:0px;" />
+
+		<p><a href="forgotlogin.php" title="Forgotten your password? Click here">Forgotten your username or password?</a></p>
+	 </div>
+	</fieldset>
+</div>
+
+<div id="Div3"> 
+<h2 class="hidden">Main Menu</h2>
+  <ol>
+	<li class="menuHome"><a href="index.php">Home</a></li>
+
+	<li class="menuBandsAZ"><a href="bands-landing.php">Bands</a></li>
+	<li class="menuGigs on"><a href="gigs-landing.php">Gigs</a></li>
+	<li class="menuMusic"><a href="music-landing.php">Music</a></li>
+	<li class="menuReviews"><a href="news-landing.php">News</a></li>
+  	<!--<li class="menuClassifieds"><a href="#">Classifieds</a></li>-->
+	<li class="menuAddContent"><a href="addcontent.php">Add Content +</a></li>
+
+  </ol>
+</div>
+
+<div id="Div4">
+	<div class="footerCol" id="music">
+		<h2>Latest music</h2>
+		<ul>
+				<li>
+					<a href="music-player.php?w=500&h=440" class="popup">Sister Fusion</a> by <a href="band-home.php">The Chase</a> - 
+					Indie
+				</li>
+
+				<li>
+					<a href="music-player.php?w=500&h=440" class="popup">Deep Browns and Greens</a> by <a href="band-home.php">Youth Honey</a> - 
+					Alternative Rock
+				</li>
+				<li>
+					<a href="music-player.php?w=500&h=440" class="popup">Graverobbers</a> by <a href="band-home.php">Wardens</a> - 
+					Indie
+				</li>
+
+				<li>
+					<a href="music-player.php?w=500&h=440" class="popup">Graverobbers</a> by <a href="band-home.php">Wardens</a> - 
+					Indie
+				</li>
+				<li>
+					<a href="music-player.php?w=500&h=440" class="popup">Sister Fusion</a> by <a href="band-home.php">The Chase</a> - 
+					Indie
+				</li>
+
+		</ul>
+		<p class="moreLink"><a href="classfieds-landing.php">More music</a></p>
+	</div>
+	<div class="footerCol" id="links">
+		<h2 class="hidden">Footer Menu</h2>
+		<p>&copy; Copyright ListenTo 2003-2008. All rights reserved.</p>
+
+		<ol>
+			<li><a href="#">About ListenTo</a></li>
+			<li><a href="#">Terms and Conditions</a></li>
+			<li><a href="#">Privacy Policy</a></li>
+			<li><a href="#" class="rss">RSS Feeds</a></li>
+		</ol>
+	</div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

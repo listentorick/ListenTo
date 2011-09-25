@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="ListenTo.Shared.DO.Town, ListenTo.Shared" table="Towns">
+    <id name="ID" column="ID" type="Guid"  >
+      <generator class="assigned" />
+      <!-- <generator class="native"/>-->
+    </id>
+    <property name="Name" column="Name" type="String" length="50" />
+    <property name="Created" column="Created" type="DateTime" />
+    <property name="IsDeleted" column="IsDeleted" type="Boolean" />
+
+    <bag name="RepresentativeSites" table="SiteTowns" lazy="false" inverse="false">
+      <key>
+        <column name="TownId" not-null="true"/>
+      </key>
+      <many-to-many class="ListenTo.Shared.DO.Site, ListenTo.Shared">
+        <column name="SiteId" not-null="true"/>
+      </many-to-many>
+    </bag>
+
+
+  </class>
+
+  <!-- Retrieves the set of all users-->
+  <query name="Town.GetAll">
+    <![CDATA[
+    from Town as t
+    where t.IsDeleted=0
+   ]]>
+  </query>
+  
+  <query name="Town.GetAllTownsRepresentedByASite">
+    <![CDATA[
+    select t from Town as t
+    inner join t.RepresentativeSites as sites
+    where
+    sites.ID =  :SiteID
+    and
+    t.IsDeleted = 0
+   ]]>
+  </query>
+
+
+ 
+
+
+</hibernate-mapping>
+
+

@@ -1,0 +1,121 @@
+﻿/* datepicker */
+
+
+/* picker button*/
+.ui-datepicker-trigger {
+	cursor:pointer;
+}
+
+/* Main Style Sheet for jQuery UI date picker */
+
+
+.ui-datepicker-div, .ui-datepicker-inline, #ui-datepicker-div {
+	background: #F4F5F3;
+	font-size: 1.2em;
+	border: 2px solid #8C9C52;
+	width: 15.5em;
+	padding: 2.5em .5em .5em .5em;
+	position: relative;
+}
+.ui-datepicker-div, #ui-datepicker-div {
+	z-index: 9999; /*must have*/
+	display: none;
+}
+.ui-datepicker-inline {
+	float: left;
+	display: block;
+}
+.ui-datepicker-control {
+	display: none;
+}
+.ui-datepicker-current {
+	display: none;
+}
+.ui-datepicker-next, .ui-datepicker-prev {
+	position: absolute;
+	left: .5em;
+	top: .5em;
+}
+.ui-datepicker-next {
+	left: 14.6em;
+}
+.ui-datepicker-next:hover, .ui-datepicker-prev:hover {
+}
+.ui-datepicker-next a, .ui-datepicker-prev a {
+	text-indent: -999999px;
+	width: 1.3em;
+	height: 1.4em;
+	display: block;
+	font-size: 1em;
+	background: url(../images/datepicker/prev.gif) 50% 50% no-repeat;
+	cursor: pointer;
+}
+.ui-datepicker-next a {
+	background: url(../images/datepicker/next.gif) 50% 50% no-repeat;
+}
+.ui-datepicker-prev a:hover, .ui-datepicker-prev a:active, .ui-datepicker-prev a:focus {
+	/*background: url(../images/datepicker/prev-over.gif) 50% 50% no-repeat;*/
+}
+.ui-datepicker-next a:hover, .ui-datepicker-next a:active, .ui-datepicker-next a:focus {
+	/*background: url(../images/datepicker/next-over.gif) 50% 50% no-repeat;*/
+}
+.ui-datepicker-header select {
+	border: 2px solid #D3D3D3;
+	position: absolute;
+	top: .5em;
+	margin: 0 !important;
+}
+.ui-datepicker-header select:focus {
+	border:2px solid #8c9c52;
+}
+
+
+.ui-datepicker-header select.ui-datepicker-new-month {
+	width: 7em;
+	left: 2.8em;
+}
+.ui-datepicker-header select.ui-datepicker-new-year {
+	width: 5em;
+	left: 10.3em;
+}
+table.ui-datepicker {
+	width: 15.5em;
+	text-align: right;
+}
+table.ui-datepicker td a {
+	padding: .1em .3em .1em 0;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	text-decoration:none;
+	border: 1px solid #F4F5F3;
+	background:#fff;
+}
+table.ui-datepicker td a:hover {
+	background: #F7F3B7;
+}
+table.ui-datepicker td a:active {
+	background: #F7F3B7;
+}
+table.ui-datepicker .ui-datepicker-title-row td {
+	text-align: center;
+	font-weight:bold;
+}
+table.ui-datepicker .ui-datepicker-title-row td a {
+	color: #222222;
+}
+.ui-datepicker-cover {
+	display: none;
+	display/**/: block;
+	position: absolute;
+	z-index: -1;
+	filter: mask();
+	top: -4px;
+	left: -4px;
+	width: 193px;
+	height: 200px;
+}
+
+
+
+

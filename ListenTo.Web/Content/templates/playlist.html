@@ -1,0 +1,25 @@
+﻿<h2>Playlist</h2>
+
+    <ul id="playList" class="itemsList">
+    <% 
+    var playList = playList;
+    var playListLength = playList.length;
+    var track;
+    var current = current;
+    
+    for(var i=0; i<playListLength; i++){
+    track = playList[i];
+    %>
+        <%if(track.ID==current.ID || playListLength == 1) {%>
+        <li class="firstItem on " >
+        <%} else { %>
+         <li class="firstItem">
+        <%} %>
+        <a id="<%=track.ID %>" href="#"><strong>
+        <%=track.Name %></strong></a> 
+        by <a href="/<%=track.ArtistProfileAddress%>"><%=track.ArtistName %></a>
+        <br><%=track.StyleName%>
+        </li>
+    <%}%> 
+
+</div>

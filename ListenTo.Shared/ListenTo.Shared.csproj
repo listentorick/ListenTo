@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CCB61526-3A0E-4B93-8C5D-364581CBB29E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ListenTo.Shared</RootNamespace>
+    <AssemblyName>ListenTo.Shared</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net, Version=1.2.0.2, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Dimebrain.TweetSharp, Version=1.0.14.37163, Culture=neutral, PublicKeyToken=c148cfba29ed1a4d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\Dimebrain.TweetSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TemplateEngine, Version=1.0.2195.38813, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\TemplateEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionData\ArtistAddedActionData.cs" />
+    <Compile Include="ActionData\CommentOnNewsItemActionData.cs" />
+    <Compile Include="ActionData\CommentOnUserProfileActionData.cs" />
+    <Compile Include="ActionData\GigAddedActionData.cs" />
+    <Compile Include="ActionData\NewsAddedActionData.cs" />
+    <Compile Include="DO\Act.cs" />
+    <Compile Include="DO\Action.cs" />
+    <Compile Include="DO\Artist.cs" />
+    <Compile Include="DO\BaseContentDO.cs" />
+    <Compile Include="DO\BaseDO.cs" />
+    <Compile Include="DO\Comment.cs" />
+    <Compile Include="DO\Relationship.cs" />
+    <Compile Include="DO\Gig.cs" />
+    <Compile Include="DO\Image.cs" />
+    <Compile Include="DO\ImageMetaData.cs" />
+    <Compile Include="DO\NewsItem.cs" />
+    <Compile Include="DO\Site.cs" />
+    <Compile Include="DO\Style.cs" />
+    <Compile Include="DO\Tag.cs" />
+    <Compile Include="DO\Town.cs" />
+    <Compile Include="DO\Track.cs" />
+    <Compile Include="DO\TrackMetaData.cs" />
+    <Compile Include="DO\User.cs" />
+    <Compile Include="DO\UserCredentials.cs" />
+    <Compile Include="DO\OwnerMetaData.cs" />
+    <Compile Include="DO\UserProfile.cs" />
+    <Compile Include="DO\Venue.cs" />
+    <Compile Include="DTO\ActSummary.cs" />
+    <Compile Include="DTO\ArtistFanRelationshipSummary.cs" />
+    <Compile Include="DTO\ArtistSummary.cs" />
+    <Compile Include="DTO\BaseDTO.cs" />
+    <Compile Include="DTO\CommentSummary.cs" />
+    <Compile Include="DTO\GigSummary.cs" />
+    <Compile Include="DTO\NewsItemSummary.cs" />
+    <Compile Include="DTO\StyleSummary.cs" />
+    <Compile Include="DTO\TrackSummary.cs" />
+    <Compile Include="DTO\VenueSummary.cs" />
+    <Compile Include="DTO\WhatsNew.cs" />
+    <Compile Include="Enums\ActionType.cs" />
+    <Compile Include="Enums\ContentType.cs" />
+    <Compile Include="Enums\PropertyType.cs" />
+    <Compile Include="EqualityComparers\DOEqualityComparer.cs" />
+    <Compile Include="EqualityComparers\DTOEqualityComparer.cs" />
+    <Compile Include="EqualityComparers\TrackSummaryComparer.cs" />
+    <Compile Include="Exceptions\DataAcessException.cs" />
+    <Compile Include="Exceptions\ListenToException.cs" />
+    <Compile Include="Exceptions\OptimisticLockingFailureException.cs" />
+    <Compile Include="Exceptions\RecordNotFoundException.cs" />
+    <Compile Include="Exceptions\UnableToSaveException.cs" />
+    <Compile Include="Helpers\FileHelpers.cs" />
+    <Compile Include="Helpers\SymmetricEncryptionHelper.cs" />
+    <Compile Include="Helpers\FormatHelpers.cs" />
+    <Compile Include="Helpers\ImageHelpers.cs" />
+    <Compile Include="Helpers\MailHelpers.cs" />
+    <Compile Include="Helpers\AderTemplateEngineHelper.cs" />
+    <Compile Include="Helpers\TemplateHelpers.cs" />
+    <Compile Include="Helpers\TinyUrlUrlShortener.cs" />
+    <Compile Include="Helpers\TrackHelpers.cs" />
+    <Compile Include="Helpers\UrlFriendlyBase64EncodeHelper.cs" />
+    <Compile Include="Interfaces\Actions\IActionContentOwnerResolver.cs" />
+    <Compile Include="Interfaces\Actions\IActionDataHelper.cs" />
+    <Compile Include="Interfaces\Actions\IActionDataHelperFactory.cs" />
+    <Compile Include="Interfaces\Actions\IActionForCommentBuilder.cs" />
+    <Compile Include="Interfaces\Actions\IActionForCommentBuilderFactory.cs" />
+    <Compile Include="Interfaces\Actions\IActionPublicationQueue.cs" />
+    <Compile Include="Interfaces\Actions\IActionPublisher.cs" />
+    <Compile Include="Interfaces\Actions\IActionPublisherFactory.cs" />
+    <Compile Include="Interfaces\Actions\IActionUrlHelper.cs" />
+    <Compile Include="Interfaces\DAO\IGenericDAO.cs" />
+    <Compile Include="Interfaces\DAO\IGigDAO.cs" />
+    <Compile Include="Interfaces\DAO\ISiteDAO.cs" />
+    <Compile Include="Interfaces\DAO\ITagDAO.cs" />
+    <Compile Include="Interfaces\DAO\ITownDAO.cs" />
+    <Compile Include="Interfaces\DAO\IVenueDAO.cs" />
+    <Compile Include="Interfaces\Do\IActionDataDO.cs" />
+    <Compile Include="Interfaces\Do\IHasBinaryData.cs" />
+    <Compile Include="Interfaces\Do\IContentDO.cs" />
+    <Compile Include="Interfaces\Do\IDeleteableDO.cs" />
+    <Compile Include="Interfaces\Do\IDO.cs" />
+    <Compile Include="Interfaces\Do\INamedDO.cs" />
+    <Compile Include="Interfaces\Do\IOwnableDO.cs" />
+    <Compile Include="Interfaces\Do\IPublishableDO.cs" />
+    <Compile Include="Interfaces\Do\ISuspendableDO.cs" />
+    <Compile Include="Interfaces\Do\ITaggableDO.cs" />
+    <Compile Include="Interfaces\Do\IUserCredentials.cs" />
+    <Compile Include="Interfaces\Dto\IDTO.cs" />
+    <Compile Include="Interfaces\Helpers\IBase64EncodeHelper.cs" />
+    <Compile Include="Interfaces\Helpers\IEncryptionHelper.cs" />
+    <Compile Include="Interfaces\Helpers\IFileHelpers.cs" />
+    <Compile Include="Interfaces\Helpers\IRouteHelpers.cs" />
+    <Compile Include="Interfaces\Helpers\ITemporaryFileStrategy.cs" />
+    <Compile Include="Interfaces\IKeyValuePair.cs" />
+    <Compile Include="Interfaces\IsNew\IIsNewHelper.cs" />
+    <Compile Include="Interfaces\IsNew\IIsNewHelperFactory.cs" />
+    <Compile Include="Interfaces\ITemplateEngine.cs" />
+    <Compile Include="Interfaces\IUrlShortener.cs" />
+    <Compile Include="Interfaces\Mail\IEmailSender.cs" />
+    <Compile Include="Interfaces\Mail\IRetrieveDetailsStrategy.cs" />
+    <Compile Include="Interfaces\Mail\IUserApprovalStrategy.cs" />
+    <Compile Include="Interfaces\Managers\IActionsManager.cs" />
+    <Compile Include="Interfaces\Managers\IArtistManager.cs" />
+    <Compile Include="Interfaces\Managers\ICommentManager.cs" />
+    <Compile Include="Interfaces\Managers\IGigManager.cs" />
+    <Compile Include="Interfaces\Managers\IImageManager.cs" />
+    <Compile Include="Interfaces\Managers\IManager.cs" />
+    <Compile Include="Interfaces\Managers\INewsItemManager.cs" />
+    <Compile Include="Interfaces\Managers\IRelationshipManager.cs" />
+    <Compile Include="Interfaces\Managers\ISiteManager.cs" />
+    <Compile Include="Interfaces\Managers\IStyleManager.cs" />
+    <Compile Include="Interfaces\Managers\ITownManager.cs" />
+    <Compile Include="Interfaces\Managers\ITrackManager.cs" />
+    <Compile Include="Interfaces\Managers\IUserManager.cs" />
+    <Compile Include="Interfaces\Managers\IVenueManager.cs" />
+    <Compile Include="DTO\KeyValuePair.cs" />
+    <Compile Include="Interfaces\Managers\IUserProfileManager.cs" />
+    <Compile Include="Interfaces\Managers\IWhatsNewManager.cs" />
+    <Compile Include="Interfaces\Ownership\IOwnershipHelper.cs" />
+    <Compile Include="Interfaces\Ownership\IOwnershipHelperFactory.cs" />
+    <Compile Include="Interfaces\Repository\IRepositoryFactory.cs" />
+    <Compile Include="RepositoryFilters\ActionFilters.cs" />
+    <Compile Include="RepositoryFilters\ArtistFanRelationshipSummaryFilters.cs" />
+    <Compile Include="RepositoryFilters\ArtistSumaryFilters.cs" />
+    <Compile Include="RepositoryFilters\CommentFilters.cs" />
+    <Compile Include="RepositoryFilters\CommentSummaryFilters.cs" />
+    <Compile Include="RepositoryFilters\ImageFilters.cs" />
+    <Compile Include="RepositoryFilters\ImageMetaDataFilters.cs" />
+    <Compile Include="RepositoryFilters\NewsItemFilters.cs" />
+    <Compile Include="RepositoryFilters\NewsItemSummaryFilters.cs" />
+    <Compile Include="RepositoryFilters\SiteFilters.cs" />
+    <Compile Include="RepositoryFilters\StyleFilter.cs" />
+    <Compile Include="RepositoryFilters\TownFilters.cs" />
+    <Compile Include="RepositoryFilters\TrackMetaDataFilters.cs" />
+    <Compile Include="RepositoryFilters\TrackSummaryFilters.cs" />
+    <Compile Include="RepositoryFilters\UserFilters.cs" />
+    <Compile Include="RepositoryFilters\UserProfileFilters.cs" />
+    <Compile Include="RepositoryFilters\WhatsNewFilters.cs" />
+    <Compile Include="Utility\Is.cs" />
+    <Compile Include="RepositoryFilters\ActFilters.cs" />
+    <Compile Include="RepositoryFilters\ArtistFilters.cs" />
+    <Compile Include="RepositoryFilters\GigFilters.cs" />
+    <Compile Include="Interfaces\Repository\IRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryFilters\VenueFilters.cs" />
+    <Compile Include="Utility\IPageOfList.cs" />
+    <Compile Include="Utility\LazyList.cs" />
+    <Compile Include="Utility\PagedList.cs" />
+    <Compile Include="Utility\PageLinqExtensions.cs" />
+    <Compile Include="Utility\PageOfList.cs" />
+    <Compile Include="Validation\ArtistValidationHelper.cs" />
+    <Compile Include="Validation\CommentValidationHelper.cs" />
+    <Compile Include="Validation\GigValidationHelper.cs" />
+    <Compile Include="Validation\ImageValidationHelper.cs" />
+    <Compile Include="Validation\IValidationHelper.cs" />
+    <Compile Include="Validation\IValidationRunner.cs" />
+    <Compile Include="Validation\NewsItemValidationHelper.cs" />
+    <Compile Include="Validation\TrackValidationHelper.cs" />
+    <Compile Include="Validation\UserProfileValidation.cs" />
+    <Compile Include="Validation\UserValidationHelper.cs" />
+    <Compile Include="Validation\ValidationException.cs" />
+    <Compile Include="Validation\ThrowsExceptionValidationRunner.cs" />
+    <Compile Include="Validation\ValidationState.cs" />
+    <Compile Include="Validation\ValidationStateDictionary.cs" />
+    <Compile Include="Validation\ValidationStateKeys.cs" />
+    <Compile Include="Validation\VenueValidationHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ListenTo.Core.Audio\ListenTo.Core.Audio.csproj">
+      <Project>{873DD969-46F0-4F77-B94E-C236D1CC28A1}</Project>
+      <Name>ListenTo.Core.Audio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ListenTo.TinyUrl\ListenTo.TinyUrl.csproj">
+      <Project>{2978D772-4EDF-449F-B931-0086A6E1739F}</Project>
+      <Name>ListenTo.TinyUrl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Constants\" />
+    <Folder Include="Helpers\Actions\" />
+    <Folder Include="Interfaces\NewFolder1\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

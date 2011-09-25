@@ -1,0 +1,12 @@
+/* ie6 bug fixes */
+
+h1, h2, .chartList li, #bands #latestBands, .tagCloud li
+{ zoom:1; }
+
+p,address,h1,td,th,h2,h3,h4,li,ul,ol,dt,dd {
+    word-wrap: break-word;
+}
+
+.buttons li {
+	display:inline;
+}

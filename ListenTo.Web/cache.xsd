@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<xsd:schema xmlns="http://www.listentomanchester.co.uk/schema/cache"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://www.listentomanchester.co.uk/schema/cache"
+    elementFormDefault="qualified">
+
+  <xsd:annotation>
+    <xsd:documentation>
+      <![CDATA[
+        elementFormDefault="qualified" is on the xsd schema, otherwise, all locally declared elements 
+        are in NO namespace.
+		]]>
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:complexType name="objectType">
+    <xsd:annotation>
+      <xsd:documentation>
+        <![CDATA[
+	      Specifies the rules for a specific bean...
+			]]>
+      </xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:sequence>
+      <xsd:element name="method" type="methodType" maxOccurs="unbounded" />
+    </xsd:sequence>
+
+    <xsd:attribute name="target" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>
+          <![CDATA[
+	          The target bean
+				]]>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    
+    
+  </xsd:complexType>
+
+  <xsd:complexType name="methodType" abstract="false">
+    <xsd:annotation>
+      <xsd:documentation>
+        <![CDATA[
+	      Rules for a specific method
+			]]>
+      </xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:attribute name="name" type="xsd:string" use="required">
+      <xsd:annotation>
+        <xsd:documentation>
+          <![CDATA[
+	          The name of the method
+				]]>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+
+    <xsd:attribute name="key" type="xsd:string" use="required">
+      <xsd:annotation>
+        <xsd:documentation>
+          <![CDATA[
+	          The name of the method
+				]]>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+
+    <xsd:attribute name="storeInCaches" type="xsd:string" use="required">
+      <xsd:annotation>
+        <xsd:documentation>
+          <![CDATA[
+	          The name of the cache to retrieve/store the data from/in
+				]]>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+
+  </xsd:complexType>
+
+  <xsd:complexType name="cacheType">
+    <xsd:annotation>
+      <xsd:documentation>
+        <![CDATA[
+	      Contains the cache definitions
+			]]>
+      </xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:sequence>
+      <xsd:element name="object" type="objectType" maxOccurs="unbounded" />
+    </xsd:sequence>
+
+</xsd:complexType>
+
+<xsd:element name="cache" type="cacheType"></xsd:element>
+
+</xsd:schema>

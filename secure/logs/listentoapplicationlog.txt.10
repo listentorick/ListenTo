@@ -1,0 +1,721 @@
+2009-09-19 22:38:37,893 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - There isnt a IsNewHelper defined for this   at ListenTo.Core.Managers.BaseManager.CheckIsNew(BaseDO baseDO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\BaseManager.cs:line 41
+   at ListenTo.Core.Managers.GigManager.Save(IDO dO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\GigManager.cs:line 45
+   at ListenTo.Web.Controllers.GigController.Add(Gig gig, FormCollection formCollection) in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 88
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters) in F:\MVC-MS-Pl\Mvc\ActionMethodDispatcher.cs:line 39
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters) in F:\MVC-MS-Pl\Mvc\ReflectedActionDescriptor.cs:line 100
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 189
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 231
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 219
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 237
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 238
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 163
+2009-09-19 22:45:42,109 [8] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Sequence contains no elements   at System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   at System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.Single[TSource](IQueryable`1 source)
+   at ListenTo.Core.Managers.VenueManager.GetByID(Guid id) in F:\ListenTo\trunk\ListenTo.Core\Managers\VenueManager.cs:line 23
+   at ListenTo.Shared.Helpers.VenueIsNewHelper.IsNew(BaseDO baseDO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Shared\Helpers\IsNew\VenueIsNewHelper.cs:line 24
+   at ListenTo.Core.Managers.BaseManager.CheckIsNew(BaseDO baseDO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\BaseManager.cs:line 44
+   at ListenTo.Core.Managers.GigManager.Save(IDO dO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\GigManager.cs:line 45
+   at ListenTo.Web.Controllers.GigController.Add(Gig gig, FormCollection formCollection) in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 88
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters) in F:\MVC-MS-Pl\Mvc\ActionMethodDispatcher.cs:line 39
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters) in F:\MVC-MS-Pl\Mvc\ReflectedActionDescriptor.cs:line 100
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 189
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 231
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 219
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 237
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 238
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 163
+2009-09-19 22:46:35,688 [8] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Sequence contains no elements   at System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   at System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.Single[TSource](IQueryable`1 source)
+   at ListenTo.Core.Managers.VenueManager.GetByID(Guid id) in F:\ListenTo\trunk\ListenTo.Core\Managers\VenueManager.cs:line 23
+   at ListenTo.Shared.Helpers.VenueIsNewHelper.IsNew(BaseDO baseDO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Shared\Helpers\IsNew\VenueIsNewHelper.cs:line 24
+   at ListenTo.Core.Managers.BaseManager.CheckIsNew(BaseDO baseDO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\BaseManager.cs:line 44
+   at ListenTo.Core.Managers.GigManager.Save(IDO dO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\GigManager.cs:line 45
+   at ListenTo.Web.Controllers.GigController.Add(Gig gig, FormCollection formCollection) in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 88
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters) in F:\MVC-MS-Pl\Mvc\ActionMethodDispatcher.cs:line 39
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters) in F:\MVC-MS-Pl\Mvc\ReflectedActionDescriptor.cs:line 100
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 189
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 231
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 219
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 237
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 238
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 163
+2009-09-19 22:55:03,147 [8] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Cannot insert the value NULL into column 'LocationID', table 'ListenTo_Live.dbo.Venues'; column does not allow nulls. INSERT fails.
+The statement has been terminated.   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   at System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.ChangeDirector.StandardChangeDirector.DynamicInsert(TrackedObject item)
+   at System.Data.Linq.ChangeDirector.StandardChangeDirector.Insert(TrackedObject item)
+   at System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   at System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   at System.Data.Linq.DataContext.SubmitChanges()
+   at ListenTo.Data.LinqToSQL.LinqToSQLRepository.SaveVenue(Venue venue) in F:\ListenTo\trunk\ListenTo.Data.SQLRepository\LinqToSQLRepository.cs:line 443
+   at ListenTo.Core.Managers.VenueManager.Save(IDO dO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\VenueManager.cs:line 43
+   at ListenTo.Core.Managers.GigManager.Save(IDO dO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\GigManager.cs:line 50
+   at ListenTo.Web.Controllers.GigController.Add(Gig gig, FormCollection formCollection) in F:\ListenTo\trunk\ListenTo.Web\Controllers\GigController.cs:line 88
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters) in F:\MVC-MS-Pl\Mvc\ActionMethodDispatcher.cs:line 39
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters) in F:\MVC-MS-Pl\Mvc\ReflectedActionDescriptor.cs:line 100
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 189
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 231
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 219
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 237
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 238
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 163
+2009-09-20 19:47:14,389 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Exception of type 'System.Web.HttpUnhandledException' was thrown.   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewPage.cs:line 115
+   at System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewUserControl.cs:line 175
+   at System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewUserControl.cs:line 166
+   at System.Web.Mvc.WebFormView.RenderViewUserControl(ViewContext context, ViewUserControl control) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 106
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 80
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, ViewEngineCollection viewEngineCollection) in F:\MVC-MS-Pl\Mvc\HtmlHelper.cs:line 277
+   at System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName) in F:\MVC-MS-Pl\Mvc\Html\RenderPartialExtensions.cs:line 18
+   at ASP.views_gig_add_aspx.__RenderContent1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Gig\Add.aspx:line 16
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ASP.views_shared_form_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Shared\Form.Master:line 36
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer) in F:\MVC-MS-Pl\Mvc\ViewPage.cs:line 103
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_gig_add_aspx.ProcessRequest(HttpContext context) in c:\Users\rick\AppData\Local\Temp\Temporary ASP.NET Files\root\a6129b27\3f0567bc\App_Web_mzj9rbaz.3.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewPage.cs:line 115
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 97
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 74
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context) in F:\MVC-MS-Pl\Mvc\ViewResultBase.cs:line 92
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 242
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<InvokeActionResultWithFilters>b__e() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 280
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 268
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 286
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 287
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 164
+2009-09-20 19:52:29,094 [9] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Exception of type 'System.Web.HttpUnhandledException' was thrown.   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewPage.cs:line 115
+   at System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewUserControl.cs:line 175
+   at System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewUserControl.cs:line 166
+   at System.Web.Mvc.WebFormView.RenderViewUserControl(ViewContext context, ViewUserControl control) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 106
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 80
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, ViewEngineCollection viewEngineCollection) in F:\MVC-MS-Pl\Mvc\HtmlHelper.cs:line 277
+   at System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName) in F:\MVC-MS-Pl\Mvc\Html\RenderPartialExtensions.cs:line 18
+   at ASP.views_gig_add_aspx.__RenderContent1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Gig\Add.aspx:line 16
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ASP.views_shared_form_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Shared\Form.Master:line 36
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer) in F:\MVC-MS-Pl\Mvc\ViewPage.cs:line 103
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_gig_add_aspx.ProcessRequest(HttpContext context) in c:\Users\rick\AppData\Local\Temp\Temporary ASP.NET Files\root\a6129b27\3f0567bc\App_Web_td5pdbwi.4.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewPage.cs:line 115
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 97
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 74
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context) in F:\MVC-MS-Pl\Mvc\ViewResultBase.cs:line 92
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 242
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<InvokeActionResultWithFilters>b__e() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 280
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 268
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 286
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 287
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 164
+2009-09-20 20:30:01,588 [7] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Exception of type 'System.Web.HttpUnhandledException' was thrown.   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewPage.cs:line 115
+   at System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewUserControl.cs:line 175
+   at System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewUserControl.cs:line 166
+   at System.Web.Mvc.WebFormView.RenderViewUserControl(ViewContext context, ViewUserControl control) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 106
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 80
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, ViewEngineCollection viewEngineCollection) in F:\MVC-MS-Pl\Mvc\HtmlHelper.cs:line 277
+   at System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName) in F:\MVC-MS-Pl\Mvc\Html\RenderPartialExtensions.cs:line 18
+   at ASP.views_gig_add_aspx.__RenderContent1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Gig\Add.aspx:line 16
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ASP.views_shared_form_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Shared\Form.Master:line 36
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer) in F:\MVC-MS-Pl\Mvc\ViewPage.cs:line 103
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_gig_add_aspx.ProcessRequest(HttpContext context) in c:\Users\rick\AppData\Local\Temp\Temporary ASP.NET Files\root\a6129b27\3f0567bc\App_Web_mpvx_soq.1.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewPage.cs:line 115
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 97
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 74
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context) in F:\MVC-MS-Pl\Mvc\ViewResultBase.cs:line 92
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 242
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<InvokeActionResultWithFilters>b__e() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 280
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 268
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 286
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 287
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 164
+2009-09-20 20:31:33,731 [7] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Exception of type 'System.Web.HttpUnhandledException' was thrown.   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewPage.cs:line 115
+   at System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewUserControl.cs:line 175
+   at System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewUserControl.cs:line 166
+   at System.Web.Mvc.WebFormView.RenderViewUserControl(ViewContext context, ViewUserControl control) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 106
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 80
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, ViewEngineCollection viewEngineCollection) in F:\MVC-MS-Pl\Mvc\HtmlHelper.cs:line 277
+   at System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName) in F:\MVC-MS-Pl\Mvc\Html\RenderPartialExtensions.cs:line 18
+   at ASP.views_gig_add_aspx.__RenderContent1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Gig\Add.aspx:line 16
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ASP.views_shared_form_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in f:\ListenTo\trunk\ListenTo.Web\Views\Shared\Form.Master:line 36
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer) in F:\MVC-MS-Pl\Mvc\ViewPage.cs:line 103
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_gig_add_aspx.ProcessRequest(HttpContext context) in c:\Users\rick\AppData\Local\Temp\Temporary ASP.NET Files\root\a6129b27\3f0567bc\App_Web_eqcavktp.2.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext) in F:\MVC-MS-Pl\Mvc\ViewPage.cs:line 115
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 97
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer) in F:\MVC-MS-Pl\Mvc\WebFormView.cs:line 74
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context) in F:\MVC-MS-Pl\Mvc\ViewResultBase.cs:line 92
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 242
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<InvokeActionResultWithFilters>b__e() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 280
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 268
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10() in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 286
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 287
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName) in F:\MVC-MS-Pl\Mvc\ControllerActionInvoker.cs:line 164
+2009-09-22 12:42:16,182 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - Exception of type 'System.Web.HttpUnhandledException' was thrown.   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_newsitem_index_aspx.ProcessRequest(HttpContext context) in c:\Users\rick\AppData\Local\Temp\Temporary ASP.NET Files\root\a6129b27\3f0567bc\App_Web_qtl-n4r6.5.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<InvokeActionResultWithFilters>b__e()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass11.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-09-26 15:44:04,219 [8] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - A generic error occurred in GDI+.   at System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   at ListenTo.Shared.Helpers.ImageHelpers.SaveJPGWithCompressionSetting(Image image, String szFileName, Int64 lCompression) in F:\ListenTo\trunk\ListenTo.Shared\Helpers\ImageHelpers.cs:line 346
+   at ListenTo.Shared.Helpers.ImageHelpers.SaveForWeb(Image image, String szFileName) in F:\ListenTo\trunk\ListenTo.Shared\Helpers\ImageHelpers.cs:line 366
+   at ListenTo.Shared.Helpers.ImageHelpers.SaveForWeb(Byte[] data, String szFileName) in F:\ListenTo\trunk\ListenTo.Shared\Helpers\ImageHelpers.cs:line 356
+   at ListenTo.Core.Managers.ImageManager.Save(IDO dO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\ImageManager.cs:line 123
+   at ListenTo.Core.Managers.ImageManager.HandleUploadedImage(Image image, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\ImageManager.cs:line 85
+   at ListenTo.Core.Managers.ImageManager.HandleUploadedImage(Byte[] data, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\ImageManager.cs:line 104
+   at ListenTo.Core.Managers.NewsItemManager.SetNewsItemImage(NewsItem newsitem, Byte[] data, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\NewsItemManager.cs:line 88
+   at ListenTo.Web.Controllers.NewsItemController.ManageNewsItem(NewsItemEditViewModel newsItemEditViewModel) in F:\ListenTo\trunk\ListenTo.Web\Controllers\NewsItemController.cs:line 132
+   at ListenTo.Web.Controllers.NewsItemController.Edit(Guid id, FormCollection formCollection) in F:\ListenTo\trunk\ListenTo.Web\Controllers\NewsItemController.cs:line 107
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-09-26 15:49:03,341 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - A generic error occurred in GDI+.   at System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   at ListenTo.Shared.Helpers.ImageHelpers.SaveJPGWithCompressionSetting(Image image, String szFileName, Int64 lCompression) in F:\ListenTo\trunk\ListenTo.Shared\Helpers\ImageHelpers.cs:line 346
+   at ListenTo.Shared.Helpers.ImageHelpers.SaveForWeb(Image image, String szFileName) in F:\ListenTo\trunk\ListenTo.Shared\Helpers\ImageHelpers.cs:line 366
+   at ListenTo.Shared.Helpers.ImageHelpers.SaveForWeb(Byte[] data, String szFileName) in F:\ListenTo\trunk\ListenTo.Shared\Helpers\ImageHelpers.cs:line 356
+   at ListenTo.Core.Managers.ImageManager.Save(IDO dO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\ImageManager.cs:line 123
+   at ListenTo.Core.Managers.ImageManager.HandleUploadedImage(Image image, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\ImageManager.cs:line 85
+   at ListenTo.Core.Managers.ImageManager.HandleUploadedImage(Byte[] data, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\ImageManager.cs:line 104
+   at ListenTo.Core.Managers.NewsItemManager.SetNewsItemImage(NewsItem newsitem, Byte[] data, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\NewsItemManager.cs:line 88
+   at ListenTo.Web.Controllers.NewsItemController.ManageNewsItem(NewsItemEditViewModel newsItemEditViewModel) in F:\ListenTo\trunk\ListenTo.Web\Controllers\NewsItemController.cs:line 132
+   at ListenTo.Web.Controllers.NewsItemController.Edit(Guid id, FormCollection formCollection) in F:\ListenTo\trunk\ListenTo.Web\Controllers\NewsItemController.cs:line 107
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-09-26 15:52:25,307 [4] ERROR ListenTo.Web.Controllers.ListenToController [(null)] - A generic error occurred in GDI+.   at System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   at ListenTo.Shared.Helpers.ImageHelpers.SaveJPGWithCompressionSetting(Image image, String szFileName, Int64 lCompression) in F:\ListenTo\trunk\ListenTo.Shared\Helpers\ImageHelpers.cs:line 346
+   at ListenTo.Shared.Helpers.ImageHelpers.SaveForWeb(Image image, String szFileName) in F:\ListenTo\trunk\ListenTo.Shared\Helpers\ImageHelpers.cs:line 366
+   at ListenTo.Shared.Helpers.ImageHelpers.SaveForWeb(Byte[] data, String szFileName) in F:\ListenTo\trunk\ListenTo.Shared\Helpers\ImageHelpers.cs:line 356
+   at ListenTo.Core.Managers.ImageManager.Save(IDO dO, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\ImageManager.cs:line 123
+   at ListenTo.Core.Managers.ImageManager.HandleUploadedImage(Image image, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\ImageManager.cs:line 85
+   at ListenTo.Core.Managers.ImageManager.HandleUploadedImage(Byte[] data, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\ImageManager.cs:line 104
+   at ListenTo.Core.Managers.NewsItemManager.SetNewsItemImage(NewsItem newsitem, Byte[] data, UserCredentials userCredentials) in F:\ListenTo\trunk\ListenTo.Core\Managers\NewsItemManager.cs:line 88
+   at ListenTo.Web.Controllers.NewsItemController.ManageNewsItem(NewsItemEditViewModel newsItemEditViewModel) in F:\ListenTo\trunk\ListenTo.Web\Controllers\NewsItemController.cs:line 132
+   at ListenTo.Web.Controllers.NewsItemController.Edit(Guid id, FormCollection formCollection) in F:\ListenTo\trunk\ListenTo.Web\Controllers\NewsItemController.cs:line 107
+   at lambda_method(ExecutionScope , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+2009-09-27 10:10:19,453 [4] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only. ---> Spring.Objects.Factory.ObjectDefinitionStoreException: Line 123 in XML document from file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] violates the schema.  The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only. ---> System.Xml.Schema.XmlSchemaValidationException: The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only.
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.HandleValidation(Object sender, ValidationEventArgs args) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 354
+   at System.Xml.Schema.XmlSchemaValidator.SendValidationEvent(ValidationEventHandler eventHandler, Object sender, XmlSchemaValidationException e, XmlSeverityType severity)
+   at System.Xml.Schema.XmlSchemaValidator.ElementValidationError(XmlQualifiedName name, ValidationState context, ValidationEventHandler eventHandler, Object sender, String sourceUri, Int32 lineNo, Int32 linePos, Boolean getParticles)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateElementContext(XmlQualifiedName elementName, Boolean& invalidElementInContext)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateElement(String localName, String namespaceUri, XmlSchemaInfo schemaInfo, String xsiType, String xsiNil, String xsiSchemaLocation, String xsiNoNamespaceSchemaLocation)
+   at System.Xml.XsdValidatingReader.ProcessElementEvent()
+   at System.Xml.XsdValidatingReader.ProcessReaderEvent()
+   at System.Xml.XsdValidatingReader.Read()
+   at System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at Spring.Util.ConfigXmlDocument.Load(XmlReader reader) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigXmlDocument.cs:line 193
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 260
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 278
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.LoadObjectDefinitions(IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 206
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String location) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 231
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String[] locations) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 255
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(XmlObjectDefinitionReader objectDefinitionReader) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 214
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(DefaultListableObjectFactory objectFactory) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 238
+   at Spring.Context.Support.AbstractXmlApplicationContext.RefreshObjectFactory() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 133
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 766
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-09-27 10:10:22,909 [4] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only. ---> Spring.Objects.Factory.ObjectDefinitionStoreException: Line 123 in XML document from file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] violates the schema.  The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only. ---> System.Xml.Schema.XmlSchemaValidationException: The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only.
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.HandleValidation(Object sender, ValidationEventArgs args) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 354
+   at System.Xml.Schema.XmlSchemaValidator.SendValidationEvent(ValidationEventHandler eventHandler, Object sender, XmlSchemaValidationException e, XmlSeverityType severity)
+   at System.Xml.Schema.XmlSchemaValidator.ElementValidationError(XmlQualifiedName name, ValidationState context, ValidationEventHandler eventHandler, Object sender, String sourceUri, Int32 lineNo, Int32 linePos, Boolean getParticles)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateElementContext(XmlQualifiedName elementName, Boolean& invalidElementInContext)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateElement(String localName, String namespaceUri, XmlSchemaInfo schemaInfo, String xsiType, String xsiNil, String xsiSchemaLocation, String xsiNoNamespaceSchemaLocation)
+   at System.Xml.XsdValidatingReader.ProcessElementEvent()
+   at System.Xml.XsdValidatingReader.ProcessReaderEvent()
+   at System.Xml.XsdValidatingReader.Read()
+   at System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at Spring.Util.ConfigXmlDocument.Load(XmlReader reader) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigXmlDocument.cs:line 193
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 260
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 278
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.LoadObjectDefinitions(IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 206
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String location) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 231
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String[] locations) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 255
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(XmlObjectDefinitionReader objectDefinitionReader) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 214
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(DefaultListableObjectFactory objectFactory) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 238
+   at Spring.Context.Support.AbstractXmlApplicationContext.RefreshObjectFactory() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 133
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 766
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-09-27 10:10:24,644 [4] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only. ---> Spring.Objects.Factory.ObjectDefinitionStoreException: Line 123 in XML document from file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] violates the schema.  The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only. ---> System.Xml.Schema.XmlSchemaValidationException: The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only.
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.HandleValidation(Object sender, ValidationEventArgs args) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 354
+   at System.Xml.Schema.XmlSchemaValidator.SendValidationEvent(ValidationEventHandler eventHandler, Object sender, XmlSchemaValidationException e, XmlSeverityType severity)
+   at System.Xml.Schema.XmlSchemaValidator.ElementValidationError(XmlQualifiedName name, ValidationState context, ValidationEventHandler eventHandler, Object sender, String sourceUri, Int32 lineNo, Int32 linePos, Boolean getParticles)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateElementContext(XmlQualifiedName elementName, Boolean& invalidElementInContext)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateElement(String localName, String namespaceUri, XmlSchemaInfo schemaInfo, String xsiType, String xsiNil, String xsiSchemaLocation, String xsiNoNamespaceSchemaLocation)
+   at System.Xml.XsdValidatingReader.ProcessElementEvent()
+   at System.Xml.XsdValidatingReader.ProcessReaderEvent()
+   at System.Xml.XsdValidatingReader.Read()
+   at System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at Spring.Util.ConfigXmlDocument.Load(XmlReader reader) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigXmlDocument.cs:line 193
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 260
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 278
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.LoadObjectDefinitions(IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 206
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String location) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 231
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String[] locations) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 255
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(XmlObjectDefinitionReader objectDefinitionReader) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 214
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(DefaultListableObjectFactory objectFactory) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 238
+   at Spring.Context.Support.AbstractXmlApplicationContext.RefreshObjectFactory() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 133
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 766
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-09-27 10:20:28,366 [4] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only. ---> Spring.Objects.Factory.ObjectDefinitionStoreException: Line 123 in XML document from file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] violates the schema.  The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only. ---> System.Xml.Schema.XmlSchemaValidationException: The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only.
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.HandleValidation(Object sender, ValidationEventArgs args) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 354
+   at System.Xml.Schema.XmlSchemaValidator.SendValidationEvent(ValidationEventHandler eventHandler, Object sender, XmlSchemaValidationException e, XmlSeverityType severity)
+   at System.Xml.Schema.XmlSchemaValidator.ElementValidationError(XmlQualifiedName name, ValidationState context, ValidationEventHandler eventHandler, Object sender, String sourceUri, Int32 lineNo, Int32 linePos, Boolean getParticles)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateElementContext(XmlQualifiedName elementName, Boolean& invalidElementInContext)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateElement(String localName, String namespaceUri, XmlSchemaInfo schemaInfo, String xsiType, String xsiNil, String xsiSchemaLocation, String xsiNoNamespaceSchemaLocation)
+   at System.Xml.XsdValidatingReader.ProcessElementEvent()
+   at System.Xml.XsdValidatingReader.ProcessReaderEvent()
+   at System.Xml.XsdValidatingReader.Read()
+   at System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at Spring.Util.ConfigXmlDocument.Load(XmlReader reader) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigXmlDocument.cs:line 193
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 260
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 278
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.LoadObjectDefinitions(IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 206
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String location) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 231
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String[] locations) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 255
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(XmlObjectDefinitionReader objectDefinitionReader) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 214
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(DefaultListableObjectFactory objectFactory) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 238
+   at Spring.Context.Support.AbstractXmlApplicationContext.RefreshObjectFactory() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 133
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 766
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-09-27 10:23:07,912 [4] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:list' because the parent element's content model is text only. ---> Spring.Objects.Factory.ObjectDefinitionStoreException: Line 137 in XML document from file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] violates the schema.  The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:list' because the parent element's content model is text only. ---> System.Xml.Schema.XmlSchemaValidationException: The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:list' because the parent element's content model is text only.
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.HandleValidation(Object sender, ValidationEventArgs args) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 354
+   at System.Xml.Schema.XmlSchemaValidator.SendValidationEvent(ValidationEventHandler eventHandler, Object sender, XmlSchemaValidationException e, XmlSeverityType severity)
+   at System.Xml.Schema.XmlSchemaValidator.ElementValidationError(XmlQualifiedName name, ValidationState context, ValidationEventHandler eventHandler, Object sender, String sourceUri, Int32 lineNo, Int32 linePos, Boolean getParticles)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateElementContext(XmlQualifiedName elementName, Boolean& invalidElementInContext)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateElement(String localName, String namespaceUri, XmlSchemaInfo schemaInfo, String xsiType, String xsiNil, String xsiSchemaLocation, String xsiNoNamespaceSchemaLocation)
+   at System.Xml.XsdValidatingReader.ProcessElementEvent()
+   at System.Xml.XsdValidatingReader.ProcessReaderEvent()
+   at System.Xml.XsdValidatingReader.Read()
+   at System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at Spring.Util.ConfigXmlDocument.Load(XmlReader reader) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigXmlDocument.cs:line 193
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 260
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 278
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.LoadObjectDefinitions(IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 206
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String location) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 231
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String[] locations) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 255
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(XmlObjectDefinitionReader objectDefinitionReader) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 214
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(DefaultListableObjectFactory objectFactory) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 238
+   at Spring.Context.Support.AbstractXmlApplicationContext.RefreshObjectFactory() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 133
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 766
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-09-27 10:25:24,717 [9] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only. ---> Spring.Objects.Factory.ObjectDefinitionStoreException: Line 123 in XML document from file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] violates the schema.  The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only. ---> System.Xml.Schema.XmlSchemaValidationException: The element 'http://www.springframework.net:value' cannot contain child element 'http://www.springframework.net:ref' because the parent element's content model is text only.
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.HandleValidation(Object sender, ValidationEventArgs args) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 354
+   at System.Xml.Schema.XmlSchemaValidator.SendValidationEvent(ValidationEventHandler eventHandler, Object sender, XmlSchemaValidationException e, XmlSeverityType severity)
+   at System.Xml.Schema.XmlSchemaValidator.ElementValidationError(XmlQualifiedName name, ValidationState context, ValidationEventHandler eventHandler, Object sender, String sourceUri, Int32 lineNo, Int32 linePos, Boolean getParticles)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateElementContext(XmlQualifiedName elementName, Boolean& invalidElementInContext)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateElement(String localName, String namespaceUri, XmlSchemaInfo schemaInfo, String xsiType, String xsiNil, String xsiSchemaLocation, String xsiNoNamespaceSchemaLocation)
+   at System.Xml.XsdValidatingReader.ProcessElementEvent()
+   at System.Xml.XsdValidatingReader.ProcessReaderEvent()
+   at System.Xml.XsdValidatingReader.Read()
+   at System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at Spring.Util.ConfigXmlDocument.Load(XmlReader reader) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigXmlDocument.cs:line 193
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 260
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 278
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.LoadObjectDefinitions(IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 206
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String location) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 231
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String[] locations) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 255
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(XmlObjectDefinitionReader objectDefinitionReader) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 214
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(DefaultListableObjectFactory objectFactory) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 238
+   at Spring.Context.Support.AbstractXmlApplicationContext.RefreshObjectFactory() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 133
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 766
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-09-27 21:17:07,764 [4] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': The element 'objects' in namespace 'http://www.springframework.net' cannot contain text. List of possible elements expected: 'import, alias, object' in namespace 'http://www.springframework.net' as well as any element in namespace '##other'. ---> Spring.Objects.Factory.ObjectDefinitionStoreException: Line 128 in XML document from file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] violates the schema.  The element 'objects' in namespace 'http://www.springframework.net' cannot contain text. List of possible elements expected: 'import, alias, object' in namespace 'http://www.springframework.net' as well as any element in namespace '##other'. ---> System.Xml.Schema.XmlSchemaValidationException: The element 'objects' in namespace 'http://www.springframework.net' cannot contain text. List of possible elements expected: 'import, alias, object' in namespace 'http://www.springframework.net' as well as any element in namespace '##other'.
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.HandleValidation(Object sender, ValidationEventArgs args) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 354
+   at System.Xml.Schema.XmlSchemaValidator.SendValidationEvent(XmlSchemaValidationException e, XmlSeverityType severity)
+   at System.Xml.Schema.XmlSchemaValidator.SendValidationEvent(String code, String[] args)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateText(String elementStringValue, XmlValueGetter elementValueGetter)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateText(XmlValueGetter elementValue)
+   at System.Xml.XsdValidatingReader.ProcessReaderEvent()
+   at System.Xml.XsdValidatingReader.Read()
+   at System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at Spring.Util.ConfigXmlDocument.Load(XmlReader reader) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigXmlDocument.cs:line 193
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 260
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 278
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.LoadObjectDefinitions(IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 206
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String location) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 231
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String[] locations) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 255
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(XmlObjectDefinitionReader objectDefinitionReader) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 214
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(DefaultListableObjectFactory objectFactory) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 238
+   at Spring.Context.Support.AbstractXmlApplicationContext.RefreshObjectFactory() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 133
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 766
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282
+2009-09-27 21:17:55,089 [4] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': The element 'objects' in namespace 'http://www.springframework.net' cannot contain text. List of possible elements expected: 'import, alias, object' in namespace 'http://www.springframework.net' as well as any element in namespace '##other'. ---> Spring.Objects.Factory.ObjectDefinitionStoreException: Line 128 in XML document from file [F:\ListenTo\trunk\ListenTo.Web\SpringConfig\Managers.xml] violates the schema.  The element 'objects' in namespace 'http://www.springframework.net' cannot contain text. List of possible elements expected: 'import, alias, object' in namespace 'http://www.springframework.net' as well as any element in namespace '##other'. ---> System.Xml.Schema.XmlSchemaValidationException: The element 'objects' in namespace 'http://www.springframework.net' cannot contain text. List of possible elements expected: 'import, alias, object' in namespace 'http://www.springframework.net' as well as any element in namespace '##other'.
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.HandleValidation(Object sender, ValidationEventArgs args) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 354
+   at System.Xml.Schema.XmlSchemaValidator.SendValidationEvent(XmlSchemaValidationException e, XmlSeverityType severity)
+   at System.Xml.Schema.XmlSchemaValidator.SendValidationEvent(String code, String[] args)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateText(String elementStringValue, XmlValueGetter elementValueGetter)
+   at System.Xml.Schema.XmlSchemaValidator.ValidateText(XmlValueGetter elementValue)
+   at System.Xml.XsdValidatingReader.ProcessReaderEvent()
+   at System.Xml.XsdValidatingReader.Read()
+   at System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at Spring.Util.ConfigXmlDocument.Load(XmlReader reader) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigXmlDocument.cs:line 193
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 260
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 278
+   at Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.LoadObjectDefinitions(IResource resource) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Xml\XmlObjectDefinitionReader.cs:line 206
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String location) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 231
+   at Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String[] locations) in F:\Spring.NET\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinitionReader.cs:line 255
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(XmlObjectDefinitionReader objectDefinitionReader) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 214
+   at Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(DefaultListableObjectFactory objectFactory) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 238
+   at Spring.Context.Support.AbstractXmlApplicationContext.RefreshObjectFactory() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractXmlApplicationContext.cs:line 133
+   at Spring.Context.Support.AbstractApplicationContext.Refresh() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\AbstractApplicationContext.cs:line 766
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 105
+   at Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 87
+   at (Object[] )
+   at Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments) in F:\Spring.NET\src\Spring\Spring.Core\Reflection\Dynamic\DynamicConstructor.cs:line 116
+   at Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 550
+   at Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext() in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 494
+   at Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 337
+   at Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebContextHandler.cs:line 129
+   at Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section) in F:\Spring.NET\src\Spring\Spring.Core\Context\Support\ContextHandler.cs:line 280
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   at System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   at System.Web.HttpContext.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   at System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   at System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   at Spring.Util.ConfigurationUtils.GetSection(String sectionName) in F:\Spring.NET\src\Spring\Spring.Core\Util\ConfigurationUtils.cs:line 58
+   at Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath) in F:\Spring.NET\src\Spring\Spring.Web\Context\Support\WebApplicationContext.cs:line 282

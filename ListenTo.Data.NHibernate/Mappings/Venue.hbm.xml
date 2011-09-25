@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="ListenTo.Shared.DO.Venue, ListenTo.Shared" table="Venues">
+    <id name="ID" column="ID" type="Guid"  >
+      <generator class="assigned" />
+      <!-- <generator class="native"/>-->
+    </id>
+    <property name="Name" column="Name" type="String" length="50" />
+    <property name="Description" column="Description" type="String" length="200" />
+    <property name="Address" column="Address" type="String" length="200" />
+    <property name="Telephone" column="Telephone" type="String" length="50" />
+    <property name="URL" column="Website" type="String" length="50" />
+    <property name="Created" column="Created" type="DateTime" />
+    <property name="IsDeleted" column="IsDeleted" type="Boolean" />
+    <many-to-one name="Town" class="ListenTo.Shared.DO.Town, ListenTo.Shared" column="TownId"/>
+  </class>
+
+  <!-- Retrieves the set of all users-->
+  <query name="Venue.GetAll">
+    <![CDATA[
+    from Venue as v
+    where v.IsDeleted=0
+   ]]>
+  </query>
+  
+</hibernate-mapping>
+

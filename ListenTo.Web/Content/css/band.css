@@ -1,0 +1,250 @@
+			h1 {
+				border:none;
+				
+			}
+
+/* Become a fan tab */
+			dl.tabs dd.becomeFan {
+				float:none;
+				text-align:left;
+				position:absolute;
+				right:0px;
+				width:170px;
+				font-weight:normal;
+				padding-top:4px;
+				text-align:center;
+			}
+			dl.tabs dd.becomeFan a {
+				display:inline;
+				padding-right:0;
+				text-decoration:underline;
+				font-size:0.9em;
+			}			
+			dl.tabs dd.becomeFan a img {
+				vertical-align:middle;
+			}
+
+			
+			
+/* Music player */
+/*			#player { 
+				position:relative;
+				background:url(../images/bg-musicplayer.gif) repeat-y;
+			}
+			.popup #player {
+				width:550px;
+			}
+			#playerMain {
+				position:relative;
+				float:left;
+				width:340px;
+			}
+			#playerMain h2 span.by { position:absolute; left:-999em; }
+			.popup #playerMain h2 span.by { position:relative; left:auto; display:block; font-size:.8em; }
+			
+			#playerPlayer {
+				position:relative;
+				float:left;
+				width:170px;
+			}
+			#playerPlayer #buttonPlay {
+				position:absolute;
+				top:146px;
+				left:109px;
+				width:48px;
+				height:40px;
+				background:url(../images/player/play-off.gif) no-repeat;
+				text-indent:-999em;
+				border:none;
+				outline:none;
+				cursor:pointer;
+			}
+			#playerPlayer #buttonPlay.on {
+				background:url(../images/player/play-on.gif) no-repeat;
+			}
+			#playerPlayer #buttonNext {
+				position:absolute;
+				top:146px;
+				left:61px;
+				width:48px;
+				height:40px;
+				background:url(../images/player/next-off.gif) no-repeat;
+				text-indent:-999em;
+				border:none;
+				outline:none;
+				cursor:pointer;
+			}
+			#playerPlayer #buttonNext.on {
+				background:url(../images/player/next-on.gif) no-repeat;
+			}
+			#playerPlayer #buttonPrev {
+				position:absolute;
+				top:146px;
+				left:13px;
+				width:48px;
+				height:40px;
+				background:url(../images/player/prev-off.gif) no-repeat;
+				text-indent:-999em;
+				border:none;
+				outline:none;
+				cursor:pointer;
+			}
+			#playerPlayer #buttonPrev.on {
+				background:url(../images/player/prev-on.gif) no-repeat;
+			}			
+			
+			#playerPlayer p.newWinLink {
+				padding-top:.2em;
+				font-size:.9em;
+				text-align:right;
+			}
+			.popup #playerPlayer p.newWinLink {
+				display:none;
+			}
+
+			#playerData {
+				position:relative;
+				float:right;
+				width:160px;	
+			}
+			#playerData dl.columnList dd {
+				margin-left:70px;
+			}
+			
+			#playerText {
+				position:absolute;
+				overflow:hidden;
+				width:124px;
+				height:14px;
+				top:44px;
+				left:22px;
+			}
+			#playerText pre {
+				font-family:"courier new", courier, monospace;
+				font-size:.8em;
+				font-weight:bold;
+			}
+			
+			#playerWrap {
+				position:absolute;
+				top:152px;
+				left:22px;
+			}
+			
+			#playerSub {
+				position:relative;
+				float:right;
+				width:170px;
+			}
+			#playerRating fieldset {
+				margin-bottom:.5em;
+			}
+			#playerPlaylist .on {
+				background:#D4D6CB;
+				margin:0 -10px -1px -10px;
+				padding-left:10px;
+				padding-right:10px;
+				padding-top:8px;
+			}
+			#playerMain, #playerRating, #playerPlaylist {
+				padding:0 10px 10px 10px;
+				background:#f4f5f3;
+			}
+			#playerRating {
+				border-bottom:12px solid #fff;
+			}
+			#playerMain h2, #playerRating h2, #playerPlaylist h2 {
+				padding-left:10px;
+				padding-top:0.15em;
+				padding-bottom:0em;
+				margin-left:-10px;
+				margin-right:-10px;
+				border-top:4px solid #B6BD8E;
+			}*/
+
+/* Popup player */
+/*			#popupPlayer {
+				background:url(../images/bg-musicplayer.gif) repeat-y 15px 0;
+			}
+			#popupPlayer #popupWrapper {
+				border-top:10px solid #fff;
+				padding-top:0;
+			}*/
+
+/* jQuery.Rating Plugin CSS - http://www.fyneworks.com/jquery/star-rating/ */
+			div.rating{
+				cursor:pointer;
+				margin:2em;
+				clear:both;
+				display:block;
+			}
+			div.rating:after{
+				content:'.';
+				display:block;
+				height:0;
+				width:0;
+				clear:both;
+				visibility:hidden;
+			}
+			div.cancel,div.star{
+				float:left;
+				width:22px;
+				height:20px;
+				text-indent:-999em;
+				cursor:pointer;
+				display:block;
+				background:transparent;
+				overflow:hidden;
+			}
+			div.cancel,div.cancel a{
+				background:url('../images/ratings/delete.gif') no-repeat 0 /*-16px*/-20px;
+			}
+			div.star,div.star a{
+				background:url('../images/ratings/star.gif') no-repeat 0 0px;
+			}
+			div.cancel a,div.star a{
+				display:block;
+				width:20px;
+				height:100%;
+				background-position:0 0px;
+				border:1 solid #FF0000;
+			}
+			div.star_on a{
+				background-position:0 /*-16px*/ -20px !important;
+			}
+			div.star_hover a,div.star_live a:hover{
+				background-position:0 /*-32px*/ -40px;
+			}
+			/* Read Only CSS */
+			div.star_readonly a,div.star_readonly a:hover{
+				cursor:default !important;
+			}
+			/* Partial Star CSS */
+			div.star{
+				background:transparent!important;
+				overflow:hidden!important;
+			}
+/* END jQuery.Rating Plugin CSS */
+
+#reasonsToBecomeAFan 
+{
+	padding-top:10px;
+}
+
+#reasonsToBecomeAFan #bandImage
+{
+	float:left;
+	margin-right:5px;
+}
+
+span.bigText
+{
+	margin-bottom:20px;
+	font-size:2em;
+	color:#514915;
+}
+
+span.focus 
+{
+	font-weight:bold;
+}

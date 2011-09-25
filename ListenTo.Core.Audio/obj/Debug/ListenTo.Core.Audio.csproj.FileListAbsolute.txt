@@ -1,0 +1,5 @@
+F:\ListenTo\trunk\ListenTo.Core.Audio\bin\Debug\ListenTo.Core.Audio.dll
+F:\ListenTo\trunk\ListenTo.Core.Audio\bin\Debug\ListenTo.Core.Audio.pdb
+F:\ListenTo\trunk\ListenTo.Core.Audio\obj\Debug\ResolveAssemblyReference.cache
+F:\ListenTo\trunk\ListenTo.Core.Audio\obj\Debug\ListenTo.Core.Audio.dll
+F:\ListenTo\trunk\ListenTo.Core.Audio\obj\Debug\ListenTo.Core.Audio.pdb

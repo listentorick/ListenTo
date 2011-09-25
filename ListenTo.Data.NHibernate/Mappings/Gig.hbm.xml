@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="ListenTo.Shared.DO.Gig, ListenTo.Shared" table="Gigs">
+    <id name="ID" column="ID" type="Guid"  >
+      <generator class="assigned" />
+      <!-- <generator class="native"/>-->
+    </id>
+    <property name="Name" column="Name" type="String" length="50" />
+    <property name="Description" column="Description" type="String" length="200" />
+    <property name="TicketPrice" column="TicketPrice"  type="String" />
+   
+    <property name="StartDate" column="Date" type="DateTime" />
+    <property name="EndDate" column="EndDate" type="DateTime" />
+    
+    <property name="Created" column="Created" type="DateTime" />
+    <property name="IsDeleted" column="IsDeleted" type="Boolean" />
+
+    <many-to-one name="Venue" class="ListenTo.Shared.DO.Venue, ListenTo.Shared" column="VenueId"/>
+
+    <bag name="Acts" lazy="false">
+      <key column="GigID"/>
+      <one-to-many class="ListenTo.Shared.DO.Act, ListenTo.Shared"/>
+    </bag>
+  </class>
+  
+
+  <!-- Retrieves the set of all users-->
+  <query name="Gig.GetAll">
+    <![CDATA[
+    from Gig as g
+    where g.IsDeleted = 0
+   ]]>
+  </query>
+
+  <query name="Gig.GetGigsBySite">
+    <![CDATA[
+    select g from Gig as g
+    inner join g.Venue as v
+    inner join v.Town as t
+    inner join t.RepresentativeSites as s
+    where
+    s.ID =  :siteID
+    and
+    g.IsDeleted = 0
+   ]]>
+  </query>
+
+  <query name="Gig.GetGigsBySiteAfterDate">
+    <![CDATA[
+    select g from Gig as g
+    inner join g.Venue as v
+    inner join v.Town as t
+    inner join t.RepresentativeSites as s
+    where
+    s.ID =  :siteId
+    and
+    g.StartDate > :afterDate
+    and
+    g.IsDeleted = 0
+   ]]>
+  </query>
+
+  <query name="Gig.GetGigsBySiteBeforeDate">
+    <![CDATA[
+    select g from Gig as g
+    inner join g.Venue as v
+    inner join v.Town as t
+    inner join t.RepresentativeSites as s
+    where
+    s.ID =  :siteId
+    and
+    g.StartDate < :beforeDate
+    and
+    g.IsDeleted = 0
+   ]]>
+  </query>
+
+  <query name="Gig.GetGigsBySiteOnDate">
+    <![CDATA[
+    select g from Gig as g
+    inner join g.Venue as v
+    inner join v.Town as t
+    inner join t.RepresentativeSites as s
+    where
+    s.ID =  :siteId
+    and
+    g.StartDate = :onDate
+    and
+    g.IsDeleted = 0
+   ]]>
+  </query>
+
+
+</hibernate-mapping>
+
+

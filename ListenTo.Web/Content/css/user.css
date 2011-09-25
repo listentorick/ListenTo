@@ -1,0 +1,31 @@
+			h1 {
+				border:none;
+				
+			}
+
+/* Edit profile tab */
+			dl.tabs dd.editProfile {
+				float:none;
+				text-align:left;
+				position:absolute;
+				right:0px;
+				width:170px;
+				font-weight:normal;
+				padding-top:4px;
+				text-align:right;
+			}
+			dl.tabs dd.editProfile a {
+				display:inline;
+				padding-right:0;
+				text-decoration:underline;
+				font-size:0.9em;
+			}			
+			dl.tabs dd.editProfile a img {
+				vertical-align:middle;
+			}
+/*
+
+ul.itemsList li img {
+float:left;
+margin:0 5px 10px 10px;
+}*/

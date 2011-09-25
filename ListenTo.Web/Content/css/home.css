@@ -1,0 +1,348 @@
+/* --------------------------------
+
+www.listentomanchester.co.uk - homepage only styles
+Last edited 27/06/08
+
+Colours:
+(see global.css)
+
+Columns:
+width		170px
+gutter		20px
+
+-------------------------------- */
+
+			body {
+				background:#cacbc8 url(../images/homepage/bg-main.png) repeat-x;
+			}
+			#innerWrapper {
+				background:url(../images/homepage/amp-bg.jpg) repeat-y right top;
+				width:930px;
+				padding-bottom:185px;
+			}
+			
+			h2 {
+				margin-bottom:0;
+			}			
+
+/* header */
+			#header {
+				position:relative;
+				width:930px;
+				height:179px;
+				margin:0 auto;
+			}
+			#header h1 {
+				font-family:arial, sans-serif;
+				font-weight:normal;
+				font-size:.8em;
+				position:absolute;
+				top:0;
+				left:0;
+				margin-left:-8px;
+				width:461px;
+				height:177px;
+				border:none;
+				color:#000;
+			}
+			#header h1 span {
+				position:absolute;
+				left:0;
+				top:0;
+				width:100%;
+				height:100%;
+			}
+
+/* cta button */
+			p.ctaButton {
+				margin:0 0 .5em 0;
+				text-align:right;
+			}
+
+/* Beta Badge - TEMPORARY */
+			#betaBadge {
+				position:absolute;
+				left:356px;
+				top:22px;
+			}
+
+/* menu */
+			#menu ul{
+				position:absolute;
+				left:10px;
+				z-index:100;
+			}
+			#menuInner{
+				top:.4em;
+			}
+			#menu ul ul{
+				left:0;
+			}
+
+/* bands */
+			#bands {
+				background:url(../images/homepage/amp-middle.jpg) no-repeat right top;
+				position:relative;
+				width:361px;
+				min-height:363px;
+				float:right;
+				display:inline;
+				padding-top:3.5em;
+			}
+			* html #bands {
+				height:363px;
+			}
+
+		/* Bands CTA */
+			#bandsCTA {
+				border-top:4px solid #B6BD8E;
+				display:block;
+				position:relative;
+				width:292px;
+				margin:0 0 2px 36px;
+				padding:0 0 1.2em 0;
+				text-align:center;
+				background:#d4d6cb;
+			}
+			#bandsCTA h2 {
+				margin:0;
+				padding-bottom:0;
+				text-align:center;
+				font-size:2.4em;
+				border:none;
+			}
+			#bandsCTA p {
+				text-align:center;
+				color:#514915;
+				font-size:1.4em;
+				margin:0;
+			}
+			#bandsCTA a {
+				padding:0 12px;
+				background:url(../images/template/morelink.gif) no-repeat right center;
+				font-size:1.4em;
+				font-weight:bold;
+				text-decoration:none;
+				line-height:0;
+			}
+			#bandsCTA a:hover {
+				text-decoration:underline;
+			}
+			#bandsCTA a em {
+				font-style:normal;
+				text-decoration:underline;
+			}
+
+		/* Highlighted band */
+			#highlightBand {
+				font-size:1.2em;
+				position:relative;
+				left:36px;
+				background:/*#B6BD8E*/ #babca2 url(../images/homepage/bg-featured-band.gif);
+				width:140px;
+				padding:0 10px 0 142px;
+				min-height:146px;
+			}
+			* html #highlightBand {
+				height:146px;
+			}
+			#highlightBand.on {
+				background:#F7F3B7 url(../images/homepage/bg-featured-band-on.gif) no-repeat right bottom;
+				cursor:pointer;
+			}
+			#highlightBand .overlay {
+				position:absolute;
+				left:5px;
+				top:0;
+				width:166px;
+				height:165px;
+				margin-left:0;
+				margin-top:-10px;
+			}
+			#highlightBand h3 {
+				padding:.2em 0 0;
+				font-size:2em;
+				line-height:1.2;
+			}
+			#highlightBand h3 a {
+				color:#000;
+				text-decoration:none;
+			}
+			#highlightBand.on h3 a {
+				text-decoration:underline;
+			}
+			#highlightBand h3 a:hover {
+				text-decoration:underline;
+			}
+			#highlightBand p, #highlightBand ul {
+				margin-bottom:.25em;
+			}
+			#highlightBand img {
+				position:absolute;
+				top:12px;
+				left:14px;
+				vertical-align:bottom;
+				/*width:146px;
+				height:146px;*/
+				width:112px;
+				height:112px;
+			}
+			#highlightBand ul {
+				/*position:absolute;
+				bottom:0;*/
+			}
+			#highlightBand li {
+				list-style-type:none;
+				margin:0;
+				padding:0;
+			}
+			#highlightBand li a {
+				color:#514915;
+				font-weight:bold;
+			}
+
+		/* Animated band list */
+			.js #bands #bandsList {
+				margin:2px 0 0 34px;
+			}
+			.js #bands #bandsList ul li {
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				float:left;
+				cursor:pointer;
+			}
+			.js #bands #bandsList ul li h3, .js #bands #bandsList ul li p, .js #bands #bandsList ul li ul {
+				display:none;
+			}
+			.js #bands #bandsList ul li img {
+				width:33px;
+				height:33px;
+				vertical-align:bottom;
+				float:left;
+				border:2px solid #1c1c1e;
+			}
+			.js #bands #bandsList ul li.on img {
+				border:2px solid #F7F3B7;
+			}
+
+/* other layout, and general */
+			#homeOther {
+				padding-top:3.5em;
+				position:relative;
+				width:550px;
+				float:left;
+				display:inline;
+			}
+			.content {
+				padding-left:10px;
+				padding-right:10px;
+				background:#f4f5f3;
+			}
+			.content h2 {
+				padding-left:10px;
+				margin-left:-10px;
+				margin-right:-10px;
+			}
+
+/* login box */
+			#login, #loggedIn {
+				width:170px;
+				float:right;
+			}
+			#login p {
+				margin-bottom:0.4em;
+			}
+			#login label {
+				display:inline;
+				margin:0;
+			}
+			#login input.text {
+				width:135px;
+			}
+			#login div.content h2 {
+				border:0 none;
+			}
+			#login .formButtons {
+				padding:.2em 0 0 0;
+			}
+			#login .formButtons p {
+				border-bottom:1px solid #D9DDC5;
+				clear:both;
+				padding:5px 0 7px 0;
+				text-align:right;
+				font-size:.9em;
+			}
+			#login .formButtons p a {
+				color:#514915;
+			}
+			
+
+/* music player */
+			#musicPlayer {
+				width:360px;
+				float:left;
+			}
+			#musicPlayer p {
+				margin-bottom:0.4em;
+			}
+			#musicPlayer .content {
+				background:#f4f5f3 url(../images/homepage/cassette.png) no-repeat right top;
+				min-height:124px;
+			}
+			* html #musicPlayer .content {
+				height:124px;
+			}
+			#musicPlayer label {
+				position:absolute; left:-999em; overflow:hidden;
+			}
+			#musicPlayer .formButtons {
+				width:172px;
+				padding:.2em 0 0 0;
+			}
+			#musicPlayer input.text {
+				width:158px;
+			}
+			#musicPlayer select {
+				width:172px;
+			}
+
+/* news */
+			#news {
+				width:170px;
+				float:left;
+				clear:left;
+				margin-top:10px;
+			}
+			#news .edit {
+				clear:right;
+			}
+
+/* gigs */
+			#gigs {
+				width:170px;
+				float:left;
+				display:inline;
+				margin-left:20px;
+				margin-top:10px;
+			}
+
+
+/* positioning */
+			.column {
+				position:relative;
+				width:170px;
+				padding-right:20px;
+				float:left;
+				display:inline;
+			}
+
+/* Main box */
+
+
+
+
+
+
+
+

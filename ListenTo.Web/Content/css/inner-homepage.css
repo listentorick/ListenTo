@@ -1,0 +1,34 @@
+			#innerWrapper {
+				/*position:relative;
+				width:930px;*/
+			}
+			#mainContent {
+			}
+
+/* content areas */
+			#mainContent {
+				width:550px;
+				float:left;
+			}
+			#subContent{
+				width:360px;
+			}
+			#subContent1, #subContent2 {
+				width:170px;
+				float:left;
+				display:inline;
+			}
+			#subContent2 {
+				float:right;
+			}
+			#subContent .content {
+				padding-bottom:0;
+			}
+
+/* Tabs */
+			dl.tabs {
+				width:auto;
+			}
+
+
+

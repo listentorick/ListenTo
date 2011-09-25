@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="ListenTo" Class="ListenToDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Acts" Member="Acts">
+    <Type Name="Act">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GigID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ArtistID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="StageTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SetLength" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="Thumbnail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Artist_Act" Member="Artist" ThisKey="ArtistID" Type="Artist" IsForeignKey="true" />
+      <Association Name="Gig_Act" Member="Gig" ThisKey="GigID" Type="Gig" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Artists" Member="Artists">
+    <Type Name="Artist">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StyleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LocationID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Profile" Type="System.String" DbType="VarChar(3000)" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Formed" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LogoImageID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="OfficalWebsiteURL" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ProfileAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TownID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Artist_Act" Member="Acts" OtherKey="ArtistID" Type="Act" />
+      <Association Name="Artist_ActionsArtist" Member="ActionsArtists" OtherKey="ArtistID" Type="ActionsArtist" />
+      <Association Name="Town_Artist" Member="Town" ThisKey="TownID" Type="Town" IsForeignKey="true" />
+      <Association Name="Image_Artist" Member="Image" ThisKey="LogoImageID" Type="Image" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Venues" Member="Venues">
+    <Type Name="Venue">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LocationID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Capacity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Website" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ImageID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TownID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Venue_Gig" Member="Gigs" OtherKey="VenueID" Type="Gig" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gigs" Member="Gigs">
+    <Type Name="Gig">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VenueID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TicketPrice" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ImageID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Gig_Act" Member="Acts" OtherKey="GigID" Type="Act" />
+      <Association Name="Gig_GigAttendee" Member="GigAttendees" OtherKey="GigID" Type="GigAttendee" />
+      <Association Name="Venue_Gig" Member="Venue" ThisKey="VenueID" Type="Venue" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GigAttendees" Member="GigAttendees">
+    <Type Name="GigAttendee">
+      <Column Name="GigID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Gig_GigAttendee" Member="Gig" ThisKey="GigID" Type="Gig" IsForeignKey="true" />
+      <Association Name="User_GigAttendee" Member="User" ThisKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Styles" Member="Styles">
+    <Type Name="Style">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="Style_UsersPreferredStyle" Member="UsersPreferredStyles" OtherKey="StyleID" Type="UsersPreferredStyle" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Towns" Member="Towns">
+    <Type Name="Town">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Town_Artist" Member="Artists" OtherKey="TownID" Type="Artist" />
+      <Association Name="Town_SiteTown" Member="SiteTowns" OtherKey="TownId" Type="SiteTown" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Images" Member="Images">
+    <Type Name="Image">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="height" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="width" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="filename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OwnerID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="OwnerType" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ThumbnailID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="OwnerUserID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Image_Artist" Member="Artists" OtherKey="LogoImageID" Type="Artist" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comments" Member="Comments">
+    <Type Name="Comment">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TargetListenToType" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TargetListenToTypeID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sites" Member="Sites">
+    <Type Name="Site">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="URL" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LocationID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Site_SiteTown" Member="SiteTowns" OtherKey="SiteId" Type="SiteTown" />
+      <Association Name="Site_ArticlesTargetSite" Member="ArticlesTargetSites" OtherKey="SiteID" Type="ArticlesTargetSite" />
+      <Association Name="Site_ActionsTargetSite" Member="ActionsTargetSites" OtherKey="SiteID" Type="ActionsTargetSite" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SiteTowns" Member="SiteTowns">
+    <Type Name="SiteTown">
+      <Column Name="SiteId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TownId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Site_SiteTown" Member="Site" ThisKey="SiteId" Type="Site" IsForeignKey="true" />
+      <Association Name="Town_SiteTown" Member="Town" ThisKey="TownId" Type="Town" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tracks" Member="Tracks">
+    <Type Name="Track">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StyleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ArtistID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(3000) NOT NULL" CanBeNull="false" />
+      <Column Name="Filename" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Length" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Studio" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Producer" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Engineer" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="firstPublished" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsPublished" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsSuspended" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Article" Member="Articles">
+    <Type Name="Article">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="VarChar(6000) NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublishDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LocationID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="IsLocationSpecific" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ImageID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="IsPublished" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsSuspended" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ResourceURL" Type="System.String" DbType="VarChar(6000)" CanBeNull="true" />
+      <Association Name="Article_ArticlesTargetSite" Member="ArticlesTargetSites" OtherKey="ArticleID" Type="ArticlesTargetSite" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ArticlesTargetSites" Member="ArticlesTargetSites">
+    <Type Name="ArticlesTargetSite">
+      <Column Name="ArticleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Article_ArticlesTargetSite" Member="Article" ThisKey="ArticleID" Type="Article" IsForeignKey="true" />
+      <Association Name="Site_ArticlesTargetSite" Member="Site" ThisKey="SiteID" Type="Site" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Actions" Member="Actions">
+    <Type Name="Action">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ActionType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContentType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContentID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OldValue" Type="System.String" DbType="VarChar(600)" CanBeNull="true" />
+      <Column Name="NewValue" Type="System.String" DbType="VarChar(600)" CanBeNull="true" />
+      <Column Name="OwnerID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Action_ActionsArtist" Member="ActionsArtists" OtherKey="ActionID" Type="ActionsArtist" />
+      <Association Name="Action_ActionsTargetSite" Member="ActionsTargetSites" OtherKey="ActionID" Type="ActionsTargetSite" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ActionsArtists" Member="ActionsArtists">
+    <Type Name="ActionsArtist">
+      <Column Name="ActionID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ArtistID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Action_ActionsArtist" Member="Action" ThisKey="ActionID" Type="Action" IsForeignKey="true" />
+      <Association Name="Artist_ActionsArtist" Member="Artist" ThisKey="ArtistID" Type="Artist" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ActionsTargetSites" Member="ActionsTargetSites">
+    <Type Name="ActionsTargetSite">
+      <Column Name="ActionID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Action_ActionsTargetSite" Member="Action" ThisKey="ActionID" Type="Action" IsForeignKey="true" />
+      <Association Name="Site_ActionsTargetSite" Member="Site" ThisKey="SiteID" Type="Site" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Relationships" Member="Relationships">
+    <Type Name="Relationship">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SourceID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SourceType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TargetID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TargetType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Forename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Profile" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AvatarImageID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsUserValidated" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TownID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AlternativeLocation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RecievesNewsletter" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="User_GigAttendee" Member="GigAttendees" OtherKey="UserID" Type="GigAttendee" />
+      <Association Name="User_UsersPreferredStyle" Member="UsersPreferredStyles" OtherKey="UserID" Type="UsersPreferredStyle" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UsersPreferredStyles" Member="UsersPreferredStyles">
+    <Type Name="UsersPreferredStyle">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StyleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Style_UsersPreferredStyle" Member="Style" ThisKey="StyleID" Type="Style" IsForeignKey="true" />
+      <Association Name="User_UsersPreferredStyle" Member="User" ThisKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

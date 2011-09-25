@@ -1,0 +1,16 @@
+F:\ListenTo\trunk\ListenTo.Core.Caching\bin\Release\ListenTo.Core.Caching.dll
+F:\ListenTo\trunk\ListenTo.Core.Caching\bin\Release\ListenTo.Core.Caching.pdb
+F:\ListenTo\trunk\ListenTo.Core.Caching\bin\Release\antlr.runtime.dll
+F:\ListenTo\trunk\ListenTo.Core.Caching\bin\Release\ListenTo.Shared.dll
+F:\ListenTo\trunk\ListenTo.Core.Caching\bin\Release\Spring.Aop.dll
+F:\ListenTo\trunk\ListenTo.Core.Caching\bin\Release\Spring.Core.dll
+F:\ListenTo\trunk\ListenTo.Core.Caching\bin\Release\Common.Logging.dll
+F:\ListenTo\trunk\ListenTo.Core.Caching\bin\Release\ListenTo.Core.Audio.dll
+F:\ListenTo\trunk\ListenTo.Core.Caching\bin\Release\ListenTo.TinyUrl.dll
+F:\ListenTo\trunk\ListenTo.Core.Caching\bin\Release\TemplateEngine.dll
+F:\ListenTo\trunk\ListenTo.Core.Caching\bin\Release\ListenTo.Core.Audio.pdb
+F:\ListenTo\trunk\ListenTo.Core.Caching\bin\Release\ListenTo.Shared.pdb
+F:\ListenTo\trunk\ListenTo.Core.Caching\bin\Release\ListenTo.TinyUrl.pdb
+F:\ListenTo\trunk\ListenTo.Core.Caching\obj\Release\ResolveAssemblyReference.cache
+F:\ListenTo\trunk\ListenTo.Core.Caching\obj\Release\ListenTo.Core.Caching.dll
+F:\ListenTo\trunk\ListenTo.Core.Caching\obj\Release\ListenTo.Core.Caching.pdb

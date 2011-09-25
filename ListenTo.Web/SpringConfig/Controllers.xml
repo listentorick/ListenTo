@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net">
+  <description>
+  </description>
+
+
+  <object id="TextToHtmlHelpers" type="ListenTo.Web.Helpers.TextToHtmlHelpers, ListenTo.Web"  singleton="false" />
+  <object id="TextHelperProcessor" type="ListenTo.Web.Helpers.TextHelperProcessor, ListenTo.Web"  singleton="true" >
+    <property name="TextToHtmlHelpers" ref="TextToHtmlHelpers"/>
+  </object>
+
+  <object name="ListenToController" abstract="true">
+
+    <property name="SiteManager" ref="SiteManager"/>
+    <property name="TownManager" ref="TownManager"/>
+    <property name="StyleManager" ref="StyleManager"/>
+    <property name="ArtistManager" ref="ArtistManager"/>
+    <property name="GigManager" ref="GigManager"/>
+    <property name="RouteHelpers" ref="RouteHelpers"/>
+    <property name="OwnershipHelper" ref="OwnershipHelper" />
+    <property name="UserProfileManager" ref="UserProfileManager"/>
+    <property name="VenueManager" ref="VenueManager"/>
+    <property name="TemporaryFileStrategy" ref="TemporaryFileStrategy"/>
+    
+  </object>
+
+  <object id="WhoIs" type="ListenTo.Web.Controllers.WhoIsController, ListenTo.Web"  singleton="false" parent="ListenToController">
+    <property name="CommentManager" ref="CommentManager"/>
+    <property name="WhatsNewManager" ref="WhatsNewManager"/>
+    <property name="ActionsManager" ref="ActionsManager"/>
+    <property name="RelationshipManager" ref="RelationshipManager"/>
+  </object>
+
+  <object id="Image" type="ListenTo.Web.Controllers.ImageController, ListenTo.Web"  singleton="false" parent="ListenToController">
+    <property name="ImageManager" ref="ImageManager"/>
+  </object>
+  
+  <object id="Home" type="ListenTo.Web.Controllers.HomeController, ListenTo.Web"  singleton="false" parent="ListenToController">
+    <property name="NewsItemManager" ref="NewsItemManager"/>
+  </object>
+
+  <object id="Radio" type="ListenTo.Web.Controllers.RadioController, ListenTo.Web"  singleton="false" parent="ListenToController" >
+    <property name="TrackManager" ref="TrackManager"/>
+  </object>
+
+  <object id="Gig" type="ListenTo.Web.Controllers.GigController, ListenTo.Web"  singleton="false" parent="ListenToController">
+    <property name="GigManager" ref="GigManager"/>
+  </object>
+
+  <object id="Venue" type="ListenTo.Web.Controllers.VenueController, ListenTo.Web"  singleton="false" parent="ListenToController" >
+    <property name="VenueManager" ref="VenueManager"/>
+  </object>
+
+  <object id="Comment" type="ListenTo.Web.Controllers.CommentController, ListenTo.Web"  singleton="false" parent="ListenToController" >
+    <property name="CommentManager" ref="CommentManager"/>
+    <property name="CommentValidationHelper" ref="CommentValidationHelper" />
+  </object>
+
+  <object id="Info" type="ListenTo.Web.Controllers.InfoController, ListenTo.Web"  singleton="false" parent="ListenToController" >
+  </object>
+
+  <object id="TemporaryFile" type="ListenTo.Web.Controllers.TemporaryFileController, ListenTo.Web"  singleton="false" parent="ListenToController" >
+    <property name="TemporaryFileStrategy" ref="TemporaryFileStrategy"/>
+  </object>
+
+
+
+
+  <object id="Artist" type="ListenTo.Web.Controllers.ArtistController, ListenTo.Web"  singleton="false" parent="ListenToController" >
+    <!--<property name="ArtistManager" ref="ArtistManager"/>-->
+    <property name="ImageManager" ref="ImageManager"/>
+    <property name="CommentManager" ref="CommentManager"/>
+    <property name="TrackManager" ref="TrackManager"/>
+    <property name="UserProfileManager" ref="UserProfileManager"/>
+    <property name="RelationshipManager" ref="RelationshipManager"/>
+    <property name="NumberOfItemsPerPageForListings" value="20"/>
+  </object>
+
+  <object id="Track" type="ListenTo.Web.Controllers.TrackController, ListenTo.Web"  singleton="false" parent="ListenToController" >
+    <property name="TrackManager" ref="TrackManager"/>
+  </object>
+
+  <object id="NewsItem" type="ListenTo.Web.Controllers.NewsItemController, ListenTo.Web"  singleton="false" parent="ListenToController" >
+    <property name="NewsItemManager" ref="NewsItemManager"/>
+    <property name="CommentManager" ref="CommentManager"/>
+    <property name="UserProfileManager" ref="UserProfileManager"/>
+  </object>
+
+
+  <object id="ModelBinderHelpers" type="ListenTo.Web.ModelBinders.ModelBinderHelpers, ListenTo.Web"  singleton="false"  >
+  </object>
+
+  <object id="GigModelBinder" type="ListenTo.Web.ModelBinders.GigModelBinder, ListenTo.Web"  singleton="false"  >
+    <property name="VenueManager" ref="VenueManager"/>
+    <property name="ArtistManager" ref="ArtistManager"/>
+    <property name="ModelBinderHelpers" ref="ModelBinderHelpers"/>
+    <property name="TownManager" ref="TownManager"/>
+  </object>
+
+  <object id="UploadImagePopupViewModelModelBinder" type="ListenTo.Web.ModelBinders.UploadImagePopupViewModelModelBinder, ListenTo.Web"  singleton="false"  >
+    <property name="ImageManager" ref="ImageManager"/>
+    <property name="ModelBinderHelpers" ref="ModelBinderHelpers"/>
+  </object>
+
+  <object id="UploadFilePartialViewModelModelBinder" type="ListenTo.Web.ModelBinders.UploadFilePartialViewModelModelBinder, ListenTo.Web"  singleton="false"  >
+    <property name="ModelBinderHelpers" ref="ModelBinderHelpers"/>
+  </object>
+
+  <object id="UploadImagePartialViewModelModelBinder" type="ListenTo.Web.ModelBinders.UploadFilePartialViewModelModelBinder, ListenTo.Web"  singleton="false"  >
+    <property name="ModelBinderHelpers" ref="ModelBinderHelpers"/>
+    <property name="TemporaryFileStrategy" ref="TemporaryFileStrategy"/>
+    <property name="FileValidationHelper" ref="ImageFileValidationHelper"/>
+  </object>
+
+  <object id="ImageFileValidationHelper" type="ListenTo.Web.Helpers.ImageFileValidationHelper, ListenTo.Web"  singleton="false"  >
+  </object>
+  
+  <object id="ImageModelBinder" type="ListenTo.Web.ModelBinders.ImageModelBinder, ListenTo.Web"  singleton="false"  >
+  </object>
+
+  <object id="NewsItemModelBinder" type="ListenTo.Web.ModelBinders.NewsItemModelBinder, ListenTo.Web"  singleton="false"  >
+    <property name="ImageManager" ref="ImageManager"/>
+    <property name="ModelBinderHelpers" ref="ModelBinderHelpers"/>
+  </object>
+
+  <object id="UserModelBinder" type="ListenTo.Web.ModelBinders.UserModelBinder, ListenTo.Web"  singleton="false"  >
+    <property name="Provider" ref="MembershipProvider"/>
+    <property name="ModelBinderHelpers" ref="ModelBinderHelpers"/>
+  </object>
+
+  <object id="CommentModelBinder" type="ListenTo.Web.ModelBinders.CommentModelBinder, ListenTo.Web"  singleton="false"  >
+    <property name="ModelBinderHelpers" ref="ModelBinderHelpers"/>
+  </object>
+
+  <object id="TrackModelBinder" type="ListenTo.Web.ModelBinders.TrackModelBinder, ListenTo.Web"  singleton="false"  >
+    <property name="ArtistManager"  ref="ArtistManager"/>
+    <property name="StyleManager"   ref="StyleManager"/>
+    <property name="TrackManager"   ref="TrackManager"/>
+    <property name="TemporaryFileStrategy" ref="TemporaryFileStrategy"/>
+    <property name="ModelBinderHelpers" ref="ModelBinderHelpers"/>
+  </object>
+
+  <object id="ArtistModelBinder" type="ListenTo.Web.ModelBinders.ArtistModelBinder, ListenTo.Web"  singleton="false"  >
+    <property name="ArtistManager"  ref="ArtistManager"/>
+    <property name="StyleManager"   ref="StyleManager"/>
+    <property name="TownManager"    ref="TownManager"/>
+    <property name="ImageManager"   ref="ImageManager"/>
+    <property name="ModelBinderHelpers" ref="ModelBinderHelpers"/>
+  </object>
+
+  <object id="UserProfileModelBinder" type="ListenTo.Web.ModelBinders.UserProfileModelBinder, ListenTo.Web"  singleton="false"  >
+    <property name="StyleManager"   ref="StyleManager"/>
+    <property name="TownManager"    ref="TownManager"/>
+    <property name="ImageManager"   ref="ImageManager"/>
+    <property name="ModelBinderHelpers" ref="ModelBinderHelpers"/>
+  </object>
+
+  <object id="Account" type="ListenTo.Web.Controllers.AccountController, ListenTo.Web"  singleton="false"  parent="ListenToController">
+    <property name="Provider" ref="MembershipProvider"/>
+    <property name="FormsAuth" ref="FormsAuthentication" />
+    <property name="UserValidationHelper" ref="UserValidationHelper" />
+    <property name="UserManager"    ref="UserManager"/>
+    <property name="ActionsManager" ref="ActionsManager"/>
+    <property name="TrackManager" ref="TrackManager"/>
+    <property name="CommentManager" ref="CommentManager"/>
+    <property name="RelationshipManager" ref="RelationshipManager"/>
+    <property name="NewsItemManager" ref="NewsItemManager"/>
+  </object>
+
+  <object id="MembershipProvider" type="ListenTo.Web.Security.ListenToMembershipProvider, ListenTo.Web" singleton="false">
+  </object>
+
+  <object id="FormsAuthentication" type="ListenTo.Web.Security.FormsAuthenticationWrapper, ListenTo.Web" singleton="false">
+  </object>
+
+  <object name="TemporaryFileStrategy" type="ListenTo.Web.Helpers.TemporaryFileStrategy, ListenTo.Web" singleton="false">
+    <property name="FileHelpers" ref="FileHelpers"/>
+    <property name="RouteHelpers" ref="RouteHelpers"/>
+  </object>
+
+  <object name="RouteHelpers" type="ListenTo.Web.Helpers.RouteHelpers, ListenTo.Web" singleton="false"></object>
+
+</objects>
